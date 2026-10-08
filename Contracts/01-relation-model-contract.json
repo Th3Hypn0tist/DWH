@@ -1,0 +1,44 @@
+{
+  "name": "DWH Website Relation Model",
+  "version": "0.1.0",
+  "entity": {
+    "required": [
+      "id",
+      "type"
+    ],
+    "optional": [
+      "data"
+    ],
+    "semantics": {
+      "id": "canonical immutable entity identity within one DWH instance",
+      "type": "explicit entity type",
+      "data": "entity-owned declarative properties"
+    }
+  },
+  "relation": {
+    "required": [
+      "source",
+      "relation",
+      "target"
+    ],
+    "optional": [
+      "order",
+      "data"
+    ],
+    "semantics": {
+      "source": "source entity id",
+      "relation": "explicit directed relation identity",
+      "target": "target entity id",
+      "order": "deterministic ordering value for ordered projections",
+      "data": "relation-owned declarative metadata"
+    }
+  },
+  "rules": [
+    "relations are directed",
+    "relation meaning must be explicit",
+    "relation authority is not duplicated inside entity data",
+    "missing or ambiguous relation targets fail visibly",
+    "ordering changes projection order, not entity identity",
+    "projection does not create a new canonical entity"
+  ]
+}
