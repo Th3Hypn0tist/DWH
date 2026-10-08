@@ -262,3 +262,20 @@ EVENT COVERAGE
 ```
 
 Missing Event evidence does not block structural modeling. Events are reviewed MetaModule by MetaModule and must not be invented merely to satisfy coverage.
+
+
+## MMDemo
+
+`/mmdemo/` is a browsing/demo projection over canonical MetaModule definitions and isolated synthetic company data.
+
+All synthetic demo-created identities use the `mmdemo.*` namespace. Canonical MetaModule and Universal identities retain their canonical names.
+
+The initial synthetic company is **MMDemo Industries Oy**, a fictional Finnish B2B industrial sensor/automation company with sales, procurement, inventory, light assembly, project delivery, field service, finance, HR and strategy activity for 2026-07-01 through 2026-09-30.
+
+The seed dataset is stored at:
+
+```text
+demo/mmdemo-industries-q3-2026.seed.json
+```
+
+The demo is designed so that strategy measurements and decisions can trace back to the same synthetic operational records used by Business MetaModules. Event coverage remains a separate review dimension.
