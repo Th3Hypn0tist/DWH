@@ -7,6 +7,8 @@ use AIGM\DWH\ProjectionEngine;
 use AIGM\DWH\ProjectionException;
 use AIGM\DWH\ProjectionNotFoundException;
 use AIGM\DWH\SiteProjector;
+use AIGM\DWH\ContentProjector;
+use AIGM\DWH\ActionProjector;
 
 require_once __DIR__ . '/../src/ProjectionException.php';
 require_once __DIR__ . '/../src/ProjectionNotFoundException.php';
@@ -14,6 +16,8 @@ require_once __DIR__ . '/../src/JsonDocumentSource.php';
 require_once __DIR__ . '/../src/ProjectionEngine.php';
 require_once __DIR__ . '/../src/MetaModuleCatalogProjector.php';
 require_once __DIR__ . '/../src/SiteProjector.php';
+require_once __DIR__ . '/../src/ContentProjector.php';
+require_once __DIR__ . '/../src/ActionProjector.php';
 
 function expect(bool $condition, string $message): void
 {
@@ -94,3 +98,69 @@ try {
 }
 
 echo "OK\n";
+
+
+$contentFixture = tempnam(sys_get_temp_dir(), 'dwh-content-');
+$actionFixture = tempnam(sys_get_temp_dir(), 'dwh-action-');
+
+if ($contentFixture === false || $actionFixture === false) {
+    throw new RuntimeException('failed to create temporary projection fixtures');
+}
+
+file_put_contents($contentFixture, json_encode([
+    '#CONTENT:mmdemo:overview' => [
+        'id' => 'overview',
+        'domain' => 'mmdemo',
+        'type' => 'text',
+        'provider' => 'inline',
+        'content' => 'MMDemo overview',
+    ],
+], JSON_THROW_ON_ERROR));
+
+file_put_contents($actionFixture, json_encode([
+    '#ACTION:mmdemo:refresh' => [
+        'id' => 'refresh',
+        'label' => 'Refresh',
+        'action' => 'mmdemo:refresh',
+    ],
+], JSON_THROW_ON_ERROR));
+
+$dynamicEngine = new ProjectionEngine();
+
+$contentProjector = new ContentProjector(new JsonDocumentSource($contentFixture));
+$dynamicEngine->registerPattern(
+    ContentProjector::SYMBOL_PATTERN,
+    static fn(string $symbol, array $matches, array $context): array
+        => $contentProjector->project($symbol, $matches, $context)
+);
+
+$actionProjector = new ActionProjector(new JsonDocumentSource($actionFixture));
+$dynamicEngine->registerPattern(
+    ActionProjector::SYMBOL_PATTERN,
+    static fn(string $symbol, array $matches, array $context): array
+        => $actionProjector->project($symbol, $matches, $context)
+);
+
+$content = $dynamicEngine->project('#CONTENT:mmdemo:overview');
+expect(($content['data']['content'] ?? null) === 'MMDemo overview', 'dynamic Content projection failed');
+
+$action = $dynamicEngine->project('#ACTION:mmdemo:refresh');
+expect(($action['data']['action'] ?? null) === 'mmdemo:refresh', 'dynamic Action projection failed');
+
+try {
+    $dynamicEngine->project('#CONTENT:mmdemo:missing');
+    throw new RuntimeException('missing dynamic Content projection did not fail');
+} catch (ProjectionNotFoundException) {
+}
+
+try {
+    $dynamicEngine->registerPattern(
+        ContentProjector::SYMBOL_PATTERN,
+        static fn(): array => ['data' => []]
+    );
+    throw new RuntimeException('duplicate pattern registration did not fail');
+} catch (ProjectionException) {
+}
+
+@unlink($contentFixture);
+@unlink($actionFixture);
