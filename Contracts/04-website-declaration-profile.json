@@ -1,6 +1,6 @@
 {
   "name": "DWH Website Projection Profile",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "kind": "website-focused projection profile over canonical DWH entities/relations",
   "sourceAuthority": "DWH canonical relational/MetaModule graph",
   "projectionConcerns": {
@@ -29,6 +29,13 @@
     "ordering is declarative relation/projection data and does not change entity identity",
     "a missing required relation fails visibly rather than invoking heuristic fallback",
     "runtime state created by WebEngine, WebGUI or S3D does not mutate canonical authority unless an explicit governed write path is invoked",
-    "website labels, routes and file paths do not establish MetaModule identity"
-  ]
+    "website labels, routes and file paths do not establish MetaModule identity",
+    "recursive nanoCMS Page structure replaces separate Site/Section/Menu/Navigation/Tree authorities"
+  ],
+  "canonicalWebStructure": {
+    "namespace": "#WEB",
+    "owner": "Expose.nanoCMS",
+    "semanticStructure": "nanoCMSStructure recursive Page + placements",
+    "derivedSiteTree": "#SITE"
+  }
 }
