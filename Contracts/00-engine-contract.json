@@ -1,0 +1,29 @@
+{
+  "name": "DWH Website Profile",
+  "version": "0.1.0",
+  "implementation": "PHP",
+  "kind": "canonical relational website content model",
+  "owns": [
+    "website entity identity and declarative data",
+    "explicit directed website relations",
+    "deterministic relation ordering",
+    "symbol identities",
+    "deterministic projection definitions and results"
+  ],
+  "doesNotOwn": [
+    "authentication",
+    "authorization policy",
+    "presentation rendering",
+    "WebEngine composition behavior",
+    "domain business behavior",
+    "physical storage as semantic identity"
+  ],
+  "principles": [
+    "one canonical authority per concern",
+    "relations are explicit and never inferred",
+    "symbols identify semantic projections rather than files",
+    "projection output is derived and rebuildable",
+    "consumers depend on projection contracts rather than storage layout",
+    "PHP implements canonical contracts and does not define them"
+  ]
+}
