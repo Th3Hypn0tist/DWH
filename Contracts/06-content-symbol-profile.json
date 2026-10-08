@@ -1,6 +1,6 @@
 {
   "name": "DWH Content Projection Profile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "symbolGrammar": "#CONTENT:<DOMAIN>:<ID>",
   "consumer": "WebEngine",
   "purpose": "provide one canonical content declaration for WebEngine runtime provider resolution",
@@ -34,6 +34,14 @@
     "symbol domain/id must match returned record identity",
     "WebEngine must not invent fallback canonical content",
     "provider execution does not transfer content authority to WebEngine",
-    "content placement relations are DWH authority and are not encoded into the content record"
-  ]
+    "content placement relations are DWH authority and are not encoded into the content record",
+    "dynamic #CONTENT symbols resolve through ProjectionEngine pattern dispatch"
+  ],
+  "implementation": {
+    "phpProjector": "ContentProjector",
+    "symbolPattern": "dynamic pattern registered in ProjectionEngine",
+    "endpoint": "/app/dwh/api/project.php",
+    "sourceAdapter": "JsonDocumentSource -> php/data/content.json",
+    "sourceAdapterRule": "storage map is implementation data; semantic identity is the #CONTENT symbol and canonical DWH relations"
+  }
 }
