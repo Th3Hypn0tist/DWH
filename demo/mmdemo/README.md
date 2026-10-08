@@ -21,7 +21,6 @@ so the same files work under both root and `/test/` instance roots.
 ## Data
 
 ```text
-data/metamodule-catalog.json
 data/company-q3-2026.json
 ```
 
@@ -33,6 +32,6 @@ Canonical MetaModule/Universal identities retain canonical identity. Display nam
 
 MMDemo is not semantic authority.
 
-The catalog file is a non-authoritative projection fixture used until the same `#METAMODULE:CATALOG` shape is served by the PHP DWH projector. WebEngine consumes it through the normal DWH adapter boundary so replacing the fixture with a live projector does not change the browser consumer contract.
+The MetaModule catalog is resolved live through the PHP DWH projection API at `../app/dwh/api/project.php`. MMDemo does not carry a duplicate catalog fixture. WebEngine consumes the `#METAMODULE:CATALOG` envelope through the normal DWH adapter boundary.
 
 BusinessSuite, Strategy and Everyday are grouping abstractions and are not Event owners. Actual member Composition MetaModules own Event review.
