@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MMDemo Industries — MetaModule Browser</title>
+  <link rel="stylesheet" href="./mmdemo.css">
+</head>
+<body>
+  <header class="shell-header">
+    <div>
+      <div class="eyebrow">AIGMos MetaModule Demo</div>
+      <h1>MMDemo Industries Oy</h1>
+      <p class="subtitle">Q3/2026 operational data projected through the same MetaModule catalog.</p>
+    </div>
+    <div class="status-block">
+      <span id="runtime-status" class="status pending">loading</span>
+      <code id="route-label"></code>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="side-nav" aria-label="MMDemo sections">
+      <a href="#overview">Overview</a>
+      <a href="#groups">Composition groups</a>
+      <a href="#universals">Universals</a>
+      <a href="#operations">Operations</a>
+      <a href="#flows">Flows</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#gaps">Coverage gaps</a>
+    </nav>
+
+    <main id="app">
+      <section class="panel">
+        <h2>Loading MetaModule catalog…</h2>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
