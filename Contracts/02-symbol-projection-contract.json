@@ -1,7 +1,7 @@
 {
   "name": "DWH Symbol Projection",
-  "version": "0.2.0",
-  "symbolPattern": "^#[A-Z][A-Z0-9_:-]*$",
+  "version": "0.3.0",
+  "symbolPattern": "^#[A-Za-z][A-Za-z0-9_:-]*$",
   "request": {
     "required": [
       "symbol"
@@ -29,7 +29,8 @@
     "identical canonical state and projection definition produce semantically identical output",
     "serialization format does not become semantic authority",
     "a projection may describe site hierarchy, content bindings, projector bindings, renderer bindings, routes, composition or actions",
-    "projection consumption does not transfer canonical ownership to WebEngine"
+    "projection consumption does not transfer canonical ownership to WebEngine",
+    "symbol identity is case-sensitive unless a specific symbol profile defines normalization"
   ],
   "consumerBoundary": {
     "producer": "DWH",
