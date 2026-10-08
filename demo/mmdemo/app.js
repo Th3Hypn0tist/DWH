@@ -1,7 +1,6 @@
 import {
-  createDwhAdapter,
+  createHttpDwhAdapter,
   loadMetaModuleCatalog,
-  METAMODULE_CATALOG_SYMBOL,
 } from '../lib/webengine/webengine.js';
 
 const $ = (selector) => document.querySelector(selector);
@@ -32,27 +31,8 @@ async function fetchJson(path) {
   return response.json();
 }
 
-const catalogAdapter = createDwhAdapter({
-  async project(symbol, context) {
-    if (symbol !== METAMODULE_CATALOG_SYMBOL) {
-      throw new Error(`MMDemo does not request unsupported DWH symbol ${symbol}`);
-    }
-
-    const response = await fetch('../app/dwh/api/project.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      cache: 'no-store',
-      body: JSON.stringify({ symbol, context }),
-    });
-
-    const payload = await response.json().catch(() => null);
-
-    if (!response.ok) {
-      throw new Error(`DWH projection failed: HTTP ${response.status} ${payload?.error ?? 'unknown_error'}`);
-    }
-
-    return payload;
-  },
+const catalogAdapter = createHttpDwhAdapter({
+  endpoint: '../app/dwh/api/project.php',
 });
 
 function flattenGroupMembers(group) {
