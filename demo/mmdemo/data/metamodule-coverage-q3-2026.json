@@ -1,0 +1,500 @@
+{
+  "dataset": "mmdemo.coverage.business_universals.2026q3",
+  "version": "0.1.0",
+  "graph_ref": "mmdemo.graph.mmdemo_industries.2026q3",
+  "catalog_ref": "#METAMODULE:CATALOG",
+  "family": "Universal/Business",
+  "member_count": 32,
+  "proven_count": 15,
+  "partial_count": 0,
+  "not_exercised_count": 17,
+  "status_semantics": {
+    "PROVEN": "direct explicit graph evidence of the canonical Universal type exists",
+    "PARTIAL": "reserved for explicit but incomplete semantic evidence; never inferred from similarity",
+    "NOT_EXERCISED": "current demo graph contains no direct evidence for this Universal"
+  },
+  "entries": [
+    {
+      "semantic_identity": "Identity",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Identity",
+        "entity_count": 28,
+        "sample_entity_ids": [
+          "mmdemo.company.mmdemo_industries",
+          "mmdemo.identity.employee.ceo",
+          "mmdemo.identity.employee.sales_1",
+          "mmdemo.identity.employee.sales_2",
+          "mmdemo.identity.employee.pm_1",
+          "mmdemo.identity.employee.tech_1",
+          "mmdemo.identity.employee.tech_2",
+          "mmdemo.identity.employee.warehouse_1"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Project",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Project",
+        "entity_count": 52,
+        "sample_entity_ids": [
+          "mmdemo.project.assembly.202607.001",
+          "mmdemo.project.assembly.202607.002",
+          "mmdemo.project.assembly.202607.003",
+          "mmdemo.project.assembly.202607.004",
+          "mmdemo.project.assembly.202607.005",
+          "mmdemo.project.assembly.202607.006",
+          "mmdemo.project.service.202607.001",
+          "mmdemo.project.service.202607.002"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Location",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Location",
+        "entity_count": 3,
+        "sample_entity_ids": [
+          "mmdemo.location.hq",
+          "mmdemo.location.warehouse",
+          "mmdemo.location.assembly"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Asset",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Asset",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "CatalogItem",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "CatalogItem",
+        "entity_count": 12,
+        "sample_entity_ids": [
+          "mmdemo.catalog.gateway",
+          "mmdemo.catalog.sensor_temp",
+          "mmdemo.catalog.sensor_vibration",
+          "mmdemo.catalog.io_node",
+          "mmdemo.catalog.panel",
+          "mmdemo.catalog.enclosure",
+          "mmdemo.catalog.pcb",
+          "mmdemo.catalog.psu"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Specification",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Specification",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Opportunity",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Opportunity",
+        "entity_count": 101,
+        "sample_entity_ids": [
+          "mmdemo.opportunity.202607.001",
+          "mmdemo.opportunity.202607.002",
+          "mmdemo.opportunity.202607.003",
+          "mmdemo.opportunity.202607.004",
+          "mmdemo.opportunity.202607.005",
+          "mmdemo.opportunity.202607.006",
+          "mmdemo.opportunity.202607.007",
+          "mmdemo.opportunity.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "LineItem",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "LineItem",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Quote",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Quote",
+        "entity_count": 42,
+        "sample_entity_ids": [
+          "mmdemo.quote.202607.001",
+          "mmdemo.quote.202607.002",
+          "mmdemo.quote.202607.003",
+          "mmdemo.quote.202607.004",
+          "mmdemo.quote.202607.005",
+          "mmdemo.quote.202607.006",
+          "mmdemo.quote.202607.007",
+          "mmdemo.quote.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Order",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Order",
+        "entity_count": 78,
+        "sample_entity_ids": [
+          "mmdemo.order.sales.202607.001",
+          "mmdemo.order.sales.202607.002",
+          "mmdemo.order.sales.202607.003",
+          "mmdemo.order.sales.202607.004",
+          "mmdemo.order.sales.202607.005",
+          "mmdemo.order.sales.202607.006",
+          "mmdemo.order.sales.202607.007",
+          "mmdemo.order.sales.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Invoice",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Invoice",
+        "entity_count": 99,
+        "sample_entity_ids": [
+          "mmdemo.invoice.sales.202607.001",
+          "mmdemo.invoice.sales.202607.002",
+          "mmdemo.invoice.sales.202607.003",
+          "mmdemo.invoice.sales.202607.004",
+          "mmdemo.invoice.sales.202607.005",
+          "mmdemo.invoice.sales.202607.006",
+          "mmdemo.invoice.sales.202607.007",
+          "mmdemo.invoice.sales.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "BalanceAccount",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "BalanceAccount",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "BalanceTransaction",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "BalanceTransaction",
+        "entity_count": 42,
+        "sample_entity_ids": [
+          "mmdemo.balance.payroll.202607.001",
+          "mmdemo.balance.payroll.202607.002",
+          "mmdemo.balance.payroll.202607.003",
+          "mmdemo.balance.payroll.202607.004",
+          "mmdemo.balance.payroll.202607.005",
+          "mmdemo.balance.payroll.202607.006",
+          "mmdemo.balance.payroll.202607.007",
+          "mmdemo.balance.payroll.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Settlement",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Settlement",
+        "entity_count": 36,
+        "sample_entity_ids": [
+          "mmdemo.settlement.in.202607.001",
+          "mmdemo.settlement.in.202607.002",
+          "mmdemo.settlement.in.202607.003",
+          "mmdemo.settlement.in.202607.004",
+          "mmdemo.settlement.in.202607.005",
+          "mmdemo.settlement.in.202607.006",
+          "mmdemo.settlement.out.202607.001",
+          "mmdemo.settlement.out.202607.002"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Account",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Account",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "JournalEntry",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "JournalEntry",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "LedgerEntry",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "LedgerEntry",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "StockMovement",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "StockMovement",
+        "entity_count": 111,
+        "sample_entity_ids": [
+          "mmdemo.stock.issue.202607.001",
+          "mmdemo.stock.issue.202607.002",
+          "mmdemo.stock.issue.202607.003",
+          "mmdemo.stock.issue.202607.004",
+          "mmdemo.stock.issue.202607.005",
+          "mmdemo.stock.issue.202607.006",
+          "mmdemo.stock.issue.202607.007",
+          "mmdemo.stock.issue.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Lot",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Lot",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Shipment",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Shipment",
+        "entity_count": 54,
+        "sample_entity_ids": [
+          "mmdemo.shipment.202607.001",
+          "mmdemo.shipment.202607.002",
+          "mmdemo.shipment.202607.003",
+          "mmdemo.shipment.202607.004",
+          "mmdemo.shipment.202607.005",
+          "mmdemo.shipment.202607.006",
+          "mmdemo.shipment.202607.007",
+          "mmdemo.shipment.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "HandlingUnit",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "HandlingUnit",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Case",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Case",
+        "entity_count": 37,
+        "sample_entity_ids": [
+          "mmdemo.case.customer.202607.001",
+          "mmdemo.case.customer.202607.002",
+          "mmdemo.case.customer.202607.003",
+          "mmdemo.case.customer.202607.004",
+          "mmdemo.case.customer.202607.005",
+          "mmdemo.case.customer.202607.006",
+          "mmdemo.case.customer.202607.007",
+          "mmdemo.case.customer.202607.008"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Assessment",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Assessment",
+        "entity_count": 8,
+        "sample_entity_ids": [
+          "mmdemo.strategy.objective.margin",
+          "mmdemo.strategy.objective.recurring",
+          "mmdemo.strategy.objective.delivery",
+          "mmdemo.strategy.capital.assembly_cell_2",
+          "mmdemo.strategy.capital.demo_van",
+          "mmdemo.strategy.radar.edge_ai",
+          "mmdemo.strategy.radar.lora",
+          "mmdemo.strategy.radar.private_5g"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "Reservation",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Reservation",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Entitlement",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Entitlement",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Contract",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Contract",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Plan",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Plan",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Filing",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Filing",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Measurement",
+      "family": "Universal/Business",
+      "coverage_status": "PROVEN",
+      "evidence": {
+        "entity_type": "Measurement",
+        "entity_count": 52,
+        "sample_entity_ids": [
+          "mmdemo.measurement.inventory.2026-06",
+          "mmdemo.measurement.inventory.202607",
+          "mmdemo.measurement.time.202607.001",
+          "mmdemo.measurement.time.202607.002",
+          "mmdemo.measurement.time.202607.003",
+          "mmdemo.measurement.time.202607.004",
+          "mmdemo.measurement.time.202607.005",
+          "mmdemo.measurement.time.202607.006"
+        ]
+      },
+      "note": "Direct typed mmdemo.* graph evidence exists."
+    },
+    {
+      "semantic_identity": "RuleSet",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "RuleSet",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "Message",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "Message",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    },
+    {
+      "semantic_identity": "FileResource",
+      "family": "Universal/Business",
+      "coverage_status": "NOT_EXERCISED",
+      "evidence": {
+        "entity_type": "FileResource",
+        "entity_count": 0,
+        "sample_entity_ids": []
+      },
+      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+    }
+  ]
+}
