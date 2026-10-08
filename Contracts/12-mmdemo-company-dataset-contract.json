@@ -1,6 +1,6 @@
 {
   "name": "MMDemo Company Dataset Contract",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "company": {
     "id": "mmdemo.company.mmdemo_industries",
     "display_name": "MMDemo Industries Oy",
@@ -124,5 +124,11 @@
     "strategyCurrentMemberIds": "PARTIALLY_RECOVERED_BY_DISPLAY_NAME; ID_SYNTAX_UNRESOLVED",
     "everydayCurrentMemberIds": "DISPLAY_NAMES_RECOVERED; ID_SYNTAX_UNRESOLVED",
     "mustNot": "promote a demo label, historical registry ID or surface name into a current canonical member identity"
+  },
+  "relationGraph": {
+    "source": "demo/mmdemo/data/relation-graph-q3-2026.json",
+    "contract": "16-mmdemo-relation-graph-contract.json",
+    "semantics": "synthetic explicit entity/relation graph over the same Q3 company data",
+    "requiredReconciliation": "demo/mmdemo/tests/reconcile.mjs"
   }
 }
