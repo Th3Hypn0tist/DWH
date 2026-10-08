@@ -1,6 +1,6 @@
 {
-  "package": "dwh-website-contracts",
-  "version": "0.7.0",
+  "package": "dwh-contracts",
+  "version": "0.8.0",
   "status": "active",
   "files": [
     "00-engine-contract.json",
@@ -16,6 +16,7 @@
     "10-metamodule-coverage-contract.json",
     "11-mmdemo-namespace-contract.json",
     "12-mmdemo-company-dataset-contract.json",
+    "13-metamodule-catalog-projection.json",
     "manifest.json"
   ]
 }
