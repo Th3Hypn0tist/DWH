@@ -1,6 +1,6 @@
 {
   "package": "dwh-website-contracts",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "status": "active",
   "files": [
     "00-engine-contract.json",
@@ -9,6 +9,8 @@
     "03-site-symbol-profile.json",
     "04-website-declaration-profile.json",
     "05-projector-symbol-profile.json",
+    "06-content-symbol-profile.json",
+    "07-action-symbol-profile.json",
     "manifest.json"
   ]
 }
