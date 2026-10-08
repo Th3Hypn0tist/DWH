@@ -1,6 +1,6 @@
 {
   "name": "DWH Projection API",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "implementationProfile": "PHP",
   "testPath": "/test/app/dwh/api/project.php",
   "productionPath": "/app/dwh/api/project.php",
@@ -53,6 +53,12 @@
   ],
   "implementedSymbols": [
     "#METAMODULE:CATALOG",
-    "#SITE"
-  ]
+    "#SITE",
+    "#CONTENT:<DOMAIN>:<ID>",
+    "#ACTION:<DOMAIN>:<ID>"
+  ],
+  "patternDispatch": {
+    "supported": true,
+    "rule": "exact symbols are checked before ordered dynamic symbol patterns; missing pattern match fails closed"
+  }
 }
