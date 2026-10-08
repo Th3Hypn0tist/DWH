@@ -207,3 +207,58 @@ DWH/
 12. Runtime implementation follows contracts; implementation structure does not redefine them.
 
 This repository starts deliberately with the website profile. The broader historical AIGMos DWH model can be added later without changing these responsibility boundaries.
+
+
+## MetaModule model
+
+DWH models MetaModules as canonical semantic compositions rather than application-specific runtimes.
+
+```text
+MetaModule
+├── stable identity
+├── explicit relations
+├── consumed Universals
+├── composition-specific schema/rules/operations where applicable
+├── ports
+└── optional Expose bindings
+```
+
+Placement such as Universal, Business, Strategy, Everyday, Studio or Administration does not create a new base type. The kind remains MetaModule.
+
+## Expose
+
+Expose is the binding surface for canonical ports.
+
+Examples include REST, WebSocket, HTTP, OSC, MCP, CLI, filesystem and local runtime. PHP, Python and JavaScript are implementation languages, not Expose types.
+
+A symbol may bind directly to a physical target. For example:
+
+```text
+#SITE
+  ↓
+filesystem Expose
+  ↓
+/home/www
+```
+
+The same semantic source may have multiple Expose bindings without creating duplicate authority.
+
+## Final coverage audit
+
+MetaModule completeness is reviewed in two separate gates.
+
+```text
+STRUCTURE COVERAGE
+  identity
+  relations
+  composition
+  ports
+  Expose bindings
+
+EVENT COVERAGE
+  reviewed separately
+  evidence-backed only
+  missing Event -> EVENT_REVIEW_REQUIRED
+```
+
+Missing Event evidence does not block structural modeling. Events are reviewed MetaModule by MetaModule and must not be invented merely to satisfy coverage.
