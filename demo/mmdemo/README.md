@@ -10,13 +10,38 @@ test deploy:     /test/mmdemo/
 production:      /mmdemo/ after explicit cutover
 ```
 
-The surface imports WebEngine relatively:
+## Runtime chain
+
+MMDemo is now a DWH-declared WebEngine surface:
 
 ```text
-../lib/webengine/webengine.js
+index.html
+  ↓
+WebEngine
+  ↓
+#SITE
+  ↓
+#WEB { path: /mmdemo/ }
+  ↓
+placement: MMDemo:browser
+  ↓
+#PROJECTOR:MMDemo:browser
+  ↓
+/app/mmdemo/renderers/browser.js
+  ↓
+#METAMODULE:CATALOG + mmdemo.* company data
 ```
 
-so the same files work under both root and `/test/` instance roots.
+Under the test instance root the physical files resolve as:
+
+```text
+/test/mmdemo/
+/test/app/dwh/
+/test/app/mmdemo/
+/test/lib/webengine/
+```
+
+The logical nanoCMS Page path remains `/mmdemo/`; `/test/` never becomes canonical Page identity.
 
 ## Data
 
@@ -32,6 +57,10 @@ Canonical MetaModule/Universal identities retain canonical identity. Display nam
 
 MMDemo is not semantic authority.
 
-The MetaModule catalog is resolved live through the PHP DWH projection API at `../app/dwh/api/project.php`. MMDemo does not carry a duplicate catalog fixture. WebEngine consumes the `#METAMODULE:CATALOG` envelope through the normal DWH adapter boundary.
+- `#WEB` is the canonical Expose.nanoCMS web-structure projection.
+- `#SITE` is derived from the same nanoCMSStructure source.
+- `#PROJECTOR:MMDemo:browser` declares the demo browser renderer binding.
+- `#METAMODULE:CATALOG` supplies the MetaModule browse/coverage projection.
+- `mmdemo.*` data is synthetic demo instance data only.
 
 BusinessSuite, Strategy and Everyday are grouping abstractions and are not Event owners. Actual member Composition MetaModules own Event review.
