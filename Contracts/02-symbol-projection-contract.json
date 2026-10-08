@@ -1,6 +1,6 @@
 {
   "name": "DWH Symbol Projection",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "symbolPattern": "^#[A-Z][A-Z0-9_:-]*$",
   "request": {
     "required": [
@@ -27,6 +27,13 @@
     "consumers must not depend on storage implementation details",
     "projection result shape is defined by the symbol profile",
     "identical canonical state and projection definition produce semantically identical output",
-    "serialization format does not become semantic authority"
-  ]
+    "serialization format does not become semantic authority",
+    "a projection may describe site hierarchy, content bindings, projector bindings, renderer bindings, routes, composition or actions",
+    "projection consumption does not transfer canonical ownership to WebEngine"
+  ],
+  "consumerBoundary": {
+    "producer": "DWH",
+    "consumer": "WebEngine",
+    "rule": "WebEngine addresses semantic symbols and never storage tables, PHP classes or physical paths"
+  }
 }
