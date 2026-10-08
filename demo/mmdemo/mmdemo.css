@@ -181,3 +181,57 @@ th { color: #aaa; font-weight: 600; }
   .demo-nav { position: static; }
   .we-main { padding: .8rem; }
 }
+
+
+.graph-browser {
+  margin-top: 1rem;
+}
+.graph-browser label {
+  display: block;
+}
+.graph-select {
+  width: 100%;
+  margin-top: .35rem;
+  padding: .6rem .7rem;
+  border: 1px solid #3a3a3a;
+  border-radius: .35rem;
+  background: #111;
+  color: #eee;
+}
+.graph-details {
+  margin-top: .8rem;
+}
+.graph-entity {
+  border: 1px solid #333;
+  border-radius: .5rem;
+  padding: .9rem;
+  background: #141414;
+}
+.graph-data {
+  max-height: 260px;
+  overflow: auto;
+  padding: .7rem;
+  background: #101010;
+  border: 1px solid #2d2d2d;
+  border-radius: .35rem;
+}
+.graph-relations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: .8rem;
+}
+.graph-link {
+  display: block;
+  width: 100%;
+  margin: .25rem 0;
+  padding: .45rem .55rem;
+  text-align: left;
+  border: 1px solid #333;
+  border-radius: .35rem;
+  background: #181818;
+  color: #ddd;
+  cursor: pointer;
+}
+.graph-link:hover {
+  background: #222;
+}
