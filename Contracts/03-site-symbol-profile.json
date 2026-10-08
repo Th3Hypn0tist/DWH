@@ -1,8 +1,8 @@
 {
   "name": "DWH #SITE Projection Profile",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "symbol": "#SITE",
-  "consumer": "WebEngine",
+  "consumer": "WebEngine via generic DWH projection API",
   "purpose": "provide the canonical public-site hierarchy projection from DWH website relations for WebEngine runtime execution",
   "outputNodeShape": [
     "id",
@@ -29,6 +29,15 @@
     "JSON may be used as transport serialization without becoming identity",
     "WebEngine validates received projection before runtime use",
     "WebEngine may derive runtime projections but must not author a competing hierarchy",
-    "WebEngine must not infer DWH relations or query DWH storage internals"
-  ]
+    "WebEngine must not infer DWH relations or query DWH storage internals",
+    "#SITE is resolved through the same ProjectionEngine as other DWH symbols",
+    "physical deployment prefix such as /test is not embedded into logical SiteTree paths"
+  ],
+  "implementation": {
+    "phpProjector": "SiteProjector",
+    "endpoint": "/app/dwh/api/project.php",
+    "testEndpoint": "/test/app/dwh/api/project.php",
+    "sourceAdapter": "JsonDocumentSource -> php/data/site-tree.json",
+    "sourceAdapterRule": "JSON is the first storage adapter and not canonical #SITE authority"
+  }
 }
