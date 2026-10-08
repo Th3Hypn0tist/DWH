@@ -1,16 +1,18 @@
 {
-  "name": "DWH Website Declaration Profile",
-  "version": "0.1.0",
-  "kind": "canonical declarative website authority profile",
-  "owns": {
-    "siteHierarchy": "public hierarchy entities, parent/child relations, path declarations and ordering",
-    "content": "content identity, declarative content data and content placement/binding relations",
-    "projectors": "projector identity, declarative projector configuration, variant relations and projector placement",
+  "name": "DWH Website Projection Profile",
+  "version": "0.2.0",
+  "kind": "website-focused projection profile over canonical DWH entities/relations",
+  "sourceAuthority": "DWH canonical relational/MetaModule graph",
+  "projectionConcerns": {
+    "siteHierarchy": "public hierarchy, parent/child relations, path declarations and ordering",
+    "content": "content identity/declaration and content placement/binding relations",
+    "projectors": "projector identity, declarative configuration, variant relations and placement",
     "rendererBindings": "binding from projected presentation identity to executable renderer identity/path",
     "routes": "public route declarations and route-to-page/resource relations",
     "composition": "page/section graph, ordering and placement relations",
-    "actions": "action identity, label/presentation metadata, domain action reference and placement relations"
+    "actions": "action presentation identity/metadata, domain action reference and placement relations"
   },
+  "authorityRule": "website projection concerns are views/bindings over canonical DWH truth; this profile does not create a parallel website-specific semantic authority",
   "doesNotOwn": {
     "rendererExecution": "WebEngine",
     "browserCompositionLifecycle": "WebEngine",
@@ -18,14 +20,15 @@
     "authorizationDecision": "AccessCore",
     "genericUiPrimitives": "WebGUI",
     "spatial3dPrimitives": "S3D",
-    "domainBusinessExecution": "owning domain service"
+    "domainBusinessExecution": "owning domain/runtime service"
   },
-  "projectionRule": "WebEngine receives deterministic projections of these declarations and does not become their canonical authority",
+  "projectionRule": "WebEngine receives deterministic projections and does not become canonical authority",
   "relationRules": [
     "every semantic relation is explicit",
     "relation identity is defined by a canonical contract rather than inferred from field names or physical layout",
     "ordering is declarative relation/projection data and does not change entity identity",
     "a missing required relation fails visibly rather than invoking heuristic fallback",
-    "runtime state created by WebEngine, WebGUI or S3D does not mutate canonical declaration authority unless an explicit governed write path is invoked"
+    "runtime state created by WebEngine, WebGUI or S3D does not mutate canonical authority unless an explicit governed write path is invoked",
+    "website labels, routes and file paths do not establish MetaModule identity"
   ]
 }
