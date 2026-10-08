@@ -1,0 +1,79 @@
+{
+  "name": "DWH MetaModule Catalog Projection",
+  "version": "0.1.0",
+  "symbol": "#METAMODULE:CATALOG",
+  "purpose": "provide one deterministic browse/coverage projection for Universal families, Composition groupings, actual MetaModules, and unresolved membership/identity gaps without promoting projections into semantic authority",
+  "sourceAuthority": "canonical DWH/AIGMos semantic definitions and explicit registry evidence",
+  "consumerExamples": [
+    "/mmdemo browser",
+    "WebEngine",
+    "AIGMos tooling"
+  ],
+  "output": {
+    "required": [
+      "families",
+      "groups",
+      "members",
+      "gaps"
+    ],
+    "familyShape": [
+      "id",
+      "label",
+      "kind",
+      "status",
+      "members"
+    ],
+    "groupShape": [
+      "id",
+      "label",
+      "kind",
+      "status",
+      "member_count",
+      "members"
+    ],
+    "memberShape": [
+      "semantic_identity",
+      "display_name",
+      "kind",
+      "placement",
+      "identity_status",
+      "structure_status",
+      "event_status"
+    ],
+    "gapShape": [
+      "id",
+      "severity",
+      "status",
+      "known",
+      "unknown",
+      "rule"
+    ]
+  },
+  "identityStatuses": [
+    "CANONICAL_CONFIRMED",
+    "CANONICAL_VERIFY_LATEST",
+    "DISPLAY_NAME_ONLY",
+    "UNRESOLVED"
+  ],
+  "structureStatuses": [
+    "STRUCTURE_PROVEN",
+    "STRUCTURE_PARTIAL",
+    "STRUCTURE_UNRESOLVED"
+  ],
+  "eventStatuses": [
+    "EVENTS_PROVEN",
+    "EVENT_REVIEW_REQUIRED",
+    "EVENT_CONFLICT",
+    "NOT_EVENT_OWNER"
+  ],
+  "rules": [
+    "BusinessSuite, Strategy and Everyday are grouping abstractions in the current grouping model and are NOT_EVENT_OWNER",
+    "actual member Composition MetaModules own their own semantics and Event review",
+    "display labels never become canonical IDs by projection",
+    "historical DOMAIN::*/SUITE::* identifiers must not be revived as current identities without explicit evidence",
+    "no new BUSINESS::, STRATEGY:: or EVERYDAY:: namespace may be invented",
+    "unresolved members remain explicit gaps",
+    "catalog projection is rebuildable and does not become a second canonical registry",
+    "mmdemo.* synthetic records may reference catalog entries but may not become canonical evidence"
+  ]
+}
