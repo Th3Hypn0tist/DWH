@@ -1,6 +1,6 @@
 {
   "name": "DWH Projector Projection Profile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "symbolGrammar": "#PROJECTOR:<DOMAIN>:<PROJECTOR>[:VARIANT...]",
   "consumer": "WebEngine",
   "purpose": "provide one effective declarative projector projection and its explicit renderer binding",
@@ -32,6 +32,15 @@
     "renderer binding must be explicit in the DWH projection",
     "projection contains declarative data only",
     "DWH resolves variant inheritance/deltas before returning the effective projection",
-    "missing projector or renderer binding fails visibly with no WebEngine fallback"
-  ]
+    "missing projector or renderer binding fails visibly with no WebEngine fallback",
+    "dynamic #PROJECTOR symbols resolve through ProjectionEngine pattern dispatch",
+    "PHP projector validates explicit same-domain renderer binding before returning the projection"
+  ],
+  "implementation": {
+    "phpProjector": "ProjectorProjector",
+    "symbolPattern": "dynamic pattern registered in ProjectionEngine",
+    "endpoint": "/app/dwh/api/project.php",
+    "sourceAdapter": "JsonDocumentSource -> php/data/projectors.json",
+    "sourceAdapterRule": "source map stores effective resolved projector projections; storage layout does not define canonical projector identity"
+  }
 }
