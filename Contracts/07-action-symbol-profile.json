@@ -1,0 +1,41 @@
+{
+  "name": "DWH Action Projection Profile",
+  "version": "0.1.0",
+  "symbolGrammar": "#ACTION:<DOMAIN>:<ID>",
+  "consumer": "WebEngine",
+  "purpose": "provide one canonical action declaration for runtime control binding",
+  "data": {
+    "required": [
+      "id",
+      "label",
+      "action"
+    ],
+    "id": "canonical action presentation identity within domain",
+    "label": "canonical action presentation label/metadata",
+    "action": "domain action reference using DOMAIN:ACTION"
+  },
+  "authority": {
+    "DWH": [
+      "action identity",
+      "label/metadata",
+      "domain action reference",
+      "action placement relations"
+    ],
+    "WebEngine": [
+      "record validation",
+      "control binding",
+      "external executor invocation orchestration"
+    ],
+    "AccessCore": [
+      "authorization decision when required"
+    ],
+    "domain": "business execution"
+  },
+  "rules": [
+    "symbol domain/id identifies the declaration",
+    "returned action reference domain must match the requested symbol domain",
+    "WebEngine must not implement domain business behavior",
+    "UI state does not grant authorization",
+    "missing action declaration fails visibly without fallback"
+  ]
+}
