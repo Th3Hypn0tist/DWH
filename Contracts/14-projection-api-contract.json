@@ -1,6 +1,6 @@
 {
   "name": "DWH Projection API",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "implementationProfile": "PHP",
   "testPath": "/test/app/dwh/api/project.php",
   "productionPath": "/app/dwh/api/project.php",
@@ -49,6 +49,10 @@
     "resolution does not imply authorization",
     "source adapter is replaceable without changing projection envelope",
     "MMDemo consumes the same API through WebEngine createDwhAdapter()",
-    "#METAMODULE:CATALOG is the first implemented PHP projection"
+    "#METAMODULE:CATALOG and #SITE are implemented through the same PHP ProjectionEngine"
+  ],
+  "implementedSymbols": [
+    "#METAMODULE:CATALOG",
+    "#SITE"
   ]
 }
