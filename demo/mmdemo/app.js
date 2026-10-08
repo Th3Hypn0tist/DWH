@@ -33,17 +33,25 @@ async function fetchJson(path) {
 }
 
 const catalogAdapter = createDwhAdapter({
-  async project(symbol) {
+  async project(symbol, context) {
     if (symbol !== METAMODULE_CATALOG_SYMBOL) {
-      throw new Error(`MMDemo fixture adapter does not expose ${symbol}`);
+      throw new Error(`MMDemo does not request unsupported DWH symbol ${symbol}`);
     }
-    const data = await fetchJson('./data/metamodule-catalog.json');
-    return {
-      symbol,
-      data,
-      revision: data.dataset ?? 'mmdemo.catalog',
-      generated_at: '2026-10-08',
-    };
+
+    const response = await fetch('../app/dwh/api/project.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      cache: 'no-store',
+      body: JSON.stringify({ symbol, context }),
+    });
+
+    const payload = await response.json().catch(() => null);
+
+    if (!response.ok) {
+      throw new Error(`DWH projection failed: HTTP ${response.status} ${payload?.error ?? 'unknown_error'}`);
+    }
+
+    return payload;
   },
 });
 
