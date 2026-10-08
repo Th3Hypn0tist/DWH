@@ -1,6 +1,6 @@
 {
   "name": "DWH #SITE Projection Profile",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "symbol": "#SITE",
   "consumer": "WebEngine via generic DWH projection API",
   "purpose": "provide the canonical public-site hierarchy projection from DWH website relations for WebEngine runtime execution",
@@ -31,7 +31,8 @@
     "WebEngine may derive runtime projections but must not author a competing hierarchy",
     "WebEngine must not infer DWH relations or query DWH storage internals",
     "#SITE is resolved through the same ProjectionEngine as other DWH symbols",
-    "physical deployment prefix such as /test is not embedded into logical SiteTree paths"
+    "physical deployment prefix such as /test is not embedded into logical SiteTree paths",
+    "#SITE does not own a separate hierarchy source beside nanoCMSStructure"
   ],
   "implementation": {
     "phpProjector": "SiteProjector",
@@ -39,5 +40,10 @@
     "testEndpoint": "/test/app/dwh/api/project.php",
     "sourceAdapter": "JsonDocumentSource -> php/data/site-tree.json",
     "sourceAdapterRule": "JSON is the first storage adapter and not canonical #SITE authority"
+  },
+  "source": {
+    "canonical": "nanoCMSStructure recursive Page + placements",
+    "adapter": "NanoCmsStructureSource -> php/data/web-structure.json",
+    "relation": "#SITE is derived from the same structure used by #WEB"
   }
 }
