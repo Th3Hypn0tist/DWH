@@ -1,0 +1,39 @@
+{
+  "name": "DWH Content Projection Profile",
+  "version": "0.1.0",
+  "symbolGrammar": "#CONTENT:<DOMAIN>:<ID>",
+  "consumer": "WebEngine",
+  "purpose": "provide one canonical content declaration for WebEngine runtime provider resolution",
+  "data": {
+    "required": [
+      "id",
+      "domain",
+      "type",
+      "provider",
+      "content"
+    ],
+    "id": "canonical content id within domain",
+    "domain": "canonical content domain",
+    "type": "presentation semantic type",
+    "provider": "runtime provider namespace",
+    "content": "inline payload or provider-relative resource identity"
+  },
+  "authority": {
+    "DWH": [
+      "content identity",
+      "content declaration",
+      "content relations and placement"
+    ],
+    "WebEngine": [
+      "record validation",
+      "provider adapter execution",
+      "safe presentation descriptor normalization"
+    ]
+  },
+  "rules": [
+    "symbol domain/id must match returned record identity",
+    "WebEngine must not invent fallback canonical content",
+    "provider execution does not transfer content authority to WebEngine",
+    "content placement relations are DWH authority and are not encoded into the content record"
+  ]
+}
