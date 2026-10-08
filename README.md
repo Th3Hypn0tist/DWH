@@ -152,7 +152,7 @@ A projection is derived and rebuildable. Projection output does not become a sec
 
 ## PHP implementation
 
-This repository contains the PHP implementation of the website DWH profile.
+This repository contains the PHP implementation of DWH contracts, initially serving the website and MetaModule catalog profiles.
 
 Canonical direction:
 
@@ -174,7 +174,7 @@ reverse-engineered semantics
 
 PHP, MariaDB/MySQL, files or another backend are implementation details. They do not define DWH semantic identity.
 
-The first PHP implementation is expected to provide entity storage, relation storage, a symbol registry, projection registry, relation resolver, `#SITE` projector and a consumer/API binding. Storage details remain private behind that interface.
+The PHP implementation provides a generic projection engine and consumer/API binding. `#METAMODULE:CATALOG` is the first live projector; `#SITE` and the remaining website projectors follow the same boundary. Storage details remain private behind source adapters.
 
 ## Repository layout
 
@@ -297,8 +297,10 @@ explicit unresolved gaps
 
 The projection must preserve unresolved identity state. Display labels, historical registry IDs and demo names never become canonical IDs by being rendered.
 
-The current demo projection seed is:
+The current PHP source adapter document is:
 
 ```text
-demo/mmdemo/data/metamodule-catalog.json
+php/data/metamodule-catalog.json
 ```
+
+MMDemo consumes this only through the DWH projection API; it carries no duplicate catalog fixture.
