@@ -1,6 +1,6 @@
 # DWH PHP runtime
 
-PHP implementation of the DWH website profile.
+PHP implementation of DWH contracts, initially serving the AIGM.fi website and MetaModule demo/catalog profiles.
 
 The PHP runtime implements canonical DWH contracts. PHP class structure, SQL schema and persistence backend are implementation details and must not redefine DWH semantics.
 
@@ -17,7 +17,7 @@ symbol + projection resolution
 WebEngine consumer boundary
 ```
 
-The initial implementation must support the declarative website model owned by DWH:
+The initial implementation must support the generic relational/projection model plus the website and MetaModule profiles:
 
 ```text
 site hierarchy
@@ -41,6 +41,7 @@ ProjectionRegistry
 RelationResolver
 ProjectionEngine
 SiteProjector (#SITE)
+MetaModuleCatalogProjector (#METAMODULE:CATALOG)
 consumer/API binding
 ```
 
