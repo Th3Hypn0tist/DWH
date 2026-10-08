@@ -1,0 +1,37 @@
+{
+  "name": "MMDemo Namespace Contract",
+  "version": "0.1.0",
+  "namespace": "mmdemo.",
+  "purpose": "isolate all synthetic/demo-created data used by the /mmdemo browser from canonical AIGMos semantic identities and production data",
+  "idPattern": "^mmdemo\\.[A-Za-z0-9][A-Za-z0-9._:-]*$",
+  "appliesTo": [
+    "demo entity instances",
+    "demo relation identities",
+    "demo port identities",
+    "demo Expose binding identities",
+    "demo projects/orders/messages/files/measurements and other generated instance data",
+    "demo-only page/surface state where persisted"
+  ],
+  "doesNotApplyTo": [
+    "canonical MetaModule identities",
+    "canonical Universal identities",
+    "canonical relation type identities",
+    "canonical symbol profile identities",
+    "real production/user data"
+  ],
+  "rules": [
+    "synthetic data created specifically for /mmdemo MUST use the mmdemo. prefix",
+    "canonical definitions referenced by the demo retain their canonical identities",
+    "mmdemo data MUST NOT become canonical source evidence",
+    "mmdemo data MUST NOT be returned by production projections unless an explicit demo context requests it",
+    "deleting all mmdemo.* data MUST NOT damage canonical definitions",
+    "demo fixtures may be regenerated without changing canonical semantic identity",
+    "authorization and validation rules still apply to demo execution paths"
+  ],
+  "example": {
+    "canonicalMetaModule": "Strategy:InvestmentCommittee",
+    "demoInstance": "mmdemo.strategy.investment_committee.case_001",
+    "demoPort": "mmdemo.port.investment_committee.review",
+    "demoExpose": "mmdemo.expose.investment_committee.rest"
+  }
+}
