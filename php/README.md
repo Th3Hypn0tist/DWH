@@ -62,3 +62,41 @@ Resolution does not imply authorization.
 ## Implementation rule
 
 Build code from the contracts, not contracts from the database schema.
+
+
+## Implemented projection path
+
+```text
+POST api/project.php
+  { "symbol": "#METAMODULE:CATALOG", "context": { ... } }
+        ↓
+ProjectionEngine
+        ↓
+MetaModuleCatalogProjector
+        ↓
+JsonDocumentSource
+        ↓
+data/metamodule-catalog.json
+```
+
+The JSON source is the first storage adapter, not semantic identity. Replacing it with MariaDB or another canonical source must not change the symbol or projection envelope.
+
+Test deployment:
+
+```text
+/test/app/dwh/api/project.php
+```
+
+Production target after explicit cutover:
+
+```text
+/app/dwh/api/project.php
+```
+
+## Tests
+
+```text
+php tests/projection_test.php
+```
+
+The test covers exact symbol resolution, SHA-256 revision generation, required catalog structure, group Event non-ownership, missing projection failure, duplicate registration rejection and invalid symbol rejection.
