@@ -1,6 +1,6 @@
 {
   "name": "DWH Symbol Projection",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "symbolPattern": "^#[A-Za-z][A-Za-z0-9_:-]*$",
   "request": {
     "required": [
@@ -22,19 +22,23 @@
     ]
   },
   "rules": [
-    "a symbol identifies a canonical projection contract",
+    "a symbol identifies an explicitly contracted semantic projection",
     "a symbol does not identify a physical file or database table",
     "consumers must not depend on storage implementation details",
     "projection result shape is defined by the symbol profile",
     "identical canonical state and projection definition produce semantically identical output",
     "serialization format does not become semantic authority",
-    "a projection may describe site hierarchy, content bindings, projector bindings, renderer bindings, routes, composition or actions",
-    "projection consumption does not transfer canonical ownership to WebEngine",
+    "a projection may describe site hierarchy, content, projectors, actions, MetaModule catalog/coverage or another explicitly contracted view",
+    "projection consumption does not transfer canonical ownership to the consumer",
     "symbol identity is case-sensitive unless a specific symbol profile defines normalization"
   ],
   "consumerBoundary": {
     "producer": "DWH",
-    "consumer": "WebEngine",
-    "rule": "WebEngine addresses semantic symbols and never storage tables, PHP classes or physical paths"
+    "consumers": [
+      "WebEngine",
+      "AIGMos/Expose implementations",
+      "other explicitly contracted consumers"
+    ],
+    "rule": "consumers address semantic symbols and never DWH storage tables, implementation classes or physical persistence layout"
   }
 }
