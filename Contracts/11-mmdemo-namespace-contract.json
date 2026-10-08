@@ -1,6 +1,6 @@
 {
   "name": "MMDemo Namespace Contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "namespace": "mmdemo.",
   "purpose": "isolate all synthetic/demo-created data used by the /mmdemo browser from canonical AIGMos semantic identities and production data",
   "idPattern": "^mmdemo\\.[A-Za-z0-9][A-Za-z0-9._:-]*$",
@@ -26,12 +26,13 @@
     "mmdemo data MUST NOT be returned by production projections unless an explicit demo context requests it",
     "deleting all mmdemo.* data MUST NOT damage canonical definitions",
     "demo fixtures may be regenerated without changing canonical semantic identity",
-    "authorization and validation rules still apply to demo execution paths"
+    "authorization and validation rules still apply to demo execution paths",
+    "unresolved Strategy/Everyday/BusinessSuite display names MUST NOT be encoded as guessed canonical IDs in demo fixtures"
   ],
   "example": {
-    "canonicalMetaModule": "Strategy:InvestmentCommittee",
-    "demoInstance": "mmdemo.strategy.investment_committee.case_001",
-    "demoPort": "mmdemo.port.investment_committee.review",
-    "demoExpose": "mmdemo.expose.investment_committee.rest"
+    "canonicalSemanticIdentity": "Order",
+    "demoInstance": "mmdemo.order.sales.example_001",
+    "demoPort": "mmdemo.port.order.read",
+    "demoExpose": "mmdemo.expose.order.rest"
   }
 }
