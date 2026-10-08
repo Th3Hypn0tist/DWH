@@ -10,6 +10,8 @@ use AIGM\DWH\SiteProjector;
 use AIGM\DWH\ContentProjector;
 use AIGM\DWH\ActionProjector;
 use AIGM\DWH\ProjectorProjector;
+use AIGM\DWH\NanoCmsStructureSource;
+use AIGM\DWH\WebProjector;
 
 require_once __DIR__ . '/../src/ProjectionException.php';
 require_once __DIR__ . '/../src/ProjectionNotFoundException.php';
@@ -20,6 +22,8 @@ require_once __DIR__ . '/../src/SiteProjector.php';
 require_once __DIR__ . '/../src/ContentProjector.php';
 require_once __DIR__ . '/../src/ActionProjector.php';
 require_once __DIR__ . '/../src/ProjectorProjector.php';
+require_once __DIR__ . '/../src/NanoCmsStructureSource.php';
+require_once __DIR__ . '/../src/WebProjector.php';
 
 function expect(bool $condition, string $message): void
 {
@@ -39,13 +43,22 @@ $engine->register(
     static fn(array $context): array => $projector->project($context)
 );
 
-$siteProjector = new SiteProjector(
-    new JsonDocumentSource(__DIR__ . '/../data/site-tree.json')
+$nanoCms = new NanoCmsStructureSource(
+    new JsonDocumentSource(__DIR__ . '/../data/web-structure.json')
 );
+
+$siteProjector = new SiteProjector($nanoCms);
 
 $engine->register(
     SiteProjector::SYMBOL,
     static fn(array $context): array => $siteProjector->project($context)
+);
+
+$webProjector = new WebProjector($nanoCms);
+
+$engine->register(
+    WebProjector::SYMBOL,
+    static fn(array $context): array => $webProjector->project($context)
 );
 
 $resolved = $engine->project('#METAMODULE:CATALOG', ['surface' => 'test']);
@@ -80,6 +93,18 @@ $walk($site['data']);
 expect(in_array('/iam/', $sitePaths, true), '#SITE missing /iam/');
 expect(in_array('/lmts/', $sitePaths, true), '#SITE missing /lmts/');
 expect(in_array('/mmdemo/', $sitePaths, true), '#SITE missing /mmdemo/');
+
+$web = $engine->project('#WEB', ['path' => '/mmdemo/']);
+expect($web['symbol'] === '#WEB', '#WEB symbol mismatch');
+expect(($web['data']['page']['id'] ?? null) === 'mmdemo', '#WEB Page mismatch');
+expect(($web['data']['placements'][0]['ref'] ?? null) === 'MMDemo:browser', '#WEB placement mismatch');
+expect(($web['data']['placements'][0]['order'] ?? null) === 10, '#WEB placement order mismatch');
+
+try {
+    $engine->project('#WEB', ['path' => '/missing/']);
+    throw new RuntimeException('missing #WEB Page did not fail');
+} catch (ProjectionNotFoundException) {
+}
 
 try {
     $engine->project('#DOES:NOT:EXIST');
