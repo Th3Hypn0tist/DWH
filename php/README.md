@@ -1,19 +1,63 @@
-# PHP runtime
+# DWH PHP runtime
 
-The PHP runtime implements the DWH website contracts.
+PHP implementation of the DWH website profile.
 
-Initial boundary:
+The PHP runtime implements canonical DWH contracts. PHP class structure, SQL schema and persistence backend are implementation details and must not redefine DWH semantics.
+
+## Responsibility
 
 ```text
-canonical entity/relation storage
-        ↓
-relation resolver
-        ↓
-symbol projection registry
-        ↓
-#SITE projector
-        ↓
-consumer adapter / serialized response
+DWH contracts
+      ↓
+PHP runtime
+      ↓
+entity/relation persistence
+symbol + projection resolution
+      ↓
+WebEngine consumer boundary
 ```
 
-The PHP class layout, persistence backend and HTTP binding are implementation details. They must implement the symbol/projection contracts without exposing storage layout as public semantics.
+The initial implementation must support the declarative website model owned by DWH:
+
+```text
+site hierarchy
+content identity and relations
+projector declarations/bindings
+renderer bindings
+route declarations
+composition graph
+action declarations
+ordering
+symbols/projections
+```
+
+## Initial runtime components
+
+```text
+EntityRepository
+RelationRepository
+SymbolRegistry
+ProjectionRegistry
+RelationResolver
+ProjectionEngine
+SiteProjector (#SITE)
+consumer/API binding
+```
+
+Names above describe implementation roles, not locked PHP class names.
+
+## Boundary
+
+WebEngine requests semantic projections. It must not query DWH tables directly.
+
+```text
+WebEngine -> project(symbol, context) -> DWH PHP -> projection envelope
+```
+
+DWH PHP does not authenticate users, own AccessCore policy, execute renderer modules, build DOM, run S3D scenes or execute domain business behavior.
+
+Resolution does not imply authorization.
+
+## Implementation rule
+
+Build code from the contracts, not contracts from the database schema.
