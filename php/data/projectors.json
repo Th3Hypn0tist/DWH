@@ -1,1 +1,10 @@
-{}
+{
+  "#PROJECTOR:MMDemo:browser": {
+    "renderer": "/app/mmdemo/renderers/browser.js",
+    "projection": {
+      "companyData": "/mmdemo/data/company-q3-2026.json",
+      "catalogSymbol": "#METAMODULE:CATALOG",
+      "surface": "mmdemo"
+    }
+  }
+}
