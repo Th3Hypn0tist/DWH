@@ -1,0 +1,12 @@
+{
+  "package": "dwh-website-contracts",
+  "version": "0.1.0",
+  "status": "active",
+  "files": [
+    "00-engine-contract.json",
+    "01-relation-model-contract.json",
+    "02-symbol-projection-contract.json",
+    "03-site-symbol-profile.json",
+    "manifest.json"
+  ]
+}
