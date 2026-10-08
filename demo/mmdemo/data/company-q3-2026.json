@@ -388,8 +388,9 @@
     "payment": {
       "id": "mmdemo.payment.in.2026.0907",
       "invoice_ref": "mmdemo.invoice.sales.2026.0834",
-      "amount": 52228.8,
-      "status": "settled"
+      "amount": 52860.6,
+      "status": "settled",
+      "vat_note": "demo gross payment uses 25.5% Finnish standard VAT over the 42120 EUR net invoice"
     }
   },
   "sampleSupplyFlow": {
