@@ -1,6 +1,6 @@
 {
   "name": "DWH Projection API",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "implementationProfile": "PHP",
   "testPath": "/test/app/dwh/api/project.php",
   "productionPath": "/app/dwh/api/project.php",
@@ -54,6 +54,7 @@
   "implementedSymbols": [
     "#METAMODULE:CATALOG",
     "#SITE",
+    "#PROJECTOR:<DOMAIN>:<PROJECTOR>[:VARIANT...]",
     "#CONTENT:<DOMAIN>:<ID>",
     "#ACTION:<DOMAIN>:<ID>"
   ],
