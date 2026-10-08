@@ -1,0 +1,69 @@
+{
+  "name": "DWH MetaModule Contract",
+  "version": "0.1.0",
+  "kind": "language-neutral semantic composition model",
+  "purpose": "define MetaModule as one canonical semantic kind composable from reusable semantics without creating application-specific runtimes",
+  "identity": {
+    "rule": "every machine-significant MetaModule has one stable canonical identity",
+    "independentOf": [
+      "file path",
+      "database row",
+      "display name",
+      "placement",
+      "implementation language",
+      "Expose surface"
+    ],
+    "oneActiveDefinition": true
+  },
+  "classification": {
+    "kind": "MetaModule",
+    "placementExamples": [
+      "Universal/Business",
+      "Universal/Platform",
+      "Universal/GUI",
+      "Composition/Business",
+      "Composition/Strategy",
+      "Composition/Everyday",
+      "Studio",
+      "Administration"
+    ],
+    "rule": "placement answers where the MetaModule belongs; placement does not create a new base type"
+  },
+  "composition": {
+    "mayOwn": [
+      "composition-specific schema",
+      "relations",
+      "roles",
+      "rules",
+      "operations",
+      "flows",
+      "ports"
+    ],
+    "mustNot": [
+      "redefine consumed Universal semantics",
+      "duplicate shared runtime mechanisms",
+      "create a separate runtime solely because the business/domain label differs"
+    ],
+    "rule": "new applications are formed by composition over shared semantic primitives"
+  },
+  "dwhRole": [
+    "store/resolve canonical MetaModule identity and relations",
+    "resolve membership and composition relations",
+    "resolve port and Expose bindings",
+    "project MetaModule views without creating duplicate authority"
+  ],
+  "eventCoverage": {
+    "requiredForFinalCoverageReview": true,
+    "separateFromStructuralCoverage": true,
+    "missingEvidenceStatus": "EVENT_REVIEW_REQUIRED",
+    "rule": "missing Event evidence does not invalidate an otherwise structurally representable MetaModule; Events are reviewed separately and must never be invented to fill coverage"
+  },
+  "invariants": [
+    "MetaModule is semantic composition, not a runtime implementation",
+    "Universal semantics remain owned by their Universal definitions",
+    "Composition may add domain-specific relations/rules/operations without redefining consumed Universals",
+    "same canonical MetaModule may have multiple projections and Expose surfaces",
+    "Expose presence does not create a second MetaModule identity",
+    "implementation language does not change semantic identity"
+  ]
+}
