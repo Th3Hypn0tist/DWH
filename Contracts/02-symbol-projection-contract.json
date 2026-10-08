@@ -1,0 +1,32 @@
+{
+  "name": "DWH Symbol Projection",
+  "version": "0.1.0",
+  "symbolPattern": "^#[A-Z][A-Z0-9_:-]*$",
+  "request": {
+    "required": [
+      "symbol"
+    ],
+    "optional": [
+      "context",
+      "parameters"
+    ]
+  },
+  "response": {
+    "required": [
+      "symbol",
+      "data"
+    ],
+    "optional": [
+      "revision",
+      "generated_at"
+    ]
+  },
+  "rules": [
+    "a symbol identifies a canonical projection contract",
+    "a symbol does not identify a physical file or database table",
+    "consumers must not depend on storage implementation details",
+    "projection result shape is defined by the symbol profile",
+    "identical canonical state and projection definition produce semantically identical output",
+    "serialization format does not become semantic authority"
+  ]
+}
