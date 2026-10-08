@@ -185,6 +185,7 @@ DWH/
 │   ├── 01-relation-model-contract.json
 │   ├── 02-symbol-projection-contract.json
 │   ├── 03-site-symbol-profile.json
+│   ├── 04-website-declaration-profile.json
 │   └── manifest.json
 ├── php/
 └── README.md
