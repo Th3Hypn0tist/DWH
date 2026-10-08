@@ -224,5 +224,6 @@
       "unknown": "which actual member MetaModules still lack reviewed Events",
       "rule": "review separately; do not invent Events"
     }
-  ]
+  ],
+  "members": []
 }
