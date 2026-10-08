@@ -1,0 +1,75 @@
+{
+  "name": "DWH #WEB nanoCMS Projection Profile",
+  "version": "0.1.0",
+  "symbol": "#WEB",
+  "canonicalNamespaceOwner": "Expose.nanoCMS",
+  "semanticSource": "nanoCMSStructure recursive Page + placements",
+  "purpose": "resolve one context-specific human/web Page projection from canonical nanoCMS structure without creating a parallel Page/Site/Menu/Navigation authority",
+  "request": {
+    "symbol": "#WEB",
+    "context": {
+      "required": [
+        "path"
+      ],
+      "path": "logical public path without deployment prefix"
+    }
+  },
+  "output": {
+    "required": [
+      "page",
+      "children",
+      "placements"
+    ],
+    "page": [
+      "id",
+      "title",
+      "menuitem",
+      "description"
+    ],
+    "children": "ordered resolved PageReference projection",
+    "placements": "ordered visible placement declarations"
+  },
+  "currentPlacementProfile": {
+    "supportedKinds": [
+      "projector"
+    ],
+    "projector": {
+      "fields": [
+        "id",
+        "kind",
+        "order",
+        "ref",
+        "title"
+      ],
+      "ref": "canonical WebEngine projector id DOMAIN:PROJECTOR[:VARIANT...]"
+    },
+    "rule": "additional placement kinds require explicit contract extension; they are not inferred"
+  },
+  "authority": {
+    "nanoCMSStructure": [
+      "recursive Page structure",
+      "Page metadata",
+      "children(context)",
+      "placement/order/context projection"
+    ],
+    "DWH": [
+      "canonical relational storage/projection of nanoCMS structure",
+      "#WEB resolution"
+    ],
+    "WebEngine": [
+      "projection validation",
+      "runtime shell/composition execution",
+      "projector resolution/mount lifecycle"
+    ]
+  },
+  "rules": [
+    "#WEB is the canonical nanoCMS web-structure namespace root",
+    "no #PAGE namespace is introduced",
+    "#SITE is a derived SiteTree/navigation projection from the same nanoCMS structure source",
+    "physical instance roots such as /test are removed before #WEB resolution",
+    "Page placement does not transfer semantic ownership of the placed MetaModule/projector",
+    "missing route/page fails closed",
+    "authorization remains AccessCore authority",
+    "new Site/Section/Folder/Menu/Navigation/Tree authority is forbidden when recursive Page already expresses the structure"
+  ]
+}
