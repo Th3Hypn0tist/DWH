@@ -8,6 +8,8 @@ use AIGM\DWH\SiteProjector;
 use AIGM\DWH\ContentProjector;
 use AIGM\DWH\ActionProjector;
 use AIGM\DWH\ProjectorProjector;
+use AIGM\DWH\NanoCmsStructureSource;
+use AIGM\DWH\WebProjector;
 
 require_once __DIR__ . '/src/ProjectionException.php';
 require_once __DIR__ . '/src/ProjectionNotFoundException.php';
@@ -18,15 +20,17 @@ require_once __DIR__ . '/src/SiteProjector.php';
 require_once __DIR__ . '/src/ContentProjector.php';
 require_once __DIR__ . '/src/ActionProjector.php';
 require_once __DIR__ . '/src/ProjectorProjector.php';
+require_once __DIR__ . '/src/NanoCmsStructureSource.php';
+require_once __DIR__ . '/src/WebProjector.php';
 
 $catalogPath = getenv('DWH_METAMODULE_CATALOG_PATH');
 if (!is_string($catalogPath) || $catalogPath === '') {
     $catalogPath = __DIR__ . '/data/metamodule-catalog.json';
 }
 
-$sitePath = getenv('DWH_SITE_TREE_PATH');
-if (!is_string($sitePath) || $sitePath === '') {
-    $sitePath = __DIR__ . '/data/site-tree.json';
+$webStructurePath = getenv('DWH_WEB_STRUCTURE_PATH');
+if (!is_string($webStructurePath) || $webStructurePath === '') {
+    $webStructurePath = __DIR__ . '/data/web-structure.json';
 }
 
 $engine = new ProjectionEngine();
@@ -39,13 +43,22 @@ $engine->register(
     static fn(array $context): array => $catalogProjector->project($context)
 );
 
-$siteProjector = new SiteProjector(
-    new JsonDocumentSource($sitePath)
+$nanoCmsStructure = new NanoCmsStructureSource(
+    new JsonDocumentSource($webStructurePath)
 );
+
+$siteProjector = new SiteProjector($nanoCmsStructure);
 
 $engine->register(
     SiteProjector::SYMBOL,
     static fn(array $context): array => $siteProjector->project($context)
+);
+
+$webProjector = new WebProjector($nanoCmsStructure);
+
+$engine->register(
+    WebProjector::SYMBOL,
+    static fn(array $context): array => $webProjector->project($context)
 );
 
 $contentPath = getenv('DWH_CONTENT_PATH');
