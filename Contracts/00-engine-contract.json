@@ -1,21 +1,31 @@
 {
   "name": "DWH Website Profile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "implementation": "PHP",
-  "kind": "canonical relational website content model",
+  "kind": "canonical relational website authority",
   "owns": [
     "website entity identity and declarative data",
     "explicit directed website relations",
     "deterministic relation ordering",
-    "symbol identities",
-    "deterministic projection definitions and results"
+    "semantic symbol identities",
+    "deterministic projection definitions and results",
+    "site hierarchy declarations",
+    "content identity and content relations",
+    "projector bindings",
+    "renderer bindings",
+    "route declarations",
+    "composition graph declarations",
+    "action declarations"
   ],
   "doesNotOwn": [
-    "authentication",
-    "authorization policy",
-    "presentation rendering",
-    "WebEngine composition behavior",
-    "domain business behavior",
+    "identity or authentication",
+    "authorization decisions",
+    "browser runtime execution",
+    "renderer lifecycle",
+    "DOM construction",
+    "spatial or 3D runtime execution",
+    "visual styling",
+    "domain business execution",
     "physical storage as semantic identity"
   ],
   "principles": [
@@ -24,6 +34,17 @@
     "symbols identify semantic projections rather than files",
     "projection output is derived and rebuildable",
     "consumers depend on projection contracts rather than storage layout",
+    "resolvability never implies authorization",
+    "WebEngine executes DWH declarations but does not own them",
     "PHP implements canonical contracts and does not define them"
-  ]
+  ],
+  "responsibility": "where / what relates to what",
+  "systemSplit": {
+    "IAM": "who",
+    "AccessCore": "authority / may",
+    "DWH": "where / what relates to what",
+    "WebEngine": "execute declared web structure",
+    "WebGUI": "generic UI primitives",
+    "S3D": "spatial / 3D primitives"
+  }
 }
