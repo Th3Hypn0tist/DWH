@@ -1,0 +1,57 @@
+{
+  "name": "DWH Expose Binding Contract",
+  "version": "0.1.0",
+  "kind": "port binding and external/local surface model",
+  "purpose": "define Expose as the set of surfaces/targets to which canonical ports can be bound without creating parallel semantic authority",
+  "concepts": {
+    "port": "canonical bind point/interface owned by the relevant semantic/runtime capability",
+    "expose": "binding that makes a port usable through a concrete surface or target",
+    "implementation": "runtime code that realizes the binding; implementation language is orthogonal to Expose type"
+  },
+  "surfaceExamples": [
+    "REST",
+    "WebSocket",
+    "HTTP",
+    "OSC",
+    "MCP",
+    "CLI",
+    "filesystem",
+    "local runtime",
+    "speech intent",
+    "LLM tool call"
+  ],
+  "implementationExamples": [
+    "PHP",
+    "Python",
+    "JavaScript"
+  ],
+  "examples": [
+    {
+      "source": "#SITE",
+      "expose": "filesystem",
+      "target": "/home/www",
+      "meaning": "the #SITE semantic resource may resolve through a filesystem Expose binding"
+    },
+    {
+      "source": "ranking.read",
+      "expose": "REST",
+      "target": "GET /ranking"
+    },
+    {
+      "source": "ranking.read",
+      "expose": "WebSocket",
+      "target": "ranking.subscribe"
+    }
+  ],
+  "rules": [
+    "REST and WebSocket are Expose surfaces, not implementation languages",
+    "PHP and Python may implement the same Expose semantics",
+    "one port may have multiple Expose bindings",
+    "Expose does not own the semantic source behind the port",
+    "Expose existence does not grant authorization",
+    "AccessCore remains authorization authority",
+    "DWH may resolve where a symbol/port is bound without becoming the execution runtime",
+    "a binding target may be a physical path such as /home/www",
+    "binding/projection must not silently create a second canonical source of truth"
+  ]
+}
