@@ -1,6 +1,6 @@
 {
   "name": "DWH MetaModule Contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "kind": "language-neutral semantic composition model",
   "purpose": "define MetaModule as one canonical semantic kind composable from reusable semantics without creating application-specific runtimes",
   "identity": {
@@ -17,17 +17,22 @@
   },
   "classification": {
     "kind": "MetaModule",
-    "placementExamples": [
+    "actualMetaModulePlacements": [
       "Universal/Business",
       "Universal/Platform",
       "Universal/GUI",
-      "Composition/Business",
-      "Composition/Strategy",
-      "Composition/Everyday",
-      "Studio",
-      "Administration"
+      "Composition/BusinessSuite member",
+      "Composition/Strategy member",
+      "Composition/Everyday member",
+      "Editor"
     ],
-    "rule": "placement answers where the MetaModule belongs; placement does not create a new base type"
+    "groupingAbstractions": [
+      "BusinessSuite",
+      "Strategy",
+      "Everyday"
+    ],
+    "groupingRule": "grouping abstractions own membership/classification only; member Composition MetaModules own their own semantics and Events",
+    "rule": "kind and placement/classification are separate dimensions; grouping does not create a new MetaModule base type"
   },
   "composition": {
     "mayOwn": [
@@ -55,15 +60,23 @@
   "eventCoverage": {
     "requiredForFinalCoverageReview": true,
     "separateFromStructuralCoverage": true,
+    "appliesTo": "actual MetaModules, including actual member Composition MetaModules",
+    "doesNotApplyToEventOwnership": [
+      "BusinessSuite group",
+      "Strategy group",
+      "Everyday group"
+    ],
     "missingEvidenceStatus": "EVENT_REVIEW_REQUIRED",
     "rule": "missing Event evidence does not invalidate an otherwise structurally representable MetaModule; Events are reviewed separately and must never be invented to fill coverage"
   },
   "invariants": [
     "MetaModule is semantic composition, not a runtime implementation",
     "Universal semantics remain owned by their Universal definitions",
-    "Composition may add domain-specific relations/rules/operations without redefining consumed Universals",
+    "Composition MetaModules may add domain-specific relations/rules/operations without redefining consumed Universals",
+    "BusinessSuite, Strategy and Everyday are grouping abstractions in the later 1.5 model and are not Event owners",
     "same canonical MetaModule may have multiple projections and Expose surfaces",
     "Expose presence does not create a second MetaModule identity",
-    "implementation language does not change semantic identity"
+    "implementation language does not change semantic identity",
+    "historical registry placement or display labels do not establish current canonical identity"
   ]
 }
