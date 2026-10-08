@@ -1,6 +1,6 @@
 {
   "name": "MetaModule Final Coverage Audit Contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "purpose": "separate structural completeness from Event completeness while auditing all known MetaModule families toward final AIGMos coverage",
   "gates": {
     "structure": {
@@ -30,12 +30,30 @@
       "rule": "do not synthesize Events merely to satisfy completeness"
     }
   },
-  "finalStatusRule": "FINAL_CANDIDATE requires STRUCTURE_PROVEN and an explicit Event review result; missing Event evidence is handled as its own review item rather than blocking structural modeling",
+  "finalStatusRule": "FINAL_CANDIDATE for an actual MetaModule requires STRUCTURE_PROVEN and an explicit Event review result; grouping abstractions are evaluated for membership/classification closure rather than Event ownership",
   "evidenceRules": [
     "prefer exact canonical/current evidence",
     "historical material may establish candidates/provenance but must not silently override newer canonical decisions",
     "counts do not prove unique semantic identities",
     "examples are not promoted to canonical identities without evidence",
     "known conflicts remain explicit"
-  ]
+  ],
+  "scope": {
+    "actualMetaModules": "structural and Event coverage",
+    "groupingAbstractions": [
+      "BusinessSuite",
+      "Strategy",
+      "Everyday"
+    ],
+    "groupingCoverage": "membership/classification only; no group-level Event ownership"
+  },
+  "identityResolution": {
+    "rule": "do not invent current member IDs or namespaces from display names, historical DOMAIN::*/SUITE::* IDs, counts or visual placement",
+    "unresolvedCurrentAxes": [
+      "BusinessSuite exact 53 current member identities",
+      "Strategy exact member ID syntax",
+      "Everyday exact member ID syntax",
+      "Strategy seventh C-suite profile display/canonical identity"
+    ]
+  }
 }
