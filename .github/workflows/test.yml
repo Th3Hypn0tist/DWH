@@ -21,3 +21,7 @@ jobs:
         run: find php -type f -name '*.php' -print0 | xargs -0 -n1 php -l
       - name: Projection tests
         run: php php/tests/projection_test.php
+      - name: MMDemo JS syntax
+        run: |
+          node --check demo/mmdemo/app.js
+          node --check demo/app/mmdemo/renderers/browser.js
