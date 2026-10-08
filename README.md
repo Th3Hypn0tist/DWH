@@ -275,7 +275,7 @@ The initial synthetic company is **MMDemo Industries Oy**, a fictional Finnish B
 The seed dataset is stored at:
 
 ```text
-demo/mmdemo-industries-q3-2026.seed.json
+demo/mmdemo/data/company-q3-2026.json
 ```
 
 The demo is designed so that strategy measurements and decisions can trace back to the same synthetic operational records used by Business MetaModules. Event coverage remains a separate review dimension.
@@ -300,5 +300,5 @@ The projection must preserve unresolved identity state. Display labels, historic
 The current demo projection seed is:
 
 ```text
-demo/mmdemo-metamodule-catalog.seed.json
+demo/mmdemo/data/metamodule-catalog.json
 ```
