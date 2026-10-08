@@ -1,0 +1,37 @@
+{
+  "name": "DWH Projector Projection Profile",
+  "version": "0.1.0",
+  "symbolGrammar": "#PROJECTOR:<DOMAIN>:<PROJECTOR>[:VARIANT...]",
+  "consumer": "WebEngine",
+  "purpose": "provide one effective declarative projector projection and its explicit renderer binding",
+  "requestIdentity": "the suffix after #PROJECTOR: is the canonical WebEngine projector id without case rewriting",
+  "data": {
+    "required": [
+      "renderer",
+      "projection"
+    ],
+    "renderer": "canonical logical root-relative executable renderer module binding",
+    "projection": "effective declarative projector data after DWH-owned relation/variant resolution"
+  },
+  "authority": {
+    "DWH": [
+      "projector declaration",
+      "variant relations",
+      "effective projection",
+      "renderer binding"
+    ],
+    "WebEngine": [
+      "projection validation",
+      "renderer-path boundary validation",
+      "runtime execution and lifecycle"
+    ]
+  },
+  "rules": [
+    "WebEngine must not derive projector declarations from /app/<domain>/projectors files",
+    "WebEngine must not derive renderer binding from projector naming convention",
+    "renderer binding must be explicit in the DWH projection",
+    "projection contains declarative data only",
+    "DWH resolves variant inheritance/deltas before returning the effective projection",
+    "missing projector or renderer binding fails visibly with no WebEngine fallback"
+  ]
+}
