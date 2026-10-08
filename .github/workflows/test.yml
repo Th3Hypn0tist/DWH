@@ -25,3 +25,5 @@ jobs:
         run: |
           node --check demo/mmdemo/app.js
           node --check demo/app/mmdemo/renderers/browser.js
+      - name: MMDemo relation reconciliation
+        run: node demo/mmdemo/tests/reconcile.mjs
