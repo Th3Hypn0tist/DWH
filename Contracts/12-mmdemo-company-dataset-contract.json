@@ -1,6 +1,6 @@
 {
   "name": "MMDemo Company Dataset Contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "company": {
     "id": "mmdemo.company.mmdemo_industries",
     "display_name": "MMDemo Industries Oy",
@@ -15,68 +15,44 @@
   },
   "objective": "exercise the MetaModule/DWH/Expose model with one coherent synthetic company whose operations naturally cross business, everyday and strategy compositions",
   "coverage": {
-    "commercial": [
+    "businessDemoViews": [
       "CRM",
       "Sales",
       "Product Catalog",
       "Pricing",
-      "Contract Management",
-      "Subscriptions"
-    ],
-    "supply_chain": [
       "Inventory",
       "WMS",
       "Procurement",
       "SCM",
       "Logistics",
-      "Returns/RMA"
-    ],
-    "production": [
       "Manufacturing/MRP",
       "Quality",
-      "Asset Management",
-      "Maintenance"
-    ],
-    "service": [
       "Projects",
       "Field Service",
-      "Customer Service"
-    ],
-    "finance": [
+      "Customer Service",
       "Billing",
       "Accounts Receivable",
       "Accounts Payable",
       "Accounting",
       "Treasury/Cash",
-      "Expenses",
-      "Tax/Fiscal",
-      "Costing",
-      "Budgeting/Forecasting"
-    ],
-    "people": [
       "HRM",
       "Payroll",
       "Time/Attendance",
-      "Workforce Scheduling"
-    ],
-    "information": [
       "DMS/Knowledge",
-      "Messaging",
       "BI/Reporting",
       "Audit",
       "Compliance/Risk"
     ],
-    "strategy": [
-      "Strategy",
-      "Capital Allocation",
+    "strategyDemoProjectionExamples": [
+      "Goals",
       "Investment Committee",
-      "Strategy Map",
+      "Capital Allocation",
       "Technology Radar"
     ],
-    "everyday": [
+    "everydayDemoSurfaceExamples": [
       "Calendar",
-      "Shopping",
-      "Todo/operational lists where represented by current canonical semantics"
+      "Shop",
+      "Shopping"
     ]
   },
   "namespaceRules": {
@@ -141,5 +117,12 @@
     "project/service work must have employees/time/evidence where applicable",
     "strategy measurements must derive from operational demo data when possible",
     "no personally identifying real-world data is used"
-  ]
+  ],
+  "coverageSemantics": {
+    "rule": "coverage labels are demo browsing/projection labels unless explicitly resolved to a current canonical MetaModule identity",
+    "businessSuiteCurrentMemberIds": "UNRESOLVED_IN_RETRIEVED_HISTORY",
+    "strategyCurrentMemberIds": "PARTIALLY_RECOVERED_BY_DISPLAY_NAME; ID_SYNTAX_UNRESOLVED",
+    "everydayCurrentMemberIds": "DISPLAY_NAMES_RECOVERED; ID_SYNTAX_UNRESOLVED",
+    "mustNot": "promote a demo label, historical registry ID or surface name into a current canonical member identity"
+  }
 }
