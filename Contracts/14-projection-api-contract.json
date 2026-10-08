@@ -1,6 +1,6 @@
 {
   "name": "DWH Projection API",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "implementationProfile": "PHP",
   "testPath": "/test/app/dwh/api/project.php",
   "productionPath": "/app/dwh/api/project.php",
@@ -49,11 +49,13 @@
     "resolution does not imply authorization",
     "source adapter is replaceable without changing projection envelope",
     "MMDemo consumes the same API through WebEngine createDwhAdapter()",
-    "#METAMODULE:CATALOG and #SITE are implemented through the same PHP ProjectionEngine"
+    "#METAMODULE:CATALOG and #SITE are implemented through the same PHP ProjectionEngine",
+    "#WEB and #SITE resolve from one nanoCMSStructure source; #SITE is derived"
   ],
   "implementedSymbols": [
-    "#METAMODULE:CATALOG",
+    "#WEB",
     "#SITE",
+    "#METAMODULE:CATALOG",
     "#PROJECTOR:<DOMAIN>:<PROJECTOR>[:VARIANT...]",
     "#CONTENT:<DOMAIN>:<ID>",
     "#ACTION:<DOMAIN>:<ID>"
