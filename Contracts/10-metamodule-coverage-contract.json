@@ -1,0 +1,41 @@
+{
+  "name": "MetaModule Final Coverage Audit Contract",
+  "version": "0.1.0",
+  "purpose": "separate structural completeness from Event completeness while auditing all known MetaModule families toward final AIGMos coverage",
+  "gates": {
+    "structure": {
+      "required": [
+        "canonical identity",
+        "classification/placement",
+        "members or consumed semantics where applicable",
+        "explicit relations",
+        "composition-specific semantics where applicable",
+        "ports where externally/locally bindable behavior exists",
+        "Expose bindings where declared"
+      ],
+      "resultStates": [
+        "STRUCTURE_PROVEN",
+        "STRUCTURE_PARTIAL",
+        "STRUCTURE_UNRESOLVED"
+      ]
+    },
+    "events": {
+      "reviewedSeparately": true,
+      "requiredForFinalReview": true,
+      "resultStates": [
+        "EVENTS_PROVEN",
+        "EVENT_REVIEW_REQUIRED",
+        "EVENT_CONFLICT"
+      ],
+      "rule": "do not synthesize Events merely to satisfy completeness"
+    }
+  },
+  "finalStatusRule": "FINAL_CANDIDATE requires STRUCTURE_PROVEN and an explicit Event review result; missing Event evidence is handled as its own review item rather than blocking structural modeling",
+  "evidenceRules": [
+    "prefer exact canonical/current evidence",
+    "historical material may establish candidates/provenance but must not silently override newer canonical decisions",
+    "counts do not prove unique semantic identities",
+    "examples are not promoted to canonical identities without evidence",
+    "known conflicts remain explicit"
+  ]
+}
