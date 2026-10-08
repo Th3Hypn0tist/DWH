@@ -4,7 +4,8 @@
     "projection": {
       "companyData": "/mmdemo/data/company-q3-2026.json",
       "catalogSymbol": "#METAMODULE:CATALOG",
-      "surface": "mmdemo"
+      "surface": "mmdemo",
+      "relationGraph": "/mmdemo/data/relation-graph-q3-2026.json"
     }
   }
 }
