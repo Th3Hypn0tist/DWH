@@ -48,7 +48,7 @@
       "id": "Universal/Platform",
       "label": "Platform Universals",
       "kind": "Universal family",
-      "status": "CANONICAL_VERIFY_LATEST",
+      "status": "CANONICAL_CONFIRMED",
       "member_count": 8,
       "members": [
         "IAM",
@@ -59,7 +59,13 @@
         "LibraryMount",
         "SymbolNamespace",
         "nanoCMSStructure"
-      ]
+      ],
+      "provenance": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/00_Registry.json",
+        "registry_version": "1.0",
+        "registry_status": "locked",
+        "locked_count": 8
+      }
     },
     {
       "id": "Universal/GUI",
@@ -198,7 +204,28 @@
       "status": "UNRESOLVED",
       "known": "Strategy has exactly seven C-suite profiles; six display names are known",
       "unknown": "seventh profile display/canonical identity",
-      "rule": "do not guess"
+      "rule": "do not guess",
+      "provenance": {
+        "historical_strategy_contract_version": "1.3",
+        "historical_profiles": [
+          "CEO",
+          "COO",
+          "CFO",
+          "CTO",
+          "CIO",
+          "CHRO",
+          "CSO"
+        ],
+        "later_recovered_display_names": [
+          "CEO",
+          "COO",
+          "CFO",
+          "CTO/CIO",
+          "CHRO",
+          "CSO"
+        ],
+        "conclusion": "historical CTO/CIO separation does not prove the missing current 1.5 profile identity"
+      }
     },
     {
       "id": "COMPOSITION_1_5_MEMBER_IDENTITIES_UNRESOLVED",
@@ -207,14 +234,6 @@
       "known": "BusinessSuite/Strategy/Everyday counts are 53/28/21",
       "unknown": "exact current canonical member IDs",
       "rule": "do not revive historical namespaces or invent replacement namespaces"
-    },
-    {
-      "id": "PLATFORM_UNIVERSAL_LATEST_REGISTRY_VERIFY",
-      "severity": "verification_needed_before_new_lock",
-      "status": "UNRESOLVED",
-      "known": "recovered Platform set contains eight members",
-      "unknown": "whether a newer canonical registry revision changed membership",
-      "rule": "verify latest registry before new lock"
     },
     {
       "id": "EVENT_COVERAGE_REVIEW",
