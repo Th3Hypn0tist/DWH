@@ -1,32 +1,32 @@
 {
-  "name": "DWH Website Profile",
-  "version": "0.2.0",
-  "implementation": "PHP",
-  "kind": "canonical relational website authority",
-  "owns": [
-    "website entity identity and declarative data",
-    "explicit directed website relations",
-    "deterministic relation ordering",
-    "semantic symbol identities",
-    "deterministic projection definitions and results",
-    "site hierarchy declarations",
-    "content identity and content relations",
-    "projector bindings",
-    "renderer bindings",
-    "route declarations",
-    "composition graph declarations",
-    "action declarations"
+  "name": "DWH Engine Contract",
+  "version": "0.3.0",
+  "kind": "canonical relational semantic authority",
+  "responsibility": "where / what relates to what",
+  "semanticCore": [
+    "entities",
+    "explicit directed relations",
+    "ordering",
+    "symbols",
+    "deterministic projections",
+    "MetaModule identity/composition",
+    "port and Expose bindings"
+  ],
+  "profiles": [
+    "website declarations and projections",
+    "MetaModule catalog/coverage projections",
+    "other explicitly contracted projections"
   ],
   "doesNotOwn": [
     "identity or authentication",
     "authorization decisions",
-    "browser runtime execution",
-    "renderer lifecycle",
+    "runtime business execution",
+    "browser renderer lifecycle",
     "DOM construction",
     "spatial or 3D runtime execution",
     "visual styling",
-    "domain business execution",
-    "physical storage as semantic identity"
+    "physical storage as semantic identity",
+    "consumer-specific runtime state"
   ],
   "principles": [
     "one canonical authority per concern",
@@ -35,16 +35,21 @@
     "projection output is derived and rebuildable",
     "consumers depend on projection contracts rather than storage layout",
     "resolvability never implies authorization",
-    "WebEngine executes DWH declarations but does not own them",
-    "PHP implements canonical contracts and does not define them"
+    "MetaModule kind and placement/classification are separate dimensions",
+    "grouping abstractions do not become semantic/Event owners",
+    "implementation language does not define semantic identity"
   ],
-  "responsibility": "where / what relates to what",
+  "implementationProfiles": {
+    "PHP": "current AIGM.fi/DWH implementation profile",
+    "Python": "permitted future implementation profile, including AIGMos use"
+  },
   "systemSplit": {
     "IAM": "who",
     "AccessCore": "authority / may",
     "DWH": "where / what relates to what",
-    "WebEngine": "execute declared web structure",
+    "WebEngine": "execute declared web projections",
     "WebGUI": "generic UI primitives",
-    "S3D": "spatial / 3D primitives"
+    "S3D": "spatial / 3D primitives",
+    "Expose": "bind canonical ports to usable surfaces/targets without taking semantic ownership"
   }
 }
