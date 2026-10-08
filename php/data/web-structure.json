@@ -1,0 +1,55 @@
+{
+  "root": "aigm",
+  "pages": {
+    "aigm": {
+      "id": "aigm",
+      "title": "AIGM.fi",
+      "menuitem": "AIGM.fi",
+      "description": "AIGM.fi",
+      "children": [
+        "iam",
+        "lmts",
+        "mmdemo"
+      ],
+      "placements": []
+    },
+    "iam": {
+      "id": "iam",
+      "title": "IAM",
+      "menuitem": "IAM",
+      "description": "Identity and authentication surface",
+      "children": [],
+      "placements": []
+    },
+    "lmts": {
+      "id": "lmts",
+      "title": "LMTS",
+      "menuitem": "LMTS",
+      "description": "LLM testing system",
+      "children": [],
+      "placements": []
+    },
+    "mmdemo": {
+      "id": "mmdemo",
+      "title": "MMDemo Industries Oy",
+      "menuitem": "MetaModule Demo",
+      "description": "Browsable MetaModule and synthetic company demo",
+      "children": [],
+      "placements": [
+        {
+          "id": "mmdemo.browser",
+          "kind": "projector",
+          "order": 10,
+          "ref": "MMDemo:browser",
+          "title": null
+        }
+      ]
+    }
+  },
+  "routes": {
+    "/": "aigm",
+    "/iam/": "iam",
+    "/lmts/": "lmts",
+    "/mmdemo/": "mmdemo"
+  }
+}
