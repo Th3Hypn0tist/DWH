@@ -1,8 +1,8 @@
 # DWH
 
-Canonical relational website model for AIGM.fi.
+Canonical relational semantic model and projection authority.
 
-DWH answers **where** a canonical website resource, relation or projection resolves. It owns declarative website structure. It does not execute browser behavior.
+DWH answers **where** canonical resources resolve and **what relates to what**. Website structure is one projection profile over the same relational model; it is not the definition of DWH itself.
 
 ## Canonical responsibility split
 
@@ -19,7 +19,7 @@ These responsibilities are intentionally non-overlapping.
 
 ## DWH responsibility
 
-DWH is the canonical authority for declarative website structure:
+DWH is the canonical authority for explicit relational structure, symbols and deterministic projections:
 
 ```text
 entities
@@ -27,13 +27,13 @@ relations
 ordering
 symbols
 projections
-site hierarchy
-content identity and content relations
-projector bindings
-renderer bindings
-route declarations
-composition graph
-action declarations
+MetaModule identity and composition
+port / Expose bindings
+
+website profile:
+  site hierarchy
+  content/projector/action projections
+  renderer/route/composition bindings
 ```
 
 DWH does **not** own authentication, authorization policy, browser runtime execution, renderer lifecycle, DOM construction, 3D runtime, domain business execution or visual styling.
@@ -206,7 +206,7 @@ DWH/
 11. Relations are explicit and never guessed.
 12. Runtime implementation follows contracts; implementation structure does not redefine them.
 
-This repository starts deliberately with the website profile. The broader historical AIGMos DWH model can be added later without changing these responsibility boundaries.
+The website model is one DWH projection profile. MetaModule catalog, coverage and Expose bindings use the same relational authority without creating parallel semantic stores.
 
 
 ## MetaModule model
@@ -223,7 +223,7 @@ MetaModule
 └── optional Expose bindings
 ```
 
-Placement such as Universal, Business, Strategy, Everyday, Studio or Administration does not create a new base type. The kind remains MetaModule.
+MetaModule kind and placement/classification are separate dimensions. Universal families contain actual MetaModules. In the current 1.5 grouping model, BusinessSuite, Strategy and Everyday are grouping abstractions; their actual member Composition MetaModules own semantics and Events.
 
 ## Expose
 
@@ -279,3 +279,26 @@ demo/mmdemo-industries-q3-2026.seed.json
 ```
 
 The demo is designed so that strategy measurements and decisions can trace back to the same synthetic operational records used by Business MetaModules. Event coverage remains a separate review dimension.
+
+
+## MetaModule catalog projection
+
+`#METAMODULE:CATALOG` is the deterministic browse/coverage projection used by consumers such as `/mmdemo/`.
+
+It exposes:
+
+```text
+Universal families
+Composition grouping abstractions
+resolved actual MetaModules
+identity / structure / Event coverage
+explicit unresolved gaps
+```
+
+The projection must preserve unresolved identity state. Display labels, historical registry IDs and demo names never become canonical IDs by being rendered.
+
+The current demo projection seed is:
+
+```text
+demo/mmdemo-metamodule-catalog.seed.json
+```
