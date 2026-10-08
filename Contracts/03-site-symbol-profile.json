@@ -1,0 +1,33 @@
+{
+  "name": "DWH #SITE Projection Profile",
+  "version": "0.1.0",
+  "symbol": "#SITE",
+  "consumer": "WebEngine",
+  "purpose": "provide the canonical SiteTree runtime projection from DWH website relations",
+  "outputNodeShape": [
+    "id",
+    "label",
+    "path",
+    "children"
+  ],
+  "nodeSemantics": {
+    "id": "canonical SiteTree node identity",
+    "label": "public node label",
+    "path": "optional canonical logical public path",
+    "children": "ordered child node projections"
+  },
+  "authorityFlow": [
+    "DWH canonical entities and relations",
+    "#SITE projection",
+    "WebEngine SiteTree runtime snapshot",
+    "derived navigation, breadcrumbs, sitemap, routing and composition"
+  ],
+  "rules": [
+    "#SITE is the SiteTree runtime identity",
+    "site.json is not a canonical authority",
+    "JSON may be used as a transport serialization without becoming identity",
+    "WebEngine validates the received SiteTree projection before use",
+    "navigation and other hierarchy views remain derived from the received SiteTree projection",
+    "WebEngine must not infer DWH relations or query DWH storage internals"
+  ]
+}
