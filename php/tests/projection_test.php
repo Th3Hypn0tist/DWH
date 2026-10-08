@@ -9,6 +9,7 @@ use AIGM\DWH\ProjectionNotFoundException;
 use AIGM\DWH\SiteProjector;
 use AIGM\DWH\ContentProjector;
 use AIGM\DWH\ActionProjector;
+use AIGM\DWH\ProjectorProjector;
 
 require_once __DIR__ . '/../src/ProjectionException.php';
 require_once __DIR__ . '/../src/ProjectionNotFoundException.php';
@@ -18,6 +19,7 @@ require_once __DIR__ . '/../src/MetaModuleCatalogProjector.php';
 require_once __DIR__ . '/../src/SiteProjector.php';
 require_once __DIR__ . '/../src/ContentProjector.php';
 require_once __DIR__ . '/../src/ActionProjector.php';
+require_once __DIR__ . '/../src/ProjectorProjector.php';
 
 function expect(bool $condition, string $message): void
 {
@@ -164,3 +166,39 @@ try {
 
 @unlink($contentFixture);
 @unlink($actionFixture);
+
+
+$projectorFixture = tempnam(sys_get_temp_dir(), 'dwh-projector-');
+if ($projectorFixture === false) {
+    throw new RuntimeException('failed to create temporary Projector fixture');
+}
+
+file_put_contents($projectorFixture, json_encode([
+    '#PROJECTOR:MMDemo:overview:compact' => [
+        'renderer' => '/app/mmdemo/renderers/overview.js',
+        'projection' => [
+            'title' => 'MMDemo overview',
+            'compact' => true,
+        ],
+    ],
+], JSON_THROW_ON_ERROR));
+
+$projectorEngine = new ProjectionEngine();
+$projectorProjector = new ProjectorProjector(new JsonDocumentSource($projectorFixture));
+$projectorEngine->registerPattern(
+    ProjectorProjector::SYMBOL_PATTERN,
+    static fn(string $symbol, array $matches, array $context): array
+        => $projectorProjector->project($symbol, $matches, $context)
+);
+
+$projected = $projectorEngine->project('#PROJECTOR:MMDemo:overview:compact');
+expect(($projected['data']['renderer'] ?? null) === '/app/mmdemo/renderers/overview.js', 'dynamic Projector renderer mismatch');
+expect(($projected['data']['projection']['compact'] ?? null) === true, 'dynamic Projector projection mismatch');
+
+try {
+    $projectorEngine->project('#PROJECTOR:MMDemo:missing');
+    throw new RuntimeException('missing dynamic Projector projection did not fail');
+} catch (ProjectionNotFoundException) {
+}
+
+@unlink($projectorFixture);
