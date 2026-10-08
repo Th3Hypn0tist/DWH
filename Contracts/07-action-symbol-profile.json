@@ -1,6 +1,6 @@
 {
   "name": "DWH Action Projection Profile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "symbolGrammar": "#ACTION:<DOMAIN>:<ID>",
   "consumer": "WebEngine",
   "purpose": "provide one canonical action declaration for runtime control binding",
@@ -36,6 +36,14 @@
     "returned action reference domain must match the requested symbol domain",
     "WebEngine must not implement domain business behavior",
     "UI state does not grant authorization",
-    "missing action declaration fails visibly without fallback"
-  ]
+    "missing action declaration fails visibly without fallback",
+    "dynamic #ACTION symbols resolve through ProjectionEngine pattern dispatch"
+  ],
+  "implementation": {
+    "phpProjector": "ActionProjector",
+    "symbolPattern": "dynamic pattern registered in ProjectionEngine",
+    "endpoint": "/app/dwh/api/project.php",
+    "sourceAdapter": "JsonDocumentSource -> php/data/actions.json",
+    "sourceAdapterRule": "storage map is implementation data; semantic identity is the #ACTION symbol and canonical DWH relations"
+  }
 }
