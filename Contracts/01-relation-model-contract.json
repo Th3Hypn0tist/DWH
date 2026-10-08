@@ -1,6 +1,6 @@
 {
-  "name": "DWH Website Relation Model",
-  "version": "0.1.0",
+  "name": "DWH Relation Model",
+  "version": "0.2.0",
   "entity": {
     "required": [
       "id",
@@ -10,7 +10,7 @@
       "data"
     ],
     "semantics": {
-      "id": "canonical immutable entity identity within one DWH instance",
+      "id": "stable entity identity within the applicable canonical DWH context",
       "type": "explicit entity type",
       "data": "entity-owned declarative properties"
     }
@@ -37,8 +37,10 @@
     "relations are directed",
     "relation meaning must be explicit",
     "relation authority is not duplicated inside entity data",
-    "missing or ambiguous relation targets fail visibly",
+    "missing or ambiguous required relation targets fail visibly",
     "ordering changes projection order, not entity identity",
-    "projection does not create a new canonical entity"
+    "projection does not create a new canonical entity",
+    "containment, ownership, authority, dependency and causality must not be inferred from visual placement",
+    "a resolved reference does not by itself prove semantic compatibility or authorization"
   ]
 }
