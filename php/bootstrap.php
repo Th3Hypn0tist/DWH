@@ -7,6 +7,7 @@ use AIGM\DWH\ProjectionEngine;
 use AIGM\DWH\SiteProjector;
 use AIGM\DWH\ContentProjector;
 use AIGM\DWH\ActionProjector;
+use AIGM\DWH\ProjectorProjector;
 
 require_once __DIR__ . '/src/ProjectionException.php';
 require_once __DIR__ . '/src/ProjectionNotFoundException.php';
@@ -16,6 +17,7 @@ require_once __DIR__ . '/src/MetaModuleCatalogProjector.php';
 require_once __DIR__ . '/src/SiteProjector.php';
 require_once __DIR__ . '/src/ContentProjector.php';
 require_once __DIR__ . '/src/ActionProjector.php';
+require_once __DIR__ . '/src/ProjectorProjector.php';
 
 $catalogPath = getenv('DWH_METAMODULE_CATALOG_PATH');
 if (!is_string($catalogPath) || $catalogPath === '') {
@@ -74,6 +76,21 @@ $engine->registerPattern(
     ActionProjector::SYMBOL_PATTERN,
     static fn(string $symbol, array $matches, array $context): array
         => $actionProjector->project($symbol, $matches, $context)
+);
+
+$projectorPath = getenv('DWH_PROJECTOR_PATH');
+if (!is_string($projectorPath) || $projectorPath === '') {
+    $projectorPath = __DIR__ . '/data/projectors.json';
+}
+
+$projectorProjector = new ProjectorProjector(
+    new JsonDocumentSource($projectorPath)
+);
+
+$engine->registerPattern(
+    ProjectorProjector::SYMBOL_PATTERN,
+    static fn(string $symbol, array $matches, array $context): array
+        => $projectorProjector->project($symbol, $matches, $context)
 );
 
 return $engine;
