@@ -4,6 +4,7 @@ declare(strict_types=1);
 use AIGM\DWH\JsonDocumentSource;
 use AIGM\DWH\MetaModuleCatalogProjector;
 use AIGM\DWH\ProjectionEngine;
+use AIGM\DWH\SiteProjector;
 
 require_once __DIR__ . '/src/ProjectionException.php';
 require_once __DIR__ . '/src/ProjectionNotFoundException.php';
