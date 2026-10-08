@@ -1,0 +1,145 @@
+{
+  "name": "MMDemo Company Dataset Contract",
+  "version": "0.1.0",
+  "company": {
+    "id": "mmdemo.company.mmdemo_industries",
+    "display_name": "MMDemo Industries Oy",
+    "fictional": true,
+    "business": "B2B industrial sensor/automation products, light assembly, project delivery, installation and maintenance",
+    "country": "FI"
+  },
+  "period": {
+    "from": "2026-07-01",
+    "to": "2026-09-30",
+    "rule": "three complete calendar months"
+  },
+  "objective": "exercise the MetaModule/DWH/Expose model with one coherent synthetic company whose operations naturally cross business, everyday and strategy compositions",
+  "coverage": {
+    "commercial": [
+      "CRM",
+      "Sales",
+      "Product Catalog",
+      "Pricing",
+      "Contract Management",
+      "Subscriptions"
+    ],
+    "supply_chain": [
+      "Inventory",
+      "WMS",
+      "Procurement",
+      "SCM",
+      "Logistics",
+      "Returns/RMA"
+    ],
+    "production": [
+      "Manufacturing/MRP",
+      "Quality",
+      "Asset Management",
+      "Maintenance"
+    ],
+    "service": [
+      "Projects",
+      "Field Service",
+      "Customer Service"
+    ],
+    "finance": [
+      "Billing",
+      "Accounts Receivable",
+      "Accounts Payable",
+      "Accounting",
+      "Treasury/Cash",
+      "Expenses",
+      "Tax/Fiscal",
+      "Costing",
+      "Budgeting/Forecasting"
+    ],
+    "people": [
+      "HRM",
+      "Payroll",
+      "Time/Attendance",
+      "Workforce Scheduling"
+    ],
+    "information": [
+      "DMS/Knowledge",
+      "Messaging",
+      "BI/Reporting",
+      "Audit",
+      "Compliance/Risk"
+    ],
+    "strategy": [
+      "Strategy",
+      "Capital Allocation",
+      "Investment Committee",
+      "Strategy Map",
+      "Technology Radar"
+    ],
+    "everyday": [
+      "Calendar",
+      "Shopping",
+      "Todo/operational lists where represented by current canonical semantics"
+    ]
+  },
+  "namespaceRules": {
+    "syntheticIdPrefix": "mmdemo.",
+    "canonicalDefinitionsKeepCanonicalIds": true,
+    "noSyntheticRecordMayBecomeCanonicalEvidence": true
+  },
+  "datasetShape": {
+    "masterData": [
+      "company",
+      "locations",
+      "employees",
+      "customers",
+      "suppliers",
+      "catalog items",
+      "price lists",
+      "assets",
+      "contracts"
+    ],
+    "transactionalData": [
+      "opportunities",
+      "quotes",
+      "sales orders",
+      "purchase orders",
+      "stock movements",
+      "assembly/production projects",
+      "shipments",
+      "service projects",
+      "cases/RMAs",
+      "invoices",
+      "payments",
+      "journal/accounting records",
+      "time records",
+      "payroll periods",
+      "expenses"
+    ],
+    "analyticalData": [
+      "monthly KPIs",
+      "forecast versus actual",
+      "inventory aging/turnover",
+      "pipeline",
+      "margin",
+      "service SLA",
+      "quality",
+      "cash",
+      "strategy measurements"
+    ],
+    "strategyData": [
+      "strategy objectives",
+      "initiatives/projects",
+      "capital requests",
+      "investment committee cases and decisions",
+      "technology radar entries",
+      "risk/assessment records"
+    ]
+  },
+  "realismRules": [
+    "all aggregates must reconcile to underlying synthetic records where both are provided",
+    "sales must consume stock or trigger procurement/assembly rather than teleport inventory",
+    "sales invoices must relate to orders/deliveries and payments must relate to invoices",
+    "purchase receipts must increase stock and supplier invoices must relate to procurement",
+    "project/service work must have employees/time/evidence where applicable",
+    "strategy measurements must derive from operational demo data when possible",
+    "no personally identifying real-world data is used"
+  ]
+}
