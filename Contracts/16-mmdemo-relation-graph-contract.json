@@ -1,0 +1,88 @@
+{
+  "name": "MMDemo Relation Graph Contract",
+  "version": "0.1.0",
+  "dataset": "mmdemo.graph.mmdemo_industries.2026q3",
+  "purpose": "provide a fully traversable synthetic DWH relation graph whose operational records reconcile to the MMDemo Q3/2026 company summary",
+  "namespace": {
+    "entityPrefix": "mmdemo.",
+    "relationPrefix": "mmdemo.rel.",
+    "rule": "all synthetic demo identities and demo relation identities remain isolated from canonical semantic identities"
+  },
+  "entityShape": {
+    "required": [
+      "id",
+      "type"
+    ],
+    "optional": [
+      "data"
+    ],
+    "typeRule": "type references an existing semantic class/Universal label where used; demo IDs do not redefine that class"
+  },
+  "relationShape": {
+    "required": [
+      "source",
+      "relation",
+      "target"
+    ],
+    "optional": [
+      "order",
+      "data"
+    ],
+    "rules": [
+      "source and target must resolve to graph entities",
+      "relations are directed and explicit",
+      "relation meaning is never inferred from proximity, object shape or display order"
+    ]
+  },
+  "exercisedTypes": [
+    "Identity",
+    "Location",
+    "CatalogItem",
+    "Opportunity",
+    "Quote",
+    "Order",
+    "Shipment",
+    "Invoice",
+    "Settlement",
+    "StockMovement",
+    "Project",
+    "Case",
+    "Measurement",
+    "BalanceTransaction",
+    "Assessment"
+  ],
+  "reconciliation": {
+    "summarySource": "demo/mmdemo/data/company-q3-2026.json",
+    "graphSource": "demo/mmdemo/data/relation-graph-q3-2026.json",
+    "test": "demo/mmdemo/tests/reconcile.mjs",
+    "checks": [
+      "entity/relation counts",
+      "unique demo entity IDs",
+      "all relation endpoints resolve",
+      "all demo relation IDs use mmdemo.rel.*",
+      "monthly leads/opportunities/quotes/orders/shipments/invoices/cases/projects/RMAs counts",
+      "monthly sales, COGS, gross margin and purchases",
+      "monthly cash in/out",
+      "monthly employee hours and payroll gross",
+      "inventory bridge from opening valuation through StockMovement values",
+      "strategy Q3 sales and gross-margin measurements"
+    ],
+    "rule": "CI must fail if graph and summary cease to reconcile"
+  },
+  "browsing": {
+    "surface": "/mmdemo/",
+    "projector": "#PROJECTOR:MMDemo:browser",
+    "behavior": [
+      "show entity-type coverage",
+      "select any entity",
+      "show entity data",
+      "traverse explicit outgoing and incoming relations"
+    ]
+  },
+  "authorityRules": [
+    "the demo graph is synthetic instance data, not canonical AIGMos semantic evidence",
+    "canonical MetaModule or Universal definitions are never derived from demo record shape",
+    "aggregate cards are derived/checkable views over graph-backed operational data where modeled",
+    "Strategy demo records link to operational Measurement evidence where available"
+  ]
+}
