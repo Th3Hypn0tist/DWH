@@ -1,0 +1,54 @@
+{
+  "name": "DWH Projection API",
+  "version": "0.1.0",
+  "implementationProfile": "PHP",
+  "testPath": "/test/app/dwh/api/project.php",
+  "productionPath": "/app/dwh/api/project.php",
+  "methods": {
+    "POST": {
+      "request": {
+        "required": [
+          "symbol"
+        ],
+        "optional": [
+          "context"
+        ]
+      },
+      "response": "DWH projection envelope"
+    },
+    "GET": {
+      "request": {
+        "required": [
+          "symbol"
+        ]
+      },
+      "note": "primarily diagnostic; POST is preferred because fragment characters in raw URLs require encoding"
+    }
+  },
+  "envelope": {
+    "required": [
+      "symbol",
+      "data"
+    ],
+    "optional": [
+      "revision",
+      "generated_at"
+    ]
+  },
+  "statusCodes": {
+    "200": "projection resolved",
+    "400": "invalid request, symbol, or projection source",
+    "404": "projection symbol not registered",
+    "405": "method not allowed",
+    "500": "unexpected server failure"
+  },
+  "rules": [
+    "API does not expose storage paths or PHP class identities",
+    "projection lookup is exact and case-sensitive",
+    "missing projection fails closed",
+    "resolution does not imply authorization",
+    "source adapter is replaceable without changing projection envelope",
+    "MMDemo consumes the same API through WebEngine createDwhAdapter()",
+    "#METAMODULE:CATALOG is the first implemented PHP projection"
+  ]
+}
