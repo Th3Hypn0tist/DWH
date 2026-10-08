@@ -47,7 +47,12 @@ The logical nanoCMS Page path remains `/mmdemo/`; `/test/` never becomes canonic
 
 ```text
 data/company-q3-2026.json
+data/relation-graph-q3-2026.json
 ```
+
+The relation graph currently contains 755 synthetic entities and 1178 explicit directed relations. CI reconciles the graph back to the monthly Q3 summary, including sales, COGS, gross margin, purchases, cash, payroll, employee hours and inventory valuation.
+
+The browser exposes an entity-type coverage view plus an incoming/outgoing relation explorer so records can be traversed directly.
 
 All synthetic record identities use `mmdemo.*`.
 
