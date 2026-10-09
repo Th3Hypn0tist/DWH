@@ -235,3 +235,34 @@ th { color: #aaa; font-weight: 600; }
 .graph-link:hover {
   background: #222;
 }
+
+
+.coverage-summary {
+  margin-bottom: 1rem;
+}
+.coverage-status {
+  display: inline-block;
+  padding: .18rem .45rem;
+  border: 1px solid #3a3a3a;
+  border-radius: 999px;
+  font-size: .76rem;
+  white-space: nowrap;
+}
+.coverage-exercised {
+  background: #1a1a1a;
+}
+.coverage-partial {
+  background: #202020;
+}
+.coverage-not_yet_exercised,
+.coverage-unresolved_id {
+  background: #151515;
+  color: #aaa;
+}
+.coverage-evidence {
+  display: block;
+  max-width: 540px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  color: #bbb;
+}
