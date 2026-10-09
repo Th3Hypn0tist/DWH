@@ -1,13 +1,13 @@
 {
   "dataset": "mmdemo.graph.mmdemo_industries.2026q3",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "period": {
     "from": "2026-07-01",
     "to": "2026-09-30"
   },
   "namespace": "mmdemo.",
-  "entity_count": 755,
-  "relation_count": 1178,
+  "entity_count": 840,
+  "relation_count": 1300,
   "entities": [
     {
       "id": "mmdemo.company.mmdemo_industries",
@@ -8338,6 +8338,771 @@
         "name": "Private 5G",
         "ring": "assess"
       }
+    },
+    {
+      "id": "mmdemo.asset.assembly.cell_1",
+      "type": "Asset",
+      "data": {
+        "name": "Assembly Cell 1",
+        "kind": "production_equipment",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.asset.service.van_1",
+      "type": "Asset",
+      "data": {
+        "name": "Service Van 1",
+        "kind": "vehicle",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.asset.service.van_2",
+      "type": "Asset",
+      "data": {
+        "name": "Service Van 2",
+        "kind": "vehicle",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.asset.testbench.1",
+      "type": "Asset",
+      "data": {
+        "name": "Electronics Test Bench",
+        "kind": "test_equipment",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.specification.gateway",
+      "type": "Specification",
+      "data": {
+        "name": "Industrial Edge Gateway specification",
+        "revision": "1.1",
+        "status": "approved"
+      }
+    },
+    {
+      "id": "mmdemo.specification.panel",
+      "type": "Specification",
+      "data": {
+        "name": "Control Panel specification",
+        "revision": "1.2",
+        "status": "approved"
+      }
+    },
+    {
+      "id": "mmdemo.specification.sensor_temp",
+      "type": "Specification",
+      "data": {
+        "name": "Temperature Sensor specification",
+        "revision": "1.3",
+        "status": "approved"
+      }
+    },
+    {
+      "id": "mmdemo.specification.sensor_vibration",
+      "type": "Specification",
+      "data": {
+        "name": "Vibration Sensor specification",
+        "revision": "1.4",
+        "status": "approved"
+      }
+    },
+    {
+      "id": "mmdemo.lineitem.001",
+      "type": "LineItem",
+      "data": {
+        "quantity": 2,
+        "net": 2980,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.lineitem.002",
+      "type": "LineItem",
+      "data": {
+        "quantity": 12,
+        "net": 2268,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.lineitem.003",
+      "type": "LineItem",
+      "data": {
+        "quantity": 1,
+        "net": 2890,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.lineitem.004",
+      "type": "LineItem",
+      "data": {
+        "quantity": 8,
+        "net": 2792,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.lineitem.005",
+      "type": "LineItem",
+      "data": {
+        "quantity": 4,
+        "net": 2760,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.lineitem.006",
+      "type": "LineItem",
+      "data": {
+        "quantity": 20,
+        "net": 2700,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.cash",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Cash",
+        "kind": "asset",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.accounts_receivable",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Accounts Receivable",
+        "kind": "asset",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.inventory",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Inventory",
+        "kind": "asset",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.accounts_payable",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Accounts Payable",
+        "kind": "liability",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.sales_revenue",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Sales Revenue",
+        "kind": "revenue",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.cogs",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Cost of Goods Sold",
+        "kind": "expense",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.balanceaccount.payroll_expense",
+      "type": "BalanceAccount",
+      "data": {
+        "name": "Payroll Expense",
+        "kind": "expense",
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "mmdemo.account.bank.main",
+      "type": "Account",
+      "data": {
+        "name": "Main Operating Bank Account",
+        "kind": "bank",
+        "currency": "EUR",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.account.customer.control",
+      "type": "Account",
+      "data": {
+        "name": "Customer Control Account",
+        "kind": "receivable_control",
+        "currency": "EUR",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.account.supplier.control",
+      "type": "Account",
+      "data": {
+        "name": "Supplier Control Account",
+        "kind": "payable_control",
+        "currency": "EUR",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.file.contract.gamma.maintenance",
+      "type": "FileResource",
+      "data": {
+        "name": "gamma-maintenance-contract.pdf",
+        "mime": "application/pdf",
+        "status": "available"
+      }
+    },
+    {
+      "id": "mmdemo.file.contract.alpha.maintenance",
+      "type": "FileResource",
+      "data": {
+        "name": "alpha-maintenance-contract.pdf",
+        "mime": "application/pdf",
+        "status": "available"
+      }
+    },
+    {
+      "id": "mmdemo.file.contract.epsilon.cloud",
+      "type": "FileResource",
+      "data": {
+        "name": "epsilon-cloud-contract.pdf",
+        "mime": "application/pdf",
+        "status": "available"
+      }
+    },
+    {
+      "id": "mmdemo.file.supplier.framework",
+      "type": "FileResource",
+      "data": {
+        "name": "electronics-framework-agreement.pdf",
+        "mime": "application/pdf",
+        "status": "available"
+      }
+    },
+    {
+      "id": "mmdemo.file.case.alpha.photo",
+      "type": "FileResource",
+      "data": {
+        "name": "alpha-sensor-fault-photo.jpg",
+        "mime": "image/jpeg",
+        "status": "available"
+      }
+    },
+    {
+      "id": "mmdemo.file.q3.management.report",
+      "type": "FileResource",
+      "data": {
+        "name": "q3-management-report.pdf",
+        "mime": "application/pdf",
+        "status": "available"
+      }
+    },
+    {
+      "id": "mmdemo.contract.gamma.maintenance",
+      "type": "Contract",
+      "data": {
+        "kind": "maintenance",
+        "start": "2026-07-01",
+        "end": "2027-06-30",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.contract.alpha.maintenance",
+      "type": "Contract",
+      "data": {
+        "kind": "maintenance",
+        "start": "2026-08-01",
+        "end": "2027-07-31",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.contract.epsilon.cloud",
+      "type": "Contract",
+      "data": {
+        "kind": "cloud_service",
+        "start": "2026-09-01",
+        "end": "2027-08-31",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.contract.supplier.electronics",
+      "type": "Contract",
+      "data": {
+        "kind": "supplier_framework",
+        "start": "2026-01-01",
+        "end": "2026-12-31",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.entitlement.gamma.maintenance",
+      "type": "Entitlement",
+      "data": {
+        "status": "active",
+        "valid_from": "2026-09-01",
+        "valid_to": "2027-08-31"
+      }
+    },
+    {
+      "id": "mmdemo.entitlement.alpha.maintenance",
+      "type": "Entitlement",
+      "data": {
+        "status": "active",
+        "valid_from": "2026-09-01",
+        "valid_to": "2027-08-31"
+      }
+    },
+    {
+      "id": "mmdemo.entitlement.epsilon.cloud",
+      "type": "Entitlement",
+      "data": {
+        "status": "active",
+        "valid_from": "2026-09-01",
+        "valid_to": "2027-08-31"
+      }
+    },
+    {
+      "id": "mmdemo.plan.sales.q3",
+      "type": "Plan",
+      "data": {
+        "name": "Q3 Sales Plan",
+        "kind": "strategy",
+        "period": "2026-Q3",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.plan.assembly.q3",
+      "type": "Plan",
+      "data": {
+        "name": "Q3 Assembly Capacity Plan",
+        "kind": "operations",
+        "period": "2026-Q3",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.plan.service.q3",
+      "type": "Plan",
+      "data": {
+        "name": "Q3 Field Service Plan",
+        "kind": "operations",
+        "period": "2026-Q3",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.ruleset.sales.credit",
+      "type": "RuleSet",
+      "data": {
+        "name": "Sales Credit Rules",
+        "scope": "sales",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.ruleset.quality.release",
+      "type": "RuleSet",
+      "data": {
+        "name": "Quality Release Rules",
+        "scope": "quality",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.ruleset.service.sla",
+      "type": "RuleSet",
+      "data": {
+        "name": "Service SLA Rules",
+        "scope": "service",
+        "status": "active"
+      }
+    },
+    {
+      "id": "mmdemo.journal.202607.close",
+      "type": "JournalEntry",
+      "data": {
+        "kind": "monthly_close",
+        "month": "2026-07",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202607.sales_cr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": -68420,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202607.ar_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 68420,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202607.cogs_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 35110,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202607.inventory_cr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": -35110,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202607.payroll_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 51400,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.journal.202608.close",
+      "type": "JournalEntry",
+      "data": {
+        "kind": "monthly_close",
+        "month": "2026-08",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202608.sales_cr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": -91280,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202608.ar_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 91280,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202608.cogs_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 45620,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202608.inventory_cr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": -45620,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202608.payroll_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 52200,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.journal.202609.close",
+      "type": "JournalEntry",
+      "data": {
+        "kind": "monthly_close",
+        "month": "2026-09",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202609.sales_cr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": -118760,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202609.ar_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 118760,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202609.cogs_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 57990,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202609.inventory_cr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": -57990,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.ledger.202609.payroll_dr",
+      "type": "LedgerEntry",
+      "data": {
+        "amount": 53100,
+        "currency": "EUR",
+        "status": "posted"
+      }
+    },
+    {
+      "id": "mmdemo.lot.gateway.2026q3",
+      "type": "Lot",
+      "data": {
+        "quantity": 24,
+        "status": "released"
+      }
+    },
+    {
+      "id": "mmdemo.lot.temp.2026q3a",
+      "type": "Lot",
+      "data": {
+        "quantity": 100,
+        "status": "released"
+      }
+    },
+    {
+      "id": "mmdemo.lot.vibration.2026q3a",
+      "type": "Lot",
+      "data": {
+        "quantity": 60,
+        "status": "released"
+      }
+    },
+    {
+      "id": "mmdemo.lot.io.2026q3a",
+      "type": "Lot",
+      "data": {
+        "quantity": 30,
+        "status": "released"
+      }
+    },
+    {
+      "id": "mmdemo.lot.panel.2026q3a",
+      "type": "Lot",
+      "data": {
+        "quantity": 12,
+        "status": "released"
+      }
+    },
+    {
+      "id": "mmdemo.handlingunit.hu001",
+      "type": "HandlingUnit",
+      "data": {
+        "kind": "pallet",
+        "status": "shipped"
+      }
+    },
+    {
+      "id": "mmdemo.handlingunit.hu002",
+      "type": "HandlingUnit",
+      "data": {
+        "kind": "box",
+        "status": "shipped"
+      }
+    },
+    {
+      "id": "mmdemo.handlingunit.hu003",
+      "type": "HandlingUnit",
+      "data": {
+        "kind": "pallet",
+        "status": "shipped"
+      }
+    },
+    {
+      "id": "mmdemo.handlingunit.hu004",
+      "type": "HandlingUnit",
+      "data": {
+        "kind": "box",
+        "status": "shipped"
+      }
+    },
+    {
+      "id": "mmdemo.handlingunit.hu005",
+      "type": "HandlingUnit",
+      "data": {
+        "kind": "pallet",
+        "status": "shipped"
+      }
+    },
+    {
+      "id": "mmdemo.reservation.stock.202609.001",
+      "type": "Reservation",
+      "data": {
+        "kind": "stock",
+        "status": "fulfilled",
+        "quantity": 2
+      }
+    },
+    {
+      "id": "mmdemo.reservation.stock.202609.002",
+      "type": "Reservation",
+      "data": {
+        "kind": "stock",
+        "status": "fulfilled",
+        "quantity": 3
+      }
+    },
+    {
+      "id": "mmdemo.reservation.stock.202609.003",
+      "type": "Reservation",
+      "data": {
+        "kind": "stock",
+        "status": "fulfilled",
+        "quantity": 4
+      }
+    },
+    {
+      "id": "mmdemo.reservation.stock.202609.004",
+      "type": "Reservation",
+      "data": {
+        "kind": "stock",
+        "status": "fulfilled",
+        "quantity": 5
+      }
+    },
+    {
+      "id": "mmdemo.reservation.stock.202609.005",
+      "type": "Reservation",
+      "data": {
+        "kind": "stock",
+        "status": "fulfilled",
+        "quantity": 6
+      }
+    },
+    {
+      "id": "mmdemo.reservation.stock.202609.006",
+      "type": "Reservation",
+      "data": {
+        "kind": "stock",
+        "status": "fulfilled",
+        "quantity": 7
+      }
+    },
+    {
+      "id": "mmdemo.filing.vat.202607",
+      "type": "Filing",
+      "data": {
+        "name": "VAT Filing July",
+        "period": "2026-07",
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "mmdemo.filing.vat.202608",
+      "type": "Filing",
+      "data": {
+        "name": "VAT Filing August",
+        "period": "2026-08",
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "mmdemo.filing.vat.202609",
+      "type": "Filing",
+      "data": {
+        "name": "VAT Filing September",
+        "period": "2026-09",
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "mmdemo.filing.payroll.202609",
+      "type": "Filing",
+      "data": {
+        "name": "Payroll Reporting September",
+        "period": "2026-09",
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "mmdemo.message.gamma.quote.accepted",
+      "type": "Message",
+      "data": {
+        "subject": "Quote accepted",
+        "channel": "email",
+        "status": "sent"
+      }
+    },
+    {
+      "id": "mmdemo.message.supplier.delivery",
+      "type": "Message",
+      "data": {
+        "subject": "Component delivery confirmed",
+        "channel": "email",
+        "status": "sent"
+      }
+    },
+    {
+      "id": "mmdemo.message.alpha.case.update",
+      "type": "Message",
+      "data": {
+        "subject": "Service case update",
+        "channel": "email",
+        "status": "sent"
+      }
+    },
+    {
+      "id": "mmdemo.message.management.q3",
+      "type": "Message",
+      "data": {
+        "subject": "Q3 management review published",
+        "channel": "email",
+        "status": "sent"
+      }
     }
   ],
   "relations": [
@@ -14339,6 +15104,659 @@
       "source": "mmdemo.strategy.capital.assembly_cell_2",
       "relation": "mmdemo.rel.evidenced_by",
       "target": "mmdemo.measurement.inventory.202609"
+    },
+    {
+      "source": "mmdemo.asset.assembly.cell_1",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.assembly"
+    },
+    {
+      "source": "mmdemo.asset.service.van_1",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.hq"
+    },
+    {
+      "source": "mmdemo.asset.service.van_2",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.hq"
+    },
+    {
+      "source": "mmdemo.asset.testbench.1",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.assembly"
+    },
+    {
+      "source": "mmdemo.specification.gateway",
+      "relation": "mmdemo.rel.specifies",
+      "target": "mmdemo.catalog.gateway"
+    },
+    {
+      "source": "mmdemo.specification.panel",
+      "relation": "mmdemo.rel.specifies",
+      "target": "mmdemo.catalog.panel"
+    },
+    {
+      "source": "mmdemo.specification.sensor_temp",
+      "relation": "mmdemo.rel.specifies",
+      "target": "mmdemo.catalog.sensor_temp"
+    },
+    {
+      "source": "mmdemo.specification.sensor_vibration",
+      "relation": "mmdemo.rel.specifies",
+      "target": "mmdemo.catalog.sensor_vibration"
+    },
+    {
+      "source": "mmdemo.order.sales.202607.001",
+      "relation": "mmdemo.rel.has_line_item",
+      "target": "mmdemo.lineitem.001",
+      "order": 0
+    },
+    {
+      "source": "mmdemo.lineitem.001",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.gateway"
+    },
+    {
+      "source": "mmdemo.order.sales.202607.001",
+      "relation": "mmdemo.rel.has_line_item",
+      "target": "mmdemo.lineitem.002",
+      "order": 1
+    },
+    {
+      "source": "mmdemo.lineitem.002",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.sensor_temp"
+    },
+    {
+      "source": "mmdemo.order.sales.202608.001",
+      "relation": "mmdemo.rel.has_line_item",
+      "target": "mmdemo.lineitem.003",
+      "order": 2
+    },
+    {
+      "source": "mmdemo.lineitem.003",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.panel"
+    },
+    {
+      "source": "mmdemo.order.sales.202608.001",
+      "relation": "mmdemo.rel.has_line_item",
+      "target": "mmdemo.lineitem.004",
+      "order": 3
+    },
+    {
+      "source": "mmdemo.lineitem.004",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.sensor_vibration"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.001",
+      "relation": "mmdemo.rel.has_line_item",
+      "target": "mmdemo.lineitem.005",
+      "order": 4
+    },
+    {
+      "source": "mmdemo.lineitem.005",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.io_node"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.001",
+      "relation": "mmdemo.rel.has_line_item",
+      "target": "mmdemo.lineitem.006",
+      "order": 5
+    },
+    {
+      "source": "mmdemo.lineitem.006",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.engineering_hour"
+    },
+    {
+      "source": "mmdemo.account.bank.main",
+      "relation": "mmdemo.rel.maps_to",
+      "target": "mmdemo.balanceaccount.cash"
+    },
+    {
+      "source": "mmdemo.account.customer.control",
+      "relation": "mmdemo.rel.maps_to",
+      "target": "mmdemo.balanceaccount.accounts_receivable"
+    },
+    {
+      "source": "mmdemo.account.supplier.control",
+      "relation": "mmdemo.rel.maps_to",
+      "target": "mmdemo.balanceaccount.accounts_payable"
+    },
+    {
+      "source": "mmdemo.contract.gamma.maintenance",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.customer.gamma"
+    },
+    {
+      "source": "mmdemo.contract.gamma.maintenance",
+      "relation": "mmdemo.rel.file",
+      "target": "mmdemo.file.contract.gamma.maintenance"
+    },
+    {
+      "source": "mmdemo.contract.alpha.maintenance",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.customer.alpha"
+    },
+    {
+      "source": "mmdemo.contract.alpha.maintenance",
+      "relation": "mmdemo.rel.file",
+      "target": "mmdemo.file.contract.alpha.maintenance"
+    },
+    {
+      "source": "mmdemo.contract.epsilon.cloud",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.customer.epsilon"
+    },
+    {
+      "source": "mmdemo.contract.epsilon.cloud",
+      "relation": "mmdemo.rel.file",
+      "target": "mmdemo.file.contract.epsilon.cloud"
+    },
+    {
+      "source": "mmdemo.contract.supplier.electronics",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.supplier.electronics"
+    },
+    {
+      "source": "mmdemo.contract.supplier.electronics",
+      "relation": "mmdemo.rel.file",
+      "target": "mmdemo.file.supplier.framework"
+    },
+    {
+      "source": "mmdemo.entitlement.gamma.maintenance",
+      "relation": "mmdemo.rel.customer",
+      "target": "mmdemo.identity.customer.gamma"
+    },
+    {
+      "source": "mmdemo.entitlement.gamma.maintenance",
+      "relation": "mmdemo.rel.contract",
+      "target": "mmdemo.contract.gamma.maintenance"
+    },
+    {
+      "source": "mmdemo.entitlement.gamma.maintenance",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.maintenance_year"
+    },
+    {
+      "source": "mmdemo.entitlement.alpha.maintenance",
+      "relation": "mmdemo.rel.customer",
+      "target": "mmdemo.identity.customer.alpha"
+    },
+    {
+      "source": "mmdemo.entitlement.alpha.maintenance",
+      "relation": "mmdemo.rel.contract",
+      "target": "mmdemo.contract.alpha.maintenance"
+    },
+    {
+      "source": "mmdemo.entitlement.alpha.maintenance",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.maintenance_year"
+    },
+    {
+      "source": "mmdemo.entitlement.epsilon.cloud",
+      "relation": "mmdemo.rel.customer",
+      "target": "mmdemo.identity.customer.epsilon"
+    },
+    {
+      "source": "mmdemo.entitlement.epsilon.cloud",
+      "relation": "mmdemo.rel.contract",
+      "target": "mmdemo.contract.epsilon.cloud"
+    },
+    {
+      "source": "mmdemo.entitlement.epsilon.cloud",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.cloud_year"
+    },
+    {
+      "source": "mmdemo.plan.assembly.q3",
+      "relation": "mmdemo.rel.plans",
+      "target": "mmdemo.project.assembly.202609.001"
+    },
+    {
+      "source": "mmdemo.plan.service.q3",
+      "relation": "mmdemo.rel.plans",
+      "target": "mmdemo.project.service.202609.001"
+    },
+    {
+      "source": "mmdemo.plan.sales.q3",
+      "relation": "mmdemo.rel.measured_by",
+      "target": "mmdemo.measurement.sales.202609"
+    },
+    {
+      "source": "mmdemo.ruleset.sales.credit",
+      "relation": "mmdemo.rel.applies_to",
+      "target": "mmdemo.order.sales.202609.001"
+    },
+    {
+      "source": "mmdemo.ruleset.quality.release",
+      "relation": "mmdemo.rel.applies_to",
+      "target": "mmdemo.lot.gateway.2026q3"
+    },
+    {
+      "source": "mmdemo.ruleset.service.sla",
+      "relation": "mmdemo.rel.applies_to",
+      "target": "mmdemo.case.customer.202609.001"
+    },
+    {
+      "source": "mmdemo.journal.202607.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202607.sales_cr",
+      "order": 0
+    },
+    {
+      "source": "mmdemo.ledger.202607.sales_cr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.sales_revenue"
+    },
+    {
+      "source": "mmdemo.journal.202607.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202607.ar_dr",
+      "order": 1
+    },
+    {
+      "source": "mmdemo.ledger.202607.ar_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.accounts_receivable"
+    },
+    {
+      "source": "mmdemo.journal.202607.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202607.cogs_dr",
+      "order": 2
+    },
+    {
+      "source": "mmdemo.ledger.202607.cogs_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.cogs"
+    },
+    {
+      "source": "mmdemo.journal.202607.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202607.inventory_cr",
+      "order": 3
+    },
+    {
+      "source": "mmdemo.ledger.202607.inventory_cr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.inventory"
+    },
+    {
+      "source": "mmdemo.journal.202607.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202607.payroll_dr",
+      "order": 4
+    },
+    {
+      "source": "mmdemo.ledger.202607.payroll_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.payroll_expense"
+    },
+    {
+      "source": "mmdemo.journal.202608.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202608.sales_cr",
+      "order": 0
+    },
+    {
+      "source": "mmdemo.ledger.202608.sales_cr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.sales_revenue"
+    },
+    {
+      "source": "mmdemo.journal.202608.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202608.ar_dr",
+      "order": 1
+    },
+    {
+      "source": "mmdemo.ledger.202608.ar_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.accounts_receivable"
+    },
+    {
+      "source": "mmdemo.journal.202608.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202608.cogs_dr",
+      "order": 2
+    },
+    {
+      "source": "mmdemo.ledger.202608.cogs_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.cogs"
+    },
+    {
+      "source": "mmdemo.journal.202608.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202608.inventory_cr",
+      "order": 3
+    },
+    {
+      "source": "mmdemo.ledger.202608.inventory_cr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.inventory"
+    },
+    {
+      "source": "mmdemo.journal.202608.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202608.payroll_dr",
+      "order": 4
+    },
+    {
+      "source": "mmdemo.ledger.202608.payroll_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.payroll_expense"
+    },
+    {
+      "source": "mmdemo.journal.202609.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202609.sales_cr",
+      "order": 0
+    },
+    {
+      "source": "mmdemo.ledger.202609.sales_cr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.sales_revenue"
+    },
+    {
+      "source": "mmdemo.journal.202609.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202609.ar_dr",
+      "order": 1
+    },
+    {
+      "source": "mmdemo.ledger.202609.ar_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.accounts_receivable"
+    },
+    {
+      "source": "mmdemo.journal.202609.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202609.cogs_dr",
+      "order": 2
+    },
+    {
+      "source": "mmdemo.ledger.202609.cogs_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.cogs"
+    },
+    {
+      "source": "mmdemo.journal.202609.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202609.inventory_cr",
+      "order": 3
+    },
+    {
+      "source": "mmdemo.ledger.202609.inventory_cr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.inventory"
+    },
+    {
+      "source": "mmdemo.journal.202609.close",
+      "relation": "mmdemo.rel.has_ledger_entry",
+      "target": "mmdemo.ledger.202609.payroll_dr",
+      "order": 4
+    },
+    {
+      "source": "mmdemo.ledger.202609.payroll_dr",
+      "relation": "mmdemo.rel.balance_account",
+      "target": "mmdemo.balanceaccount.payroll_expense"
+    },
+    {
+      "source": "mmdemo.lot.gateway.2026q3",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.gateway"
+    },
+    {
+      "source": "mmdemo.lot.gateway.2026q3",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.warehouse"
+    },
+    {
+      "source": "mmdemo.lot.temp.2026q3a",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.sensor_temp"
+    },
+    {
+      "source": "mmdemo.lot.temp.2026q3a",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.warehouse"
+    },
+    {
+      "source": "mmdemo.lot.vibration.2026q3a",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.sensor_vibration"
+    },
+    {
+      "source": "mmdemo.lot.vibration.2026q3a",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.warehouse"
+    },
+    {
+      "source": "mmdemo.lot.io.2026q3a",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.io_node"
+    },
+    {
+      "source": "mmdemo.lot.io.2026q3a",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.warehouse"
+    },
+    {
+      "source": "mmdemo.lot.panel.2026q3a",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.panel"
+    },
+    {
+      "source": "mmdemo.lot.panel.2026q3a",
+      "relation": "mmdemo.rel.location",
+      "target": "mmdemo.location.warehouse"
+    },
+    {
+      "source": "mmdemo.handlingunit.hu001",
+      "relation": "mmdemo.rel.contains_lot",
+      "target": "mmdemo.lot.gateway.2026q3"
+    },
+    {
+      "source": "mmdemo.shipment.202609.001",
+      "relation": "mmdemo.rel.uses_handling_unit",
+      "target": "mmdemo.handlingunit.hu001"
+    },
+    {
+      "source": "mmdemo.handlingunit.hu002",
+      "relation": "mmdemo.rel.contains_lot",
+      "target": "mmdemo.lot.temp.2026q3a"
+    },
+    {
+      "source": "mmdemo.shipment.202609.002",
+      "relation": "mmdemo.rel.uses_handling_unit",
+      "target": "mmdemo.handlingunit.hu002"
+    },
+    {
+      "source": "mmdemo.handlingunit.hu003",
+      "relation": "mmdemo.rel.contains_lot",
+      "target": "mmdemo.lot.vibration.2026q3a"
+    },
+    {
+      "source": "mmdemo.shipment.202609.003",
+      "relation": "mmdemo.rel.uses_handling_unit",
+      "target": "mmdemo.handlingunit.hu003"
+    },
+    {
+      "source": "mmdemo.handlingunit.hu004",
+      "relation": "mmdemo.rel.contains_lot",
+      "target": "mmdemo.lot.io.2026q3a"
+    },
+    {
+      "source": "mmdemo.shipment.202609.004",
+      "relation": "mmdemo.rel.uses_handling_unit",
+      "target": "mmdemo.handlingunit.hu004"
+    },
+    {
+      "source": "mmdemo.handlingunit.hu005",
+      "relation": "mmdemo.rel.contains_lot",
+      "target": "mmdemo.lot.panel.2026q3a"
+    },
+    {
+      "source": "mmdemo.shipment.202609.005",
+      "relation": "mmdemo.rel.uses_handling_unit",
+      "target": "mmdemo.handlingunit.hu005"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.001",
+      "relation": "mmdemo.rel.has_reservation",
+      "target": "mmdemo.reservation.stock.202609.001"
+    },
+    {
+      "source": "mmdemo.reservation.stock.202609.001",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.gateway"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.002",
+      "relation": "mmdemo.rel.has_reservation",
+      "target": "mmdemo.reservation.stock.202609.002"
+    },
+    {
+      "source": "mmdemo.reservation.stock.202609.002",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.sensor_temp"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.003",
+      "relation": "mmdemo.rel.has_reservation",
+      "target": "mmdemo.reservation.stock.202609.003"
+    },
+    {
+      "source": "mmdemo.reservation.stock.202609.003",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.sensor_vibration"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.004",
+      "relation": "mmdemo.rel.has_reservation",
+      "target": "mmdemo.reservation.stock.202609.004"
+    },
+    {
+      "source": "mmdemo.reservation.stock.202609.004",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.io_node"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.005",
+      "relation": "mmdemo.rel.has_reservation",
+      "target": "mmdemo.reservation.stock.202609.005"
+    },
+    {
+      "source": "mmdemo.reservation.stock.202609.005",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.panel"
+    },
+    {
+      "source": "mmdemo.order.sales.202609.006",
+      "relation": "mmdemo.rel.has_reservation",
+      "target": "mmdemo.reservation.stock.202609.006"
+    },
+    {
+      "source": "mmdemo.reservation.stock.202609.006",
+      "relation": "mmdemo.rel.catalog_item",
+      "target": "mmdemo.catalog.gateway"
+    },
+    {
+      "source": "mmdemo.filing.vat.202607",
+      "relation": "mmdemo.rel.based_on",
+      "target": "mmdemo.journal.202607.close"
+    },
+    {
+      "source": "mmdemo.filing.vat.202608",
+      "relation": "mmdemo.rel.based_on",
+      "target": "mmdemo.journal.202608.close"
+    },
+    {
+      "source": "mmdemo.filing.vat.202609",
+      "relation": "mmdemo.rel.based_on",
+      "target": "mmdemo.journal.202609.close"
+    },
+    {
+      "source": "mmdemo.filing.payroll.202609",
+      "relation": "mmdemo.rel.based_on",
+      "target": "mmdemo.journal.202609.close"
+    },
+    {
+      "source": "mmdemo.message.gamma.quote.accepted",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.customer.gamma"
+    },
+    {
+      "source": "mmdemo.message.gamma.quote.accepted",
+      "relation": "mmdemo.rel.references",
+      "target": "mmdemo.order.sales.202607.001"
+    },
+    {
+      "source": "mmdemo.message.supplier.delivery",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.supplier.electronics"
+    },
+    {
+      "source": "mmdemo.message.supplier.delivery",
+      "relation": "mmdemo.rel.references",
+      "target": "mmdemo.order.purchase.202608.001"
+    },
+    {
+      "source": "mmdemo.message.alpha.case.update",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.customer.alpha"
+    },
+    {
+      "source": "mmdemo.message.alpha.case.update",
+      "relation": "mmdemo.rel.references",
+      "target": "mmdemo.case.customer.202609.001"
+    },
+    {
+      "source": "mmdemo.message.management.q3",
+      "relation": "mmdemo.rel.counterparty",
+      "target": "mmdemo.identity.employee.ceo"
+    },
+    {
+      "source": "mmdemo.message.management.q3",
+      "relation": "mmdemo.rel.references",
+      "target": "mmdemo.file.q3.management.report"
+    },
+    {
+      "source": "mmdemo.case.customer.202609.001",
+      "relation": "mmdemo.rel.file",
+      "target": "mmdemo.file.case.alpha.photo"
+    },
+    {
+      "source": "mmdemo.strategy.objective.margin",
+      "relation": "mmdemo.rel.file",
+      "target": "mmdemo.file.q3.management.report"
     }
-  ]
+  ],
+  "coverage_extension": {
+    "purpose": "exercise all 32 Business Universal semantic types with explicit synthetic Q3 company evidence",
+    "added_types": [
+      "Asset",
+      "Specification",
+      "LineItem",
+      "BalanceAccount",
+      "Account",
+      "JournalEntry",
+      "LedgerEntry",
+      "Lot",
+      "HandlingUnit",
+      "Reservation",
+      "Entitlement",
+      "Contract",
+      "Plan",
+      "Filing",
+      "RuleSet",
+      "Message",
+      "FileResource"
+    ]
+  }
 }
