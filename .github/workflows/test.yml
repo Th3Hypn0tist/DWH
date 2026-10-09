@@ -29,3 +29,5 @@ jobs:
         run: node demo/mmdemo/tests/reconcile.mjs
       - name: MMDemo MetaModule coverage
         run: node demo/mmdemo/tools/build-coverage.mjs --check
+      - name: MMDemo Event audit
+        run: node demo/mmdemo/tests/event-audit.mjs
