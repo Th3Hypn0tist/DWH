@@ -1,500 +1,1193 @@
 {
-  "dataset": "mmdemo.coverage.business_universals.2026q3",
-  "version": "0.1.0",
-  "graph_ref": "mmdemo.graph.mmdemo_industries.2026q3",
-  "catalog_ref": "#METAMODULE:CATALOG",
-  "family": "Universal/Business",
-  "member_count": 32,
-  "proven_count": 15,
-  "partial_count": 0,
-  "not_exercised_count": 17,
-  "status_semantics": {
-    "PROVEN": "direct explicit graph evidence of the canonical Universal type exists",
-    "PARTIAL": "reserved for explicit but incomplete semantic evidence; never inferred from similarity",
-    "NOT_EXERCISED": "current demo graph contains no direct evidence for this Universal"
+  "dataset": "mmdemo.coverage.mmdemo_industries.2026q3",
+  "version": "0.2.0",
+  "authority": "synthetic_demo_evidence_only",
+  "sources": {
+    "catalog": "#METAMODULE:CATALOG",
+    "relation_graph": "mmdemo.graph.mmdemo_industries.2026q3",
+    "company": "mmdemo.company.mmdemo_industries.2026q3"
   },
-  "entries": [
-    {
-      "semantic_identity": "Identity",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
+  "status_model": [
+    "EXERCISED",
+    "PARTIAL",
+    "NOT_YET_EXERCISED",
+    "UNRESOLVED_ID"
+  ],
+  "universals": {
+    "business": [
+      {
+        "semantic_identity": "Identity",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Identity",
+          "entity_count": 28,
+          "sample_entity_ids": [
+            "mmdemo.company.mmdemo_industries",
+            "mmdemo.identity.employee.ceo",
+            "mmdemo.identity.employee.sales_1",
+            "mmdemo.identity.employee.sales_2",
+            "mmdemo.identity.employee.pm_1"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Project",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Project",
+          "entity_count": 52,
+          "sample_entity_ids": [
+            "mmdemo.project.assembly.202607.001",
+            "mmdemo.project.assembly.202607.002",
+            "mmdemo.project.assembly.202607.003",
+            "mmdemo.project.assembly.202607.004",
+            "mmdemo.project.assembly.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Location",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Location",
+          "entity_count": 3,
+          "sample_entity_ids": [
+            "mmdemo.location.hq",
+            "mmdemo.location.warehouse",
+            "mmdemo.location.assembly"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Asset",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Asset",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "CatalogItem",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "CatalogItem",
+          "entity_count": 12,
+          "sample_entity_ids": [
+            "mmdemo.catalog.gateway",
+            "mmdemo.catalog.sensor_temp",
+            "mmdemo.catalog.sensor_vibration",
+            "mmdemo.catalog.io_node",
+            "mmdemo.catalog.panel"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Specification",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Specification",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Opportunity",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Opportunity",
+          "entity_count": 101,
+          "sample_entity_ids": [
+            "mmdemo.opportunity.202607.001",
+            "mmdemo.opportunity.202607.002",
+            "mmdemo.opportunity.202607.003",
+            "mmdemo.opportunity.202607.004",
+            "mmdemo.opportunity.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "LineItem",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "LineItem",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Quote",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Quote",
+          "entity_count": 42,
+          "sample_entity_ids": [
+            "mmdemo.quote.202607.001",
+            "mmdemo.quote.202607.002",
+            "mmdemo.quote.202607.003",
+            "mmdemo.quote.202607.004",
+            "mmdemo.quote.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Order",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Order",
+          "entity_count": 78,
+          "sample_entity_ids": [
+            "mmdemo.order.sales.202607.001",
+            "mmdemo.order.sales.202607.002",
+            "mmdemo.order.sales.202607.003",
+            "mmdemo.order.sales.202607.004",
+            "mmdemo.order.sales.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Invoice",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Invoice",
+          "entity_count": 99,
+          "sample_entity_ids": [
+            "mmdemo.invoice.sales.202607.001",
+            "mmdemo.invoice.sales.202607.002",
+            "mmdemo.invoice.sales.202607.003",
+            "mmdemo.invoice.sales.202607.004",
+            "mmdemo.invoice.sales.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "BalanceAccount",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "BalanceAccount",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "BalanceTransaction",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "BalanceTransaction",
+          "entity_count": 42,
+          "sample_entity_ids": [
+            "mmdemo.balance.payroll.202607.001",
+            "mmdemo.balance.payroll.202607.002",
+            "mmdemo.balance.payroll.202607.003",
+            "mmdemo.balance.payroll.202607.004",
+            "mmdemo.balance.payroll.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Settlement",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Settlement",
+          "entity_count": 36,
+          "sample_entity_ids": [
+            "mmdemo.settlement.in.202607.001",
+            "mmdemo.settlement.in.202607.002",
+            "mmdemo.settlement.in.202607.003",
+            "mmdemo.settlement.in.202607.004",
+            "mmdemo.settlement.in.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Account",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Account",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "JournalEntry",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "JournalEntry",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "LedgerEntry",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "LedgerEntry",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "StockMovement",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "StockMovement",
+          "entity_count": 111,
+          "sample_entity_ids": [
+            "mmdemo.stock.issue.202607.001",
+            "mmdemo.stock.issue.202607.002",
+            "mmdemo.stock.issue.202607.003",
+            "mmdemo.stock.issue.202607.004",
+            "mmdemo.stock.issue.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Lot",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Lot",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Shipment",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Shipment",
+          "entity_count": 54,
+          "sample_entity_ids": [
+            "mmdemo.shipment.202607.001",
+            "mmdemo.shipment.202607.002",
+            "mmdemo.shipment.202607.003",
+            "mmdemo.shipment.202607.004",
+            "mmdemo.shipment.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "HandlingUnit",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "HandlingUnit",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Case",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Case",
+          "entity_count": 37,
+          "sample_entity_ids": [
+            "mmdemo.case.customer.202607.001",
+            "mmdemo.case.customer.202607.002",
+            "mmdemo.case.customer.202607.003",
+            "mmdemo.case.customer.202607.004",
+            "mmdemo.case.customer.202607.005"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Assessment",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Assessment",
+          "entity_count": 8,
+          "sample_entity_ids": [
+            "mmdemo.strategy.objective.margin",
+            "mmdemo.strategy.objective.recurring",
+            "mmdemo.strategy.objective.delivery",
+            "mmdemo.strategy.capital.assembly_cell_2",
+            "mmdemo.strategy.capital.demo_van"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "Reservation",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Reservation",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Entitlement",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Entitlement",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Contract",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Contract",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Plan",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Plan",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Filing",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Filing",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Measurement",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "entity_type": "Measurement",
+          "entity_count": 52,
+          "sample_entity_ids": [
+            "mmdemo.measurement.inventory.2026-06",
+            "mmdemo.measurement.inventory.202607",
+            "mmdemo.measurement.time.202607.001",
+            "mmdemo.measurement.time.202607.002",
+            "mmdemo.measurement.time.202607.003"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "RuleSet",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "RuleSet",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "Message",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "Message",
+          "entity_count": 0
+        }
+      },
+      {
+        "semantic_identity": "FileResource",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "entity_type": "FileResource",
+          "entity_count": 0
+        }
+      }
+    ],
+    "platform": [
+      {
+        "semantic_identity": "IAM",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "AccessCore",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "DWH",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "implementation": "PHP ProjectionEngine + DWH projection API",
+          "contracts": [
+            "#WEB",
+            "#SITE",
+            "#METAMODULE:CATALOG",
+            "#PROJECTOR:*",
+            "#CONTENT:*",
+            "#ACTION:*"
+          ]
+        }
+      },
+      {
+        "semantic_identity": "EXTPeer",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "NetworkService",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "LibraryMount",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "SymbolNamespace",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "nanoCMSStructure",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "EXERCISED",
+        "evidence": {
+          "implementation": "recursive Page + placements source",
+          "source": "php/data/web-structure.json",
+          "projections": [
+            "#WEB",
+            "#SITE"
+          ]
+        }
+      }
+    ],
+    "gui": [
+      {
+        "semantic_identity": "LiveBinding",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "DirectManipulation",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      },
+      {
+        "semantic_identity": "SpatialView",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": null
+      }
+    ]
+  },
+  "compositions": {
+    "known_examples": [
+      {
+        "display_name": "ERP",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "status": "EXERCISED",
+        "evidence": {
+          "required_types": [
+            "Order",
+            "Invoice",
+            "Settlement",
+            "StockMovement",
+            "Project",
+            "BalanceTransaction"
+          ],
+          "type_counts": {
+            "Order": 78,
+            "Invoice": 99,
+            "Settlement": 36,
+            "StockMovement": 111,
+            "Project": 52,
+            "BalanceTransaction": 42
+          },
+          "required_relations": [
+            "mmdemo.rel.billed_by",
+            "mmdemo.rel.settled_by",
+            "mmdemo.rel.posts_stock_movement"
+          ],
+          "relation_counts": {
+            "mmdemo.rel.billed_by": 88,
+            "mmdemo.rel.settled_by": 36,
+            "mmdemo.rel.posts_stock_movement": 78
+          },
+          "missing_types": [],
+          "missing_relations": []
+        }
+      },
+      {
+        "display_name": "CRM",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "status": "EXERCISED",
+        "evidence": {
+          "required_types": [
+            "Identity",
+            "Opportunity",
+            "Quote",
+            "Order"
+          ],
+          "type_counts": {
+            "Identity": 28,
+            "Opportunity": 101,
+            "Quote": 42,
+            "Order": 78
+          },
+          "required_relations": [
+            "mmdemo.rel.customer",
+            "mmdemo.rel.has_quote",
+            "mmdemo.rel.converted_to"
+          ],
+          "relation_counts": {
+            "mmdemo.rel.customer": 308,
+            "mmdemo.rel.has_quote": 42,
+            "mmdemo.rel.converted_to": 87
+          },
+          "missing_types": [],
+          "missing_relations": []
+        }
+      },
+      {
+        "display_name": "HRM",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "status": "EXERCISED",
+        "evidence": {
+          "required_types": [
+            "Identity",
+            "Measurement",
+            "BalanceTransaction"
+          ],
+          "type_counts": {
+            "Identity": 28,
+            "Measurement": 52,
+            "BalanceTransaction": 42
+          },
+          "required_relations": [
+            "mmdemo.rel.employs",
+            "mmdemo.rel.payroll_transaction"
+          ],
+          "relation_counts": {
+            "mmdemo.rel.employs": 14,
+            "mmdemo.rel.payroll_transaction": 42
+          },
+          "missing_types": [],
+          "missing_relations": []
+        }
+      },
+      {
+        "display_name": "WMS",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "status": "EXERCISED",
+        "evidence": {
+          "required_types": [
+            "Location",
+            "StockMovement",
+            "Shipment"
+          ],
+          "type_counts": {
+            "Location": 3,
+            "StockMovement": 111,
+            "Shipment": 54
+          },
+          "required_relations": [
+            "mmdemo.rel.received_by",
+            "mmdemo.rel.posts_stock_movement",
+            "mmdemo.rel.location"
+          ],
+          "relation_counts": {
+            "mmdemo.rel.received_by": 33,
+            "mmdemo.rel.posts_stock_movement": 78,
+            "mmdemo.rel.location": 135
+          },
+          "missing_types": [],
+          "missing_relations": []
+        }
+      },
+      {
+        "display_name": "Projects",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "status": "EXERCISED",
+        "evidence": {
+          "required_types": [
+            "Project",
+            "Identity"
+          ],
+          "type_counts": {
+            "Project": 52,
+            "Identity": 28
+          },
+          "required_relations": [
+            "mmdemo.rel.assigned_to"
+          ],
+          "relation_counts": {
+            "mmdemo.rel.assigned_to": 28
+          },
+          "missing_types": [],
+          "missing_relations": []
+        }
+      },
+      {
+        "display_name": "Editor",
+        "identity_status": "CANONICAL_CONFIRMED",
+        "status": "NOT_YET_EXERCISED",
+        "evidence": {
+          "required_types": [],
+          "type_counts": {},
+          "required_relations": [],
+          "relation_counts": {},
+          "missing_types": [],
+          "missing_relations": []
+        }
+      }
+    ],
+    "strategy": {
+      "group_identity": "Strategy",
+      "group_event_status": "NOT_EVENT_OWNER",
+      "member_count": 28,
+      "members": [
+        {
+          "bucket": "methods_tools",
+          "display_name": "SWOT",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "PESTEL",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Five Forces",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Scenario Planning",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "OKR",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "PARTIAL",
+          "evidence": {
+            "reason": "demo has explicit objectives + targets, but no explicit Objective/Key Result hierarchy",
+            "entity_ids": [
+              "mmdemo.strategy.objective.margin",
+              "mmdemo.strategy.objective.recurring",
+              "mmdemo.strategy.objective.delivery"
+            ]
+          }
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Balanced Scorecard",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Decision Matrix",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "PARTIAL",
+          "evidence": {
+            "reason": "capital cases have decisions/status/date but no explicit weighted criteria matrix",
+            "entity_ids": [
+              "mmdemo.strategy.capital.assembly_cell_2",
+              "mmdemo.strategy.capital.demo_van"
+            ]
+          }
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Business Model Canvas",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Risk Matrix",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "methods_tools",
+          "display_name": "Roadmap",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "PARTIAL",
+          "evidence": {
+            "reason": "Technology Radar evidence exists, but no explicit roadmap timeline/dependency model",
+            "entity_ids": [
+              "mmdemo.strategy.radar.edge_ai",
+              "mmdemo.strategy.radar.lora",
+              "mmdemo.strategy.radar.private_5g"
+            ]
+          }
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Board",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "PARTIAL",
+          "evidence": {
+            "reason": "capital decisions exist, but current demo does not model Board membership/session semantics",
+            "entity_ids": [
+              "mmdemo.strategy.capital.assembly_cell_2",
+              "mmdemo.strategy.capital.demo_van"
+            ]
+          }
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Portfolio",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "PARTIAL",
+          "evidence": {
+            "reason": "multiple projects/capital cases exist, but no explicit portfolio object is modeled",
+            "entity_types": [
+              "Project",
+              "Assessment"
+            ]
+          }
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Decision",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "entity_ids": [
+              "mmdemo.strategy.capital.assembly_cell_2",
+              "mmdemo.strategy.capital.demo_van"
+            ],
+            "fields": [
+              "status",
+              "decision_date"
+            ]
+          }
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Due Diligence/M&A",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Governance/GRC",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Vendor",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Tender/RFP",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Benefits",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "War Room",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": null
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Investor/Management Reporting",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "measurements": [
+              "q3_sales_net",
+              "q3_gross_margin",
+              "q3_gross_margin_pct",
+              "september_run_rate",
+              "inventory_value_end"
+            ]
+          }
+        },
+        {
+          "bucket": "management_capabilities",
+          "display_name": "Management System",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "PARTIAL",
+          "evidence": {
+            "reason": "operational measurements, projects and decisions are linked, but no explicit Management System member identity is resolved"
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": "CEO",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "reason": "company-wide Q3 operational and strategy measurements are present"
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": "COO",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "entity_types": [
+              "Order",
+              "Shipment",
+              "StockMovement",
+              "Project",
+              "Case"
+            ]
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": "CFO",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "entity_types": [
+              "Invoice",
+              "Settlement",
+              "BalanceTransaction",
+              "Measurement"
+            ]
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": "CTO/CIO",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "entity_ids": [
+              "mmdemo.strategy.radar.edge_ai",
+              "mmdemo.strategy.radar.lora",
+              "mmdemo.strategy.radar.private_5g"
+            ]
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": "CHRO",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "EXERCISED",
+          "evidence": {
+            "relation_ids": [
+              "mmdemo.rel.employs",
+              "mmdemo.rel.payroll_transaction"
+            ],
+            "measurement_kind": "employee_hours"
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": "CSO",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "display label is known but current 1.5 semantics/identity remain unresolved; demo does not infer acronym meaning"
+          }
+        },
+        {
+          "bucket": "c_suite_views",
+          "display_name": null,
+          "identity_status": "UNRESOLVED",
+          "status": "UNRESOLVED_ID",
+          "gap_id": "STRATEGY_CSUITE_PROFILE_7_NAME_UNRESOLVED",
+          "evidence": null
+        }
+      ]
+    },
+    "everyday": {
+      "group_identity": "Everyday",
+      "group_event_status": "NOT_EVENT_OWNER",
+      "member_count": 21,
+      "members": [
+        {
+          "bucket": null,
+          "display_name": "Shopping",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Pantry",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Meals",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Tasks",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Habits",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Budget",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Subscriptions",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Warranty",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Inventory",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Packing",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Travel",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Events",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Family",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Medication",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Workout",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Reading",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Watchlist",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Wishlist",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Gifts",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Maintenance",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        },
+        {
+          "bucket": null,
+          "display_name": "Logbook",
+          "identity_status": "DISPLAY_NAME_ONLY",
+          "status": "NOT_YET_EXERCISED",
+          "evidence": {
+            "reason": "business demo data is not promoted into Everyday semantics by name similarity"
+          }
+        }
+      ]
+    },
+    "business_suite": {
+      "group_identity": "BusinessSuite",
+      "group_event_status": "NOT_EVENT_OWNER",
+      "member_count": 53,
+      "identity_status": "UNRESOLVED",
+      "status": "UNRESOLVED_ID",
       "evidence": {
-        "entity_type": "Identity",
-        "entity_count": 28,
-        "sample_entity_ids": [
-          "mmdemo.company.mmdemo_industries",
-          "mmdemo.identity.employee.ceo",
-          "mmdemo.identity.employee.sales_1",
-          "mmdemo.identity.employee.sales_2",
-          "mmdemo.identity.employee.pm_1",
-          "mmdemo.identity.employee.tech_1",
-          "mmdemo.identity.employee.tech_2",
-          "mmdemo.identity.employee.warehouse_1"
+        "known_actual_composition_examples": [
+          "ERP",
+          "CRM",
+          "HRM",
+          "WMS",
+          "Projects",
+          "Editor"
         ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Project",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Project",
-        "entity_count": 52,
-        "sample_entity_ids": [
-          "mmdemo.project.assembly.202607.001",
-          "mmdemo.project.assembly.202607.002",
-          "mmdemo.project.assembly.202607.003",
-          "mmdemo.project.assembly.202607.004",
-          "mmdemo.project.assembly.202607.005",
-          "mmdemo.project.assembly.202607.006",
-          "mmdemo.project.service.202607.001",
-          "mmdemo.project.service.202607.002"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Location",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Location",
-        "entity_count": 3,
-        "sample_entity_ids": [
-          "mmdemo.location.hq",
-          "mmdemo.location.warehouse",
-          "mmdemo.location.assembly"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Asset",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Asset",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "CatalogItem",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "CatalogItem",
-        "entity_count": 12,
-        "sample_entity_ids": [
-          "mmdemo.catalog.gateway",
-          "mmdemo.catalog.sensor_temp",
-          "mmdemo.catalog.sensor_vibration",
-          "mmdemo.catalog.io_node",
-          "mmdemo.catalog.panel",
-          "mmdemo.catalog.enclosure",
-          "mmdemo.catalog.pcb",
-          "mmdemo.catalog.psu"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Specification",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Specification",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Opportunity",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Opportunity",
-        "entity_count": 101,
-        "sample_entity_ids": [
-          "mmdemo.opportunity.202607.001",
-          "mmdemo.opportunity.202607.002",
-          "mmdemo.opportunity.202607.003",
-          "mmdemo.opportunity.202607.004",
-          "mmdemo.opportunity.202607.005",
-          "mmdemo.opportunity.202607.006",
-          "mmdemo.opportunity.202607.007",
-          "mmdemo.opportunity.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "LineItem",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "LineItem",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Quote",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Quote",
-        "entity_count": 42,
-        "sample_entity_ids": [
-          "mmdemo.quote.202607.001",
-          "mmdemo.quote.202607.002",
-          "mmdemo.quote.202607.003",
-          "mmdemo.quote.202607.004",
-          "mmdemo.quote.202607.005",
-          "mmdemo.quote.202607.006",
-          "mmdemo.quote.202607.007",
-          "mmdemo.quote.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Order",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Order",
-        "entity_count": 78,
-        "sample_entity_ids": [
-          "mmdemo.order.sales.202607.001",
-          "mmdemo.order.sales.202607.002",
-          "mmdemo.order.sales.202607.003",
-          "mmdemo.order.sales.202607.004",
-          "mmdemo.order.sales.202607.005",
-          "mmdemo.order.sales.202607.006",
-          "mmdemo.order.sales.202607.007",
-          "mmdemo.order.sales.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Invoice",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Invoice",
-        "entity_count": 99,
-        "sample_entity_ids": [
-          "mmdemo.invoice.sales.202607.001",
-          "mmdemo.invoice.sales.202607.002",
-          "mmdemo.invoice.sales.202607.003",
-          "mmdemo.invoice.sales.202607.004",
-          "mmdemo.invoice.sales.202607.005",
-          "mmdemo.invoice.sales.202607.006",
-          "mmdemo.invoice.sales.202607.007",
-          "mmdemo.invoice.sales.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "BalanceAccount",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "BalanceAccount",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "BalanceTransaction",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "BalanceTransaction",
-        "entity_count": 42,
-        "sample_entity_ids": [
-          "mmdemo.balance.payroll.202607.001",
-          "mmdemo.balance.payroll.202607.002",
-          "mmdemo.balance.payroll.202607.003",
-          "mmdemo.balance.payroll.202607.004",
-          "mmdemo.balance.payroll.202607.005",
-          "mmdemo.balance.payroll.202607.006",
-          "mmdemo.balance.payroll.202607.007",
-          "mmdemo.balance.payroll.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Settlement",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Settlement",
-        "entity_count": 36,
-        "sample_entity_ids": [
-          "mmdemo.settlement.in.202607.001",
-          "mmdemo.settlement.in.202607.002",
-          "mmdemo.settlement.in.202607.003",
-          "mmdemo.settlement.in.202607.004",
-          "mmdemo.settlement.in.202607.005",
-          "mmdemo.settlement.in.202607.006",
-          "mmdemo.settlement.out.202607.001",
-          "mmdemo.settlement.out.202607.002"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Account",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Account",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "JournalEntry",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "JournalEntry",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "LedgerEntry",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "LedgerEntry",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "StockMovement",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "StockMovement",
-        "entity_count": 111,
-        "sample_entity_ids": [
-          "mmdemo.stock.issue.202607.001",
-          "mmdemo.stock.issue.202607.002",
-          "mmdemo.stock.issue.202607.003",
-          "mmdemo.stock.issue.202607.004",
-          "mmdemo.stock.issue.202607.005",
-          "mmdemo.stock.issue.202607.006",
-          "mmdemo.stock.issue.202607.007",
-          "mmdemo.stock.issue.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Lot",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Lot",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Shipment",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Shipment",
-        "entity_count": 54,
-        "sample_entity_ids": [
-          "mmdemo.shipment.202607.001",
-          "mmdemo.shipment.202607.002",
-          "mmdemo.shipment.202607.003",
-          "mmdemo.shipment.202607.004",
-          "mmdemo.shipment.202607.005",
-          "mmdemo.shipment.202607.006",
-          "mmdemo.shipment.202607.007",
-          "mmdemo.shipment.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "HandlingUnit",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "HandlingUnit",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Case",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Case",
-        "entity_count": 37,
-        "sample_entity_ids": [
-          "mmdemo.case.customer.202607.001",
-          "mmdemo.case.customer.202607.002",
-          "mmdemo.case.customer.202607.003",
-          "mmdemo.case.customer.202607.004",
-          "mmdemo.case.customer.202607.005",
-          "mmdemo.case.customer.202607.006",
-          "mmdemo.case.customer.202607.007",
-          "mmdemo.case.customer.202607.008"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Assessment",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Assessment",
-        "entity_count": 8,
-        "sample_entity_ids": [
-          "mmdemo.strategy.objective.margin",
-          "mmdemo.strategy.objective.recurring",
-          "mmdemo.strategy.objective.delivery",
-          "mmdemo.strategy.capital.assembly_cell_2",
-          "mmdemo.strategy.capital.demo_van",
-          "mmdemo.strategy.radar.edge_ai",
-          "mmdemo.strategy.radar.lora",
-          "mmdemo.strategy.radar.private_5g"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "Reservation",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Reservation",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Entitlement",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Entitlement",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Contract",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Contract",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Plan",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Plan",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Filing",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Filing",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Measurement",
-      "family": "Universal/Business",
-      "coverage_status": "PROVEN",
-      "evidence": {
-        "entity_type": "Measurement",
-        "entity_count": 52,
-        "sample_entity_ids": [
-          "mmdemo.measurement.inventory.2026-06",
-          "mmdemo.measurement.inventory.202607",
-          "mmdemo.measurement.time.202607.001",
-          "mmdemo.measurement.time.202607.002",
-          "mmdemo.measurement.time.202607.003",
-          "mmdemo.measurement.time.202607.004",
-          "mmdemo.measurement.time.202607.005",
-          "mmdemo.measurement.time.202607.006"
-        ]
-      },
-      "note": "Direct typed mmdemo.* graph evidence exists."
-    },
-    {
-      "semantic_identity": "RuleSet",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "RuleSet",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "Message",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "Message",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
-    },
-    {
-      "semantic_identity": "FileResource",
-      "family": "Universal/Business",
-      "coverage_status": "NOT_EXERCISED",
-      "evidence": {
-        "entity_type": "FileResource",
-        "entity_count": 0,
-        "sample_entity_ids": []
-      },
-      "note": "No direct typed entity evidence exists in the current Q3 demo graph; no semantic equivalence is inferred from adjacent records."
+      }
     }
+  },
+  "summary": {
+    "business_universals": {
+      "EXERCISED": 15,
+      "NOT_YET_EXERCISED": 17
+    },
+    "platform_universals": {
+      "NOT_YET_EXERCISED": 6,
+      "EXERCISED": 2
+    },
+    "gui_universals": {
+      "NOT_YET_EXERCISED": 3
+    },
+    "known_compositions": {
+      "EXERCISED": 5,
+      "NOT_YET_EXERCISED": 1
+    },
+    "strategy_members": {
+      "NOT_YET_EXERCISED": 14,
+      "PARTIAL": 6,
+      "EXERCISED": 7,
+      "UNRESOLVED_ID": 1
+    },
+    "everyday_members": {
+      "NOT_YET_EXERCISED": 21
+    }
+  },
+  "rules": [
+    "coverage evidence never creates canonical semantic identity",
+    "exact Business Universal coverage requires exact graph entity.type match",
+    "Composition/Strategy/Everyday labels remain display labels when current 1.5 identity is unresolved",
+    "PARTIAL means evidence exists but the full named semantics are not explicitly modeled",
+    "NOT_YET_EXERCISED is not a model failure; it is a demo coverage gap",
+    "UNRESOLVED_ID is an identity/evidence gap and must not be guessed"
   ]
 }
