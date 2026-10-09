@@ -11,6 +11,9 @@ const graph = JSON.parse(
 const company = JSON.parse(
   await fs.readFile(new URL('../data/company-q3-2026.json', import.meta.url), 'utf8')
 );
+const strategyComposition = JSON.parse(
+  await fs.readFile(new URL('../data/strategy-business-universal-composition.json', import.meta.url), 'utf8')
+);
 
 const entityCounts = new Map();
 const entitySamples = new Map();
@@ -162,109 +165,47 @@ const compositionExamples = catalog.known_actual_composition_examples.map(item =
   };
 });
 
-const strategyEvidence = {
-  OKR: {
-    status: 'PARTIAL',
+const businessCoverageStatus = new Map(
+  businessUniversals.map(entry => [entry.semantic_identity, entry.status])
+);
+
+const strategyMembersFromComposition = strategyComposition.entries.map(entry => {
+  if (!entry.display_name) {
+    return {
+      bucket: entry.bucket,
+      display_name: null,
+      identity_status: 'UNRESOLVED',
+      status: 'UNRESOLVED_ID',
+      gap_id: entry.gap_id,
+      evidence: null,
+    };
+  }
+
+  const required = entry.required_business_universals ?? [];
+  const missing = required.filter(
+    semanticIdentity => businessCoverageStatus.get(semanticIdentity) !== 'EXERCISED'
+  );
+
+  return {
+    bucket: entry.bucket,
+    display_name: entry.display_name,
+    identity_status: 'DISPLAY_NAME_ONLY',
+    status: missing.length === 0 ? 'EXERCISED' : 'PARTIAL',
     evidence: {
-      reason: 'demo has explicit objectives + targets, but no explicit Objective/Key Result hierarchy',
-      entity_ids: company.strategy.objectives.map(item => item.id),
+      composition_basis: 'Business Universals',
+      required_business_universals: required,
+      business_universal_status: Object.fromEntries(
+        required.map(semanticIdentity => [
+          semanticIdentity,
+          businessCoverageStatus.get(semanticIdentity) ?? 'MISSING',
+        ])
+      ),
+      missing_business_universals: missing,
+      source_mapping: entry.source_mapping,
     },
-  },
-  'Balanced Scorecard': {
-    status: 'NOT_YET_EXERCISED',
-    evidence: null,
-  },
-  'Decision Matrix': {
-    status: 'PARTIAL',
-    evidence: {
-      reason: 'capital cases have decisions/status/date but no explicit weighted criteria matrix',
-      entity_ids: company.strategy.capital_cases.map(item => item.id),
-    },
-  },
-  Roadmap: {
-    status: 'PARTIAL',
-    evidence: {
-      reason: 'Technology Radar evidence exists, but no explicit roadmap timeline/dependency model',
-      entity_ids: company.strategy.technology_radar.map(item => item.id),
-    },
-  },
-  Board: {
-    status: 'PARTIAL',
-    evidence: {
-      reason: 'capital decisions exist, but current demo does not model Board membership/session semantics',
-      entity_ids: company.strategy.capital_cases.map(item => item.id),
-    },
-  },
-  Portfolio: {
-    status: 'PARTIAL',
-    evidence: {
-      reason: 'multiple projects/capital cases exist, but no explicit portfolio object is modeled',
-      entity_types: ['Project', 'Assessment'],
-    },
-  },
-  Decision: {
-    status: 'EXERCISED',
-    evidence: {
-      entity_ids: company.strategy.capital_cases.map(item => item.id),
-      fields: ['status', 'decision_date'],
-    },
-  },
-  'Investor/Management Reporting': {
-    status: 'EXERCISED',
-    evidence: {
-      measurements: [
-        'q3_sales_net',
-        'q3_gross_margin',
-        'q3_gross_margin_pct',
-        'september_run_rate',
-        'inventory_value_end',
-      ],
-    },
-  },
-  'Management System': {
-    status: 'PARTIAL',
-    evidence: {
-      reason: 'operational measurements, projects and decisions are linked, but no explicit Management System member identity is resolved',
-    },
-  },
-  CEO: {
-    status: 'EXERCISED',
-    evidence: {
-      reason: 'company-wide Q3 operational and strategy measurements are present',
-    },
-  },
-  COO: {
-    status: 'EXERCISED',
-    evidence: {
-      entity_types: ['Order', 'Shipment', 'StockMovement', 'Project', 'Case'],
-    },
-  },
-  CFO: {
-    status: 'EXERCISED',
-    evidence: {
-      entity_types: ['Invoice', 'Settlement', 'BalanceTransaction', 'Measurement'],
-    },
-  },
-  'CTO/CIO': {
-    status: 'EXERCISED',
-    evidence: {
-      entity_ids: company.strategy.technology_radar.map(item => item.id),
-    },
-  },
-  CHRO: {
-    status: 'EXERCISED',
-    evidence: {
-      relation_ids: ['mmdemo.rel.employs', 'mmdemo.rel.payroll_transaction'],
-      measurement_kind: 'employee_hours',
-    },
-  },
-  CSO: {
-    status: 'NOT_YET_EXERCISED',
-    evidence: {
-      reason: 'display label is known but its current 1.5 semantics/identity are unresolved; demo does not infer acronym meaning',
-    },
-  },
-};
+  };
+});
+
 
 function flattenGroupMembers(group) {
   if (Array.isArray(group.members)) {
@@ -284,28 +225,7 @@ function flattenGroupMembers(group) {
   );
 }
 
-const strategyMembers = flattenGroupMembers(strategyGroup).map(member => {
-  if (member.unresolved) {
-    return {
-      bucket: member.bucket,
-      display_name: null,
-      identity_status: 'UNRESOLVED',
-      status: 'UNRESOLVED_ID',
-      gap_id: member.unresolved.gap_id,
-      evidence: null,
-    };
-  }
-
-  return {
-    bucket: member.bucket,
-    display_name: member.display_name,
-    identity_status: 'DISPLAY_NAME_ONLY',
-    ...(strategyEvidence[member.display_name] ?? {
-      status: 'NOT_YET_EXERCISED',
-      evidence: null,
-    }),
-  };
-});
+const strategyMembers = strategyMembersFromComposition;
 
 const everydayMembers = flattenGroupMembers(everydayGroup).map(member => ({
   bucket: member.bucket,
@@ -327,7 +247,7 @@ function countStatuses(entries) {
 
 const coverage = {
   dataset: 'mmdemo.coverage.mmdemo_industries.2026q3',
-  version: '0.3.0',
+  version: '0.4.0',
   authority: 'synthetic_demo_evidence_only',
   sources: {
     catalog: '#METAMODULE:CATALOG',
