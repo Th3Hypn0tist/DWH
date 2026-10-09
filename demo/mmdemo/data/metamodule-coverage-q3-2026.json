@@ -929,7 +929,7 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "NOT_YET_EXERCISED",
           "evidence": {
-            "reason": "display label is known but current 1.5 semantics/identity remain unresolved; demo does not infer acronym meaning"
+            "reason": "display label is known but its current 1.5 semantics/identity are unresolved; demo does not infer acronym meaning"
           }
         },
         {
