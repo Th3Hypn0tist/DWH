@@ -1,6 +1,6 @@
 {
   "name": "MMDemo Relation Graph Contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dataset": "mmdemo.graph.mmdemo_industries.2026q3",
   "purpose": "provide a fully traversable synthetic DWH relation graph whose operational records reconcile to the MMDemo Q3/2026 company summary",
   "namespace": {
@@ -36,20 +36,37 @@
   },
   "exercisedTypes": [
     "Identity",
+    "Project",
     "Location",
+    "Asset",
     "CatalogItem",
+    "Specification",
     "Opportunity",
+    "LineItem",
     "Quote",
     "Order",
-    "Shipment",
     "Invoice",
-    "Settlement",
-    "StockMovement",
-    "Project",
-    "Case",
-    "Measurement",
+    "BalanceAccount",
     "BalanceTransaction",
-    "Assessment"
+    "Settlement",
+    "Account",
+    "JournalEntry",
+    "LedgerEntry",
+    "StockMovement",
+    "Lot",
+    "Shipment",
+    "HandlingUnit",
+    "Case",
+    "Assessment",
+    "Reservation",
+    "Entitlement",
+    "Contract",
+    "Plan",
+    "Filing",
+    "Measurement",
+    "RuleSet",
+    "Message",
+    "FileResource"
   ],
   "reconciliation": {
     "summarySource": "demo/mmdemo/data/company-q3-2026.json",
@@ -65,7 +82,8 @@
       "monthly cash in/out",
       "monthly employee hours and payroll gross",
       "inventory bridge from opening valuation through StockMovement values",
-      "strategy Q3 sales and gross-margin measurements"
+      "strategy Q3 sales and gross-margin measurements",
+      "all 32 Business Universal semantic types are exercised by exact entity.type evidence"
     ],
     "rule": "CI must fail if graph and summary cease to reconcile"
   },
