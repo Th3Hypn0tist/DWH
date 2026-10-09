@@ -1,0 +1,503 @@
+{
+  "dataset": "mmdemo.strategy.business_universal_composition.2026-10-09",
+  "version": "0.1.0",
+  "authority": "audit_projection_only",
+  "purpose": "map current Strategy display labels to Business Universal composition requirements without minting current 1.5 member identities",
+  "provenance": {
+    "repository": "Th3Hypn0tist/AIGMos_docs",
+    "commit": "befef6476a3b8974baa961e73acd68e53ecc135c",
+    "path": "canonical/json/composition/strategy/00_Strategy_Contract.json",
+    "source_version": "1.3",
+    "source_status": "unlocked"
+  },
+  "current_model": {
+    "group": "Strategy",
+    "classification": "grouping abstraction",
+    "event_status": "NOT_EVENT_OWNER",
+    "member_count": 28,
+    "identity_rule": "display labels do not become current 1.5 canonical identities"
+  },
+  "coverage_rule": "a known Strategy display label is EXERCISED when every required Business Universal is EXERCISED in the MMDemo coverage graph; unresolved identity stays UNRESOLVED_ID",
+  "entries": [
+    {
+      "bucket": "methods_tools",
+      "display_name": "SWOT",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "SWOT"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "Opportunity",
+        "RuleSet"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "PESTEL",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "PESTEL"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "Measurement",
+        "RuleSet"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Five Forces",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "PorterFiveForces"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "Opportunity",
+        "RuleSet"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Scenario Planning",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "ScenarioPlanning"
+      },
+      "required_business_universals": [
+        "Plan",
+        "Assessment",
+        "Measurement",
+        "RuleSet",
+        "Project"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "OKR",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "OKR"
+      },
+      "required_business_universals": [
+        "Project",
+        "Plan",
+        "Measurement"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Balanced Scorecard",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "BalancedScorecard"
+      },
+      "required_business_universals": [
+        "Measurement",
+        "Project",
+        "Plan",
+        "Assessment"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Decision Matrix",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "DecisionMatrix"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "RuleSet",
+        "Measurement"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Business Model Canvas",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "BusinessModelCanvas"
+      },
+      "required_business_universals": [
+        "Identity",
+        "Opportunity",
+        "Asset",
+        "Contract",
+        "Account",
+        "Project",
+        "Plan"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Risk Matrix",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "RiskMatrix"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "Measurement",
+        "RuleSet",
+        "Case"
+      ]
+    },
+    {
+      "bucket": "methods_tools",
+      "display_name": "Roadmap",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "methods",
+        "key": "Roadmap"
+      },
+      "required_business_universals": [
+        "Project",
+        "Plan",
+        "Measurement"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Board",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Board"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "Measurement",
+        "Project",
+        "Plan",
+        "Contract",
+        "Opportunity",
+        "Account",
+        "FileResource"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Portfolio",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Portfolio"
+      },
+      "required_business_universals": [
+        "Project",
+        "Plan",
+        "Measurement",
+        "Assessment",
+        "Opportunity",
+        "Asset",
+        "Account",
+        "Contract"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Decision",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Decision"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "RuleSet",
+        "Measurement",
+        "Plan",
+        "Project",
+        "FileResource"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Due Diligence/M&A",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Diligence"
+      },
+      "required_business_universals": [
+        "Identity",
+        "Contract",
+        "Assessment",
+        "Account",
+        "JournalEntry",
+        "LedgerEntry",
+        "Asset",
+        "FileResource",
+        "Case",
+        "Plan",
+        "Project"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Governance/GRC",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Governance"
+      },
+      "required_business_universals": [
+        "RuleSet",
+        "Assessment",
+        "FileResource",
+        "Case",
+        "Project",
+        "Measurement",
+        "Contract",
+        "Entitlement"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Vendor",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Vendor"
+      },
+      "required_business_universals": [
+        "Identity",
+        "Quote",
+        "Order",
+        "Contract",
+        "Invoice",
+        "Settlement",
+        "Assessment",
+        "Measurement",
+        "Project",
+        "Asset"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Tender/RFP",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Tender"
+      },
+      "required_business_universals": [
+        "Specification",
+        "Quote",
+        "Assessment",
+        "RuleSet",
+        "Contract",
+        "Identity",
+        "FileResource"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Benefits",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Benefits"
+      },
+      "required_business_universals": [
+        "Plan",
+        "Project",
+        "Measurement",
+        "Assessment",
+        "Account",
+        "Opportunity"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "War Room",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "WarRoom"
+      },
+      "required_business_universals": [
+        "Case",
+        "Assessment",
+        "Project",
+        "Plan",
+        "Measurement",
+        "Identity",
+        "Asset",
+        "Location",
+        "FileResource"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Investor/Management Reporting",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Reporting"
+      },
+      "required_business_universals": [
+        "Measurement",
+        "Assessment",
+        "Project",
+        "Plan",
+        "Account",
+        "JournalEntry",
+        "LedgerEntry",
+        "Invoice",
+        "Settlement",
+        "Opportunity",
+        "FileResource"
+      ]
+    },
+    {
+      "bucket": "management_capabilities",
+      "display_name": "Management System",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "capabilities",
+        "key": "Management"
+      },
+      "required_business_universals": [
+        "Assessment",
+        "Measurement",
+        "Plan",
+        "Project",
+        "RuleSet",
+        "Opportunity",
+        "Contract",
+        "Account",
+        "Case",
+        "FileResource"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": "CEO",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "csuite.profiles",
+        "key": "CEO"
+      },
+      "required_business_universals": [
+        "Opportunity",
+        "Project",
+        "Measurement",
+        "Assessment",
+        "Plan",
+        "Contract"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": "COO",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "csuite.profiles",
+        "key": "COO"
+      },
+      "required_business_universals": [
+        "Project",
+        "Plan",
+        "Measurement",
+        "Asset",
+        "Location",
+        "Case",
+        "Assessment"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": "CFO",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "csuite.profiles",
+        "key": "CFO"
+      },
+      "required_business_universals": [
+        "Account",
+        "JournalEntry",
+        "LedgerEntry",
+        "Invoice",
+        "Settlement",
+        "Measurement",
+        "Plan",
+        "Assessment"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": "CTO/CIO",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "csuite.profiles",
+        "keys": [
+          "CTO",
+          "CIO"
+        ],
+        "merge_rule": "identical_focus_required"
+      },
+      "required_business_universals": [
+        "Project",
+        "Asset",
+        "Specification",
+        "Assessment",
+        "Measurement",
+        "Plan",
+        "Case"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": "CHRO",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "csuite.profiles",
+        "key": "CHRO"
+      },
+      "required_business_universals": [
+        "Identity",
+        "Contract",
+        "Project",
+        "Assessment",
+        "Measurement",
+        "Plan"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": "CSO",
+      "identity_status": "DISPLAY_NAME_ONLY",
+      "source_mapping": {
+        "section": "csuite.profiles",
+        "key": "CSO"
+      },
+      "required_business_universals": [
+        "Opportunity",
+        "Assessment",
+        "Plan",
+        "Measurement",
+        "Project"
+      ]
+    },
+    {
+      "bucket": "c_suite_views",
+      "display_name": null,
+      "identity_status": "UNRESOLVED",
+      "gap_id": "STRATEGY_CSUITE_PROFILE_7_NAME_UNRESOLVED",
+      "source_mapping": null,
+      "required_business_universals": null
+    }
+  ]
+}
