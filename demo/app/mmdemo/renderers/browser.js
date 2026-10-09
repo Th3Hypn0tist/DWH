@@ -283,6 +283,77 @@ function renderCoverage(coverage) {
   `;
 }
 
+function renderEventAudit(audit) {
+  const universalRows = audit.entries.map(entry => `
+    <tr>
+      <td>${esc(entry.family)}</td>
+      <td>${esc(entry.semantic_identity)}</td>
+      <td>${esc(entry.canonical_status)}</td>
+      <td>${esc(entry.event_status)}</td>
+      <td>${entry.declared_event_count ?? '—'}</td>
+    </tr>
+  `).join('');
+
+  const groupRows = audit.compositions.groups.map(group => `
+    <tr>
+      <td>${esc(group.identity)}</td>
+      <td>${esc(group.classification)}</td>
+      <td>${esc(group.event_status)}</td>
+      <td>${esc(group.note ?? '')}</td>
+    </tr>
+  `).join('');
+
+  const unresolvedRows = audit.compositions.unresolved_actual_members.map(item => `
+    <tr>
+      <td>${esc(item.display_name)}</td>
+      <td>${esc(item.identity_status)}</td>
+      <td>${esc(item.event_status)}</td>
+      <td>${esc(item.reason)}</td>
+    </tr>
+  `).join('');
+
+  return `
+    <div class="kpis">
+      <div class="kpi"><strong>${audit.summary.universals_total}</strong><span>Universal MetaModules audited</span></div>
+      <div class="kpi"><strong>${audit.summary.universals_events_proven}</strong><span>Universals with EVENTS_PROVEN</span></div>
+      <div class="kpi"><strong>${audit.summary.universals_event_review_required}</strong><span>Universals requiring Event review</span></div>
+      <div class="kpi"><strong>${audit.summary.grouping_not_event_owner}</strong><span>Grouping abstractions NOT_EVENT_OWNER</span></div>
+    </div>
+
+    <h3>Universal MetaModules</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Family</th><th>Semantic identity</th><th>Canonical status</th><th>Event status</th><th>Declared events</th></tr></thead>
+        <tbody>${universalRows}</tbody>
+      </table>
+    </div>
+
+    <h3>Composition boundary</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Identity</th><th>Classification</th><th>Event status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Editor</td>
+            <td>actual Composition MetaModule</td>
+            <td>${esc(audit.compositions.editor.event_status)}</td>
+            <td>${esc(audit.compositions.editor.note)}</td>
+          </tr>
+          ${groupRows}
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Unresolved actual Composition members</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Display label</th><th>Identity status</th><th>Event status</th><th>Reason</th></tr></thead>
+        <tbody>${unresolvedRows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderStrategy(strategy, computed) {
   return `
     <div class="kpis">
@@ -338,17 +409,23 @@ export async function mount(target, projection, context) {
     throw new Error('MMDemo browser projector requires logical coverageData path');
   }
 
+  if (typeof projection?.eventAuditData !== 'string' || !projection.eventAuditData.startsWith('/')) {
+    throw new Error('MMDemo browser projector requires logical eventAuditData path');
+  }
+
   const companyPath = resolveInstancePath(projection.companyData);
   const graphPath = resolveInstancePath(projection.relationGraph);
   const coveragePath = resolveInstancePath(projection.coverageData);
+  const eventAuditPath = resolveInstancePath(projection.eventAuditData);
 
-  const [catalogEnvelope, company, graph, coverage] = await Promise.all([
+  const [catalogEnvelope, company, graph, coverage, eventAudit] = await Promise.all([
     loadMetaModuleCatalog(context.dwh, {
       surface: projection.surface ?? 'mmdemo',
     }),
     fetchJson(companyPath),
     fetchJson(graphPath),
     fetchJson(coveragePath),
+    fetchJson(eventAuditPath),
   ]);
 
   const catalog = catalogEnvelope.data;
@@ -371,6 +448,7 @@ export async function mount(target, projection, context) {
       <a href="#flows">Flows</a>
       <a href="#graph">Relation graph</a>
       <a href="#coverage">Coverage</a>
+      <a href="#events">Event audit</a>
       <a href="#strategy">Strategy</a>
       <a href="#gaps">Coverage gaps</a>
     </nav>
@@ -466,6 +544,14 @@ export async function mount(target, projection, context) {
         Coverage never promotes demo data or display labels into canonical identity.
       </p>
       ${renderCoverage(coverage)}
+    </section>
+
+    <section id="events" class="panel">
+      <h2>Event audit</h2>
+      <p class="warn">
+        Event coverage is audited separately from structural coverage. Missing Events are not synthesized.
+      </p>
+      ${renderEventAudit(eventAudit)}
     </section>
 
     <section id="strategy" class="panel">
