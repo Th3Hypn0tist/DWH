@@ -192,6 +192,97 @@ function renderEntityDetails(index, entityId) {
   `;
 }
 
+function renderStatusSummary(summary) {
+  return Object.entries(summary ?? {})
+    .map(([status, count]) => `<span class="chip">${esc(status)} · ${count}</span>`)
+    .join('');
+}
+
+function renderCoverageRows(entries, labelField = 'semantic_identity') {
+  return entries.map(entry => {
+    const label = entry[labelField] ?? '(unresolved)';
+    const evidence = entry.evidence == null
+      ? '—'
+      : JSON.stringify(entry.evidence);
+
+    return `
+      <tr>
+        <td>${esc(label)}</td>
+        <td>${esc(entry.identity_status ?? '')}</td>
+        <td><span class="coverage-status coverage-${esc(entry.status.toLowerCase())}">${esc(entry.status)}</span></td>
+        <td><code class="coverage-evidence">${esc(evidence)}</code></td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function renderCoverage(coverage) {
+  return `
+    <div class="grid coverage-summary">
+      <article class="card">
+        <h3>Business Universals</h3>
+        <div class="chips">${renderStatusSummary(coverage.summary.business_universals)}</div>
+      </article>
+      <article class="card">
+        <h3>Platform Universals</h3>
+        <div class="chips">${renderStatusSummary(coverage.summary.platform_universals)}</div>
+      </article>
+      <article class="card">
+        <h3>GUI Universals</h3>
+        <div class="chips">${renderStatusSummary(coverage.summary.gui_universals)}</div>
+      </article>
+      <article class="card">
+        <h3>Known compositions</h3>
+        <div class="chips">${renderStatusSummary(coverage.summary.known_compositions)}</div>
+      </article>
+      <article class="card">
+        <h3>Strategy members</h3>
+        <div class="chips">${renderStatusSummary(coverage.summary.strategy_members)}</div>
+      </article>
+      <article class="card">
+        <h3>Everyday members</h3>
+        <div class="chips">${renderStatusSummary(coverage.summary.everyday_members)}</div>
+      </article>
+    </div>
+
+    <h3>Business Universal coverage</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Semantic identity</th><th>Identity status</th><th>Coverage</th><th>Evidence</th></tr></thead>
+        <tbody>${renderCoverageRows(coverage.universals.business)}</tbody>
+      </table>
+    </div>
+
+    <h3>Known Composition examples</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Display label</th><th>Identity status</th><th>Coverage</th><th>Evidence</th></tr></thead>
+        <tbody>${renderCoverageRows(coverage.compositions.known_examples, 'display_name')}</tbody>
+      </table>
+    </div>
+
+    <h3>Strategy</h3>
+    <p class="warn">
+      Strategy is a grouping abstraction. These rows are member display-label evidence only;
+      unresolved 1.5 identities remain unresolved.
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Display label</th><th>Identity status</th><th>Coverage</th><th>Evidence</th></tr></thead>
+        <tbody>${renderCoverageRows(coverage.compositions.strategy.members, 'display_name')}</tbody>
+      </table>
+    </div>
+
+    <h3>Everyday</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Display label</th><th>Identity status</th><th>Coverage</th><th>Evidence</th></tr></thead>
+        <tbody>${renderCoverageRows(coverage.compositions.everyday.members, 'display_name')}</tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderStrategy(strategy, computed) {
   return `
     <div class="kpis">
@@ -243,15 +334,21 @@ export async function mount(target, projection, context) {
     throw new Error('MMDemo browser projector requires logical relationGraph path');
   }
 
+  if (typeof projection?.coverageData !== 'string' || !projection.coverageData.startsWith('/')) {
+    throw new Error('MMDemo browser projector requires logical coverageData path');
+  }
+
   const companyPath = resolveInstancePath(projection.companyData);
   const graphPath = resolveInstancePath(projection.relationGraph);
+  const coveragePath = resolveInstancePath(projection.coverageData);
 
-  const [catalogEnvelope, company, graph] = await Promise.all([
+  const [catalogEnvelope, company, graph, coverage] = await Promise.all([
     loadMetaModuleCatalog(context.dwh, {
       surface: projection.surface ?? 'mmdemo',
     }),
     fetchJson(companyPath),
     fetchJson(graphPath),
+    fetchJson(coveragePath),
   ]);
 
   const catalog = catalogEnvelope.data;
@@ -273,6 +370,7 @@ export async function mount(target, projection, context) {
       <a href="#operations">Operations</a>
       <a href="#flows">Flows</a>
       <a href="#graph">Relation graph</a>
+      <a href="#coverage">Coverage</a>
       <a href="#strategy">Strategy</a>
       <a href="#gaps">Coverage gaps</a>
     </nav>
@@ -359,6 +457,15 @@ export async function mount(target, projection, context) {
         </label>
         <div class="graph-details"></div>
       </div>
+    </section>
+
+    <section id="coverage" class="panel">
+      <h2>MetaModule coverage</h2>
+      <p>
+        Evidence is derived from the current demo graph and implementation surfaces.
+        Coverage never promotes demo data or display labels into canonical identity.
+      </p>
+      ${renderCoverage(coverage)}
     </section>
 
     <section id="strategy" class="panel">
