@@ -1,6 +1,6 @@
 {
   "name": "MMDemo MetaModule Coverage Evidence Contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dataset": "mmdemo.coverage.mmdemo_industries.2026q3",
   "purpose": "bind synthetic operational/demo evidence to canonical or unresolved MetaModule catalog entries without creating semantic identity or canonical authority",
   "sources": {
@@ -27,7 +27,8 @@
     "builder": "demo/mmdemo/tools/build-coverage.mjs",
     "snapshot": "demo/mmdemo/data/metamodule-coverage-q3-2026.json",
     "ciCheck": "node demo/mmdemo/tools/build-coverage.mjs --check",
-    "rule": "snapshot must be deterministically regenerated from catalog + graph + company data"
+    "rule": "snapshot must be deterministically regenerated from catalog + graph + company data",
+    "strategyInvariant": "node demo/mmdemo/tests/strategy-coverage.mjs"
   },
   "surface": {
     "projector": "#PROJECTOR:MMDemo:browser",
@@ -37,6 +38,24 @@
       "per-member coverage state",
       "identity status",
       "machine-readable evidence"
+    ]
+  },
+  "strategy": {
+    "classification": "grouping abstraction",
+    "event_status": "NOT_EVENT_OWNER",
+    "coverage_basis": "Business Universal composition requirements",
+    "composition_profile": "demo/mmdemo/data/strategy-business-universal-composition.json",
+    "current_result": {
+      "known_labels": 27,
+      "exercised": 27,
+      "unresolved_id": 1
+    },
+    "rules": [
+      "Strategy coverage is derived from required Business Universal coverage",
+      "no Strategy-specific duplicate source-of-truth is created",
+      "display labels remain display labels when current 1.5 identity is unresolved",
+      "the unresolved seventh C-suite member remains UNRESOLVED_ID",
+      "Event completeness is audited separately and is not implied by structural/demo coverage"
     ]
   }
 }
