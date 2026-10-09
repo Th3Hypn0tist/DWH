@@ -31,3 +31,5 @@ jobs:
         run: node demo/mmdemo/tools/build-coverage.mjs --check
       - name: MMDemo Event audit
         run: node demo/mmdemo/tests/event-audit.mjs
+      - name: MMDemo Strategy coverage
+        run: node demo/mmdemo/tests/strategy-coverage.mjs
