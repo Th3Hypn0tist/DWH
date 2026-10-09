@@ -69,3 +69,37 @@ MMDemo is not semantic authority.
 - `mmdemo.*` data is synthetic demo instance data only.
 
 BusinessSuite, Strategy and Everyday are grouping abstractions and are not Event owners. Actual member Composition MetaModules own Event review.
+
+
+## Event audit
+
+Event completeness is tracked separately from structural/demo coverage.
+
+Current audited state:
+
+```text
+Business Universals   32 EVENT_REVIEW_REQUIRED
+Platform Universals    8 EVENT_REVIEW_REQUIRED
+GUI Universals         3 EVENT_REVIEW_REQUIRED
+Editor                  1 EVENT_REVIEW_REQUIRED
+
+BusinessSuite           NOT_EVENT_OWNER
+Strategy                NOT_EVENT_OWNER
+Everyday                NOT_EVENT_OWNER
+
+ERP / CRM / HRM /
+WMS / Projects          EVENT_REVIEW_REQUIRED
+                        current 1.5 identity axis unresolved
+```
+
+The Universal canonical source contracts currently expose explicit empty `behavior.events` arrays. This does **not** mean “no Events are needed”; it means Event coverage is not yet proven.
+
+Strategy and Everyday retain provenance links to older unlocked Composition contracts, but the newer 1.5 grouping model remains authoritative for current Event ownership.
+
+Audit snapshot:
+
+```text
+data/metamodule-event-audit.json
+```
+
+CI validates that missing Events are not silently promoted to `EVENTS_PROVEN`.
