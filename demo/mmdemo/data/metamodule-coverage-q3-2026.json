@@ -1,6 +1,6 @@
 {
   "dataset": "mmdemo.coverage.mmdemo_industries.2026q3",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "authority": "synthetic_demo_evidence_only",
   "sources": {
     "catalog": "#METAMODULE:CATALOG",
@@ -64,10 +64,16 @@
       {
         "semantic_identity": "Asset",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Asset",
-          "entity_count": 0
+          "entity_count": 4,
+          "sample_entity_ids": [
+            "mmdemo.asset.assembly.cell_1",
+            "mmdemo.asset.service.van_1",
+            "mmdemo.asset.service.van_2",
+            "mmdemo.asset.testbench.1"
+          ]
         }
       },
       {
@@ -89,10 +95,16 @@
       {
         "semantic_identity": "Specification",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Specification",
-          "entity_count": 0
+          "entity_count": 4,
+          "sample_entity_ids": [
+            "mmdemo.specification.gateway",
+            "mmdemo.specification.panel",
+            "mmdemo.specification.sensor_temp",
+            "mmdemo.specification.sensor_vibration"
+          ]
         }
       },
       {
@@ -114,10 +126,17 @@
       {
         "semantic_identity": "LineItem",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "LineItem",
-          "entity_count": 0
+          "entity_count": 6,
+          "sample_entity_ids": [
+            "mmdemo.lineitem.001",
+            "mmdemo.lineitem.002",
+            "mmdemo.lineitem.003",
+            "mmdemo.lineitem.004",
+            "mmdemo.lineitem.005"
+          ]
         }
       },
       {
@@ -171,10 +190,17 @@
       {
         "semantic_identity": "BalanceAccount",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "BalanceAccount",
-          "entity_count": 0
+          "entity_count": 7,
+          "sample_entity_ids": [
+            "mmdemo.balanceaccount.cash",
+            "mmdemo.balanceaccount.accounts_receivable",
+            "mmdemo.balanceaccount.inventory",
+            "mmdemo.balanceaccount.accounts_payable",
+            "mmdemo.balanceaccount.sales_revenue"
+          ]
         }
       },
       {
@@ -212,28 +238,45 @@
       {
         "semantic_identity": "Account",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Account",
-          "entity_count": 0
+          "entity_count": 3,
+          "sample_entity_ids": [
+            "mmdemo.account.bank.main",
+            "mmdemo.account.customer.control",
+            "mmdemo.account.supplier.control"
+          ]
         }
       },
       {
         "semantic_identity": "JournalEntry",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "JournalEntry",
-          "entity_count": 0
+          "entity_count": 3,
+          "sample_entity_ids": [
+            "mmdemo.journal.202607.close",
+            "mmdemo.journal.202608.close",
+            "mmdemo.journal.202609.close"
+          ]
         }
       },
       {
         "semantic_identity": "LedgerEntry",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "LedgerEntry",
-          "entity_count": 0
+          "entity_count": 15,
+          "sample_entity_ids": [
+            "mmdemo.ledger.202607.sales_cr",
+            "mmdemo.ledger.202607.ar_dr",
+            "mmdemo.ledger.202607.cogs_dr",
+            "mmdemo.ledger.202607.inventory_cr",
+            "mmdemo.ledger.202607.payroll_dr"
+          ]
         }
       },
       {
@@ -255,10 +298,17 @@
       {
         "semantic_identity": "Lot",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Lot",
-          "entity_count": 0
+          "entity_count": 5,
+          "sample_entity_ids": [
+            "mmdemo.lot.gateway.2026q3",
+            "mmdemo.lot.temp.2026q3a",
+            "mmdemo.lot.vibration.2026q3a",
+            "mmdemo.lot.io.2026q3a",
+            "mmdemo.lot.panel.2026q3a"
+          ]
         }
       },
       {
@@ -280,10 +330,17 @@
       {
         "semantic_identity": "HandlingUnit",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "HandlingUnit",
-          "entity_count": 0
+          "entity_count": 5,
+          "sample_entity_ids": [
+            "mmdemo.handlingunit.hu001",
+            "mmdemo.handlingunit.hu002",
+            "mmdemo.handlingunit.hu003",
+            "mmdemo.handlingunit.hu004",
+            "mmdemo.handlingunit.hu005"
+          ]
         }
       },
       {
@@ -321,46 +378,75 @@
       {
         "semantic_identity": "Reservation",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Reservation",
-          "entity_count": 0
+          "entity_count": 6,
+          "sample_entity_ids": [
+            "mmdemo.reservation.stock.202609.001",
+            "mmdemo.reservation.stock.202609.002",
+            "mmdemo.reservation.stock.202609.003",
+            "mmdemo.reservation.stock.202609.004",
+            "mmdemo.reservation.stock.202609.005"
+          ]
         }
       },
       {
         "semantic_identity": "Entitlement",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Entitlement",
-          "entity_count": 0
+          "entity_count": 3,
+          "sample_entity_ids": [
+            "mmdemo.entitlement.gamma.maintenance",
+            "mmdemo.entitlement.alpha.maintenance",
+            "mmdemo.entitlement.epsilon.cloud"
+          ]
         }
       },
       {
         "semantic_identity": "Contract",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Contract",
-          "entity_count": 0
+          "entity_count": 4,
+          "sample_entity_ids": [
+            "mmdemo.contract.gamma.maintenance",
+            "mmdemo.contract.alpha.maintenance",
+            "mmdemo.contract.epsilon.cloud",
+            "mmdemo.contract.supplier.electronics"
+          ]
         }
       },
       {
         "semantic_identity": "Plan",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Plan",
-          "entity_count": 0
+          "entity_count": 3,
+          "sample_entity_ids": [
+            "mmdemo.plan.sales.q3",
+            "mmdemo.plan.assembly.q3",
+            "mmdemo.plan.service.q3"
+          ]
         }
       },
       {
         "semantic_identity": "Filing",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Filing",
-          "entity_count": 0
+          "entity_count": 4,
+          "sample_entity_ids": [
+            "mmdemo.filing.vat.202607",
+            "mmdemo.filing.vat.202608",
+            "mmdemo.filing.vat.202609",
+            "mmdemo.filing.payroll.202609"
+          ]
         }
       },
       {
@@ -382,28 +468,46 @@
       {
         "semantic_identity": "RuleSet",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "RuleSet",
-          "entity_count": 0
+          "entity_count": 3,
+          "sample_entity_ids": [
+            "mmdemo.ruleset.sales.credit",
+            "mmdemo.ruleset.quality.release",
+            "mmdemo.ruleset.service.sla"
+          ]
         }
       },
       {
         "semantic_identity": "Message",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "Message",
-          "entity_count": 0
+          "entity_count": 4,
+          "sample_entity_ids": [
+            "mmdemo.message.gamma.quote.accepted",
+            "mmdemo.message.supplier.delivery",
+            "mmdemo.message.alpha.case.update",
+            "mmdemo.message.management.q3"
+          ]
         }
       },
       {
         "semantic_identity": "FileResource",
         "identity_status": "CANONICAL_CONFIRMED",
-        "status": "NOT_YET_EXERCISED",
+        "status": "EXERCISED",
         "evidence": {
           "entity_type": "FileResource",
-          "entity_count": 0
+          "entity_count": 6,
+          "sample_entity_ids": [
+            "mmdemo.file.contract.gamma.maintenance",
+            "mmdemo.file.contract.alpha.maintenance",
+            "mmdemo.file.contract.epsilon.cloud",
+            "mmdemo.file.supplier.framework",
+            "mmdemo.file.case.alpha.photo"
+          ]
         }
       }
     ],
@@ -1158,8 +1262,7 @@
   },
   "summary": {
     "business_universals": {
-      "EXERCISED": 15,
-      "NOT_YET_EXERCISED": 17
+      "EXERCISED": 32
     },
     "platform_universals": {
       "NOT_YET_EXERCISED": 6,
