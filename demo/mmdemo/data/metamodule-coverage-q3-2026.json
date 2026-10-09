@@ -1,6 +1,6 @@
 {
   "dataset": "mmdemo.coverage.mmdemo_industries.2026q3",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "authority": "synthetic_demo_evidence_only",
   "sources": {
     "catalog": "#METAMODULE:CATALOG",
@@ -769,116 +769,324 @@
           "bucket": "methods_tools",
           "display_name": "SWOT",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "Opportunity",
+              "RuleSet"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "RuleSet": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "SWOT"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "PESTEL",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "Measurement",
+              "RuleSet"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "RuleSet": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "PESTEL"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Five Forces",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "Opportunity",
+              "RuleSet"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "RuleSet": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "PorterFiveForces"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Scenario Planning",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Plan",
+              "Assessment",
+              "Measurement",
+              "RuleSet",
+              "Project"
+            ],
+            "business_universal_status": {
+              "Plan": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "RuleSet": "EXERCISED",
+              "Project": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "ScenarioPlanning"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "OKR",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "PARTIAL",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "demo has explicit objectives + targets, but no explicit Objective/Key Result hierarchy",
-            "entity_ids": [
-              "mmdemo.strategy.objective.margin",
-              "mmdemo.strategy.objective.recurring",
-              "mmdemo.strategy.objective.delivery"
-            ]
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Project",
+              "Plan",
+              "Measurement"
+            ],
+            "business_universal_status": {
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Measurement": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "OKR"
+            }
           }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Balanced Scorecard",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Measurement",
+              "Project",
+              "Plan",
+              "Assessment"
+            ],
+            "business_universal_status": {
+              "Measurement": "EXERCISED",
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Assessment": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "BalancedScorecard"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Decision Matrix",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "PARTIAL",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "capital cases have decisions/status/date but no explicit weighted criteria matrix",
-            "entity_ids": [
-              "mmdemo.strategy.capital.assembly_cell_2",
-              "mmdemo.strategy.capital.demo_van"
-            ]
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "RuleSet",
+              "Measurement"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "RuleSet": "EXERCISED",
+              "Measurement": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "DecisionMatrix"
+            }
           }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Business Model Canvas",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Identity",
+              "Opportunity",
+              "Asset",
+              "Contract",
+              "Account",
+              "Project",
+              "Plan"
+            ],
+            "business_universal_status": {
+              "Identity": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "Asset": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Account": "EXERCISED",
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "BusinessModelCanvas"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Risk Matrix",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "Measurement",
+              "RuleSet",
+              "Case"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "RuleSet": "EXERCISED",
+              "Case": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "RiskMatrix"
+            }
+          }
         },
         {
           "bucket": "methods_tools",
           "display_name": "Roadmap",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "PARTIAL",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "Technology Radar evidence exists, but no explicit roadmap timeline/dependency model",
-            "entity_ids": [
-              "mmdemo.strategy.radar.edge_ai",
-              "mmdemo.strategy.radar.lora",
-              "mmdemo.strategy.radar.private_5g"
-            ]
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Project",
+              "Plan",
+              "Measurement"
+            ],
+            "business_universal_status": {
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Measurement": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "methods",
+              "key": "Roadmap"
+            }
           }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Board",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "PARTIAL",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "capital decisions exist, but current demo does not model Board membership/session semantics",
-            "entity_ids": [
-              "mmdemo.strategy.capital.assembly_cell_2",
-              "mmdemo.strategy.capital.demo_van"
-            ]
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "Measurement",
+              "Project",
+              "Plan",
+              "Contract",
+              "Opportunity",
+              "Account",
+              "FileResource"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "Account": "EXERCISED",
+              "FileResource": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Board"
+            }
           }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Portfolio",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "PARTIAL",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "multiple projects/capital cases exist, but no explicit portfolio object is modeled",
-            "entity_types": [
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
               "Project",
-              "Assessment"
-            ]
+              "Plan",
+              "Measurement",
+              "Assessment",
+              "Opportunity",
+              "Asset",
+              "Account",
+              "Contract"
+            ],
+            "business_universal_status": {
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "Asset": "EXERCISED",
+              "Account": "EXERCISED",
+              "Contract": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Portfolio"
+            }
           }
         },
         {
@@ -887,57 +1095,239 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "entity_ids": [
-              "mmdemo.strategy.capital.assembly_cell_2",
-              "mmdemo.strategy.capital.demo_van"
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "RuleSet",
+              "Measurement",
+              "Plan",
+              "Project",
+              "FileResource"
             ],
-            "fields": [
-              "status",
-              "decision_date"
-            ]
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "RuleSet": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Project": "EXERCISED",
+              "FileResource": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Decision"
+            }
           }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Due Diligence/M&A",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Identity",
+              "Contract",
+              "Assessment",
+              "Account",
+              "JournalEntry",
+              "LedgerEntry",
+              "Asset",
+              "FileResource",
+              "Case",
+              "Plan",
+              "Project"
+            ],
+            "business_universal_status": {
+              "Identity": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Account": "EXERCISED",
+              "JournalEntry": "EXERCISED",
+              "LedgerEntry": "EXERCISED",
+              "Asset": "EXERCISED",
+              "FileResource": "EXERCISED",
+              "Case": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Project": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Diligence"
+            }
+          }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Governance/GRC",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "RuleSet",
+              "Assessment",
+              "FileResource",
+              "Case",
+              "Project",
+              "Measurement",
+              "Contract",
+              "Entitlement"
+            ],
+            "business_universal_status": {
+              "RuleSet": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "FileResource": "EXERCISED",
+              "Case": "EXERCISED",
+              "Project": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Entitlement": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Governance"
+            }
+          }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Vendor",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Identity",
+              "Quote",
+              "Order",
+              "Contract",
+              "Invoice",
+              "Settlement",
+              "Assessment",
+              "Measurement",
+              "Project",
+              "Asset"
+            ],
+            "business_universal_status": {
+              "Identity": "EXERCISED",
+              "Quote": "EXERCISED",
+              "Order": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Invoice": "EXERCISED",
+              "Settlement": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Project": "EXERCISED",
+              "Asset": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Vendor"
+            }
+          }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Tender/RFP",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Specification",
+              "Quote",
+              "Assessment",
+              "RuleSet",
+              "Contract",
+              "Identity",
+              "FileResource"
+            ],
+            "business_universal_status": {
+              "Specification": "EXERCISED",
+              "Quote": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "RuleSet": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Identity": "EXERCISED",
+              "FileResource": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Tender"
+            }
+          }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Benefits",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Plan",
+              "Project",
+              "Measurement",
+              "Assessment",
+              "Account",
+              "Opportunity"
+            ],
+            "business_universal_status": {
+              "Plan": "EXERCISED",
+              "Project": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Account": "EXERCISED",
+              "Opportunity": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Benefits"
+            }
+          }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "War Room",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
-          "evidence": null
+          "status": "EXERCISED",
+          "evidence": {
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Case",
+              "Assessment",
+              "Project",
+              "Plan",
+              "Measurement",
+              "Identity",
+              "Asset",
+              "Location",
+              "FileResource"
+            ],
+            "business_universal_status": {
+              "Case": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Identity": "EXERCISED",
+              "Asset": "EXERCISED",
+              "Location": "EXERCISED",
+              "FileResource": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "WarRoom"
+            }
+          }
         },
         {
           "bucket": "management_capabilities",
@@ -945,22 +1335,76 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "measurements": [
-              "q3_sales_net",
-              "q3_gross_margin",
-              "q3_gross_margin_pct",
-              "september_run_rate",
-              "inventory_value_end"
-            ]
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Measurement",
+              "Assessment",
+              "Project",
+              "Plan",
+              "Account",
+              "JournalEntry",
+              "LedgerEntry",
+              "Invoice",
+              "Settlement",
+              "Opportunity",
+              "FileResource"
+            ],
+            "business_universal_status": {
+              "Measurement": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Account": "EXERCISED",
+              "JournalEntry": "EXERCISED",
+              "LedgerEntry": "EXERCISED",
+              "Invoice": "EXERCISED",
+              "Settlement": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "FileResource": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Reporting"
+            }
           }
         },
         {
           "bucket": "management_capabilities",
           "display_name": "Management System",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "PARTIAL",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "operational measurements, projects and decisions are linked, but no explicit Management System member identity is resolved"
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Assessment",
+              "Measurement",
+              "Plan",
+              "Project",
+              "RuleSet",
+              "Opportunity",
+              "Contract",
+              "Account",
+              "Case",
+              "FileResource"
+            ],
+            "business_universal_status": {
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Project": "EXERCISED",
+              "RuleSet": "EXERCISED",
+              "Opportunity": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Account": "EXERCISED",
+              "Case": "EXERCISED",
+              "FileResource": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "capabilities",
+              "key": "Management"
+            }
           }
         },
         {
@@ -969,7 +1413,28 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "reason": "company-wide Q3 operational and strategy measurements are present"
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Opportunity",
+              "Project",
+              "Measurement",
+              "Assessment",
+              "Plan",
+              "Contract"
+            ],
+            "business_universal_status": {
+              "Opportunity": "EXERCISED",
+              "Project": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Contract": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "csuite.profiles",
+              "key": "CEO"
+            }
           }
         },
         {
@@ -978,13 +1443,30 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "entity_types": [
-              "Order",
-              "Shipment",
-              "StockMovement",
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
               "Project",
-              "Case"
-            ]
+              "Plan",
+              "Measurement",
+              "Asset",
+              "Location",
+              "Case",
+              "Assessment"
+            ],
+            "business_universal_status": {
+              "Project": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Asset": "EXERCISED",
+              "Location": "EXERCISED",
+              "Case": "EXERCISED",
+              "Assessment": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "csuite.profiles",
+              "key": "COO"
+            }
           }
         },
         {
@@ -993,12 +1475,32 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "entity_types": [
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Account",
+              "JournalEntry",
+              "LedgerEntry",
               "Invoice",
               "Settlement",
-              "BalanceTransaction",
-              "Measurement"
-            ]
+              "Measurement",
+              "Plan",
+              "Assessment"
+            ],
+            "business_universal_status": {
+              "Account": "EXERCISED",
+              "JournalEntry": "EXERCISED",
+              "LedgerEntry": "EXERCISED",
+              "Invoice": "EXERCISED",
+              "Settlement": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Assessment": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "csuite.profiles",
+              "key": "CFO"
+            }
           }
         },
         {
@@ -1007,11 +1509,34 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "entity_ids": [
-              "mmdemo.strategy.radar.edge_ai",
-              "mmdemo.strategy.radar.lora",
-              "mmdemo.strategy.radar.private_5g"
-            ]
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Project",
+              "Asset",
+              "Specification",
+              "Assessment",
+              "Measurement",
+              "Plan",
+              "Case"
+            ],
+            "business_universal_status": {
+              "Project": "EXERCISED",
+              "Asset": "EXERCISED",
+              "Specification": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Case": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "csuite.profiles",
+              "keys": [
+                "CTO",
+                "CIO"
+              ],
+              "merge_rule": "identical_focus_required"
+            }
           }
         },
         {
@@ -1020,20 +1545,56 @@
           "identity_status": "DISPLAY_NAME_ONLY",
           "status": "EXERCISED",
           "evidence": {
-            "relation_ids": [
-              "mmdemo.rel.employs",
-              "mmdemo.rel.payroll_transaction"
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Identity",
+              "Contract",
+              "Project",
+              "Assessment",
+              "Measurement",
+              "Plan"
             ],
-            "measurement_kind": "employee_hours"
+            "business_universal_status": {
+              "Identity": "EXERCISED",
+              "Contract": "EXERCISED",
+              "Project": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Plan": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "csuite.profiles",
+              "key": "CHRO"
+            }
           }
         },
         {
           "bucket": "c_suite_views",
           "display_name": "CSO",
           "identity_status": "DISPLAY_NAME_ONLY",
-          "status": "NOT_YET_EXERCISED",
+          "status": "EXERCISED",
           "evidence": {
-            "reason": "display label is known but its current 1.5 semantics/identity are unresolved; demo does not infer acronym meaning"
+            "composition_basis": "Business Universals",
+            "required_business_universals": [
+              "Opportunity",
+              "Assessment",
+              "Plan",
+              "Measurement",
+              "Project"
+            ],
+            "business_universal_status": {
+              "Opportunity": "EXERCISED",
+              "Assessment": "EXERCISED",
+              "Plan": "EXERCISED",
+              "Measurement": "EXERCISED",
+              "Project": "EXERCISED"
+            },
+            "missing_business_universals": [],
+            "source_mapping": {
+              "section": "csuite.profiles",
+              "key": "CSO"
+            }
           }
         },
         {
@@ -1276,9 +1837,7 @@
       "NOT_YET_EXERCISED": 1
     },
     "strategy_members": {
-      "NOT_YET_EXERCISED": 14,
-      "PARTIAL": 6,
-      "EXERCISED": 7,
+      "EXERCISED": 27,
       "UNRESOLVED_ID": 1
     },
     "everyday_members": {
