@@ -394,6 +394,23 @@ const output = new URL('../data/metamodule-coverage-q3-2026.json', import.meta.u
 if (process.argv.includes('--check')) {
   const existing = await fs.readFile(output, 'utf8');
   if (existing !== json) {
+    const expectedLines = json.split('\n');
+    const actualLines = existing.split('\n');
+    const max = Math.max(expectedLines.length, actualLines.length);
+    let firstDiff = 0;
+
+    while (
+      firstDiff < max &&
+      expectedLines[firstDiff] === actualLines[firstDiff]
+    ) {
+      firstDiff += 1;
+    }
+
+    const line = firstDiff + 1;
+    console.error(`coverage mismatch at line ${line}`);
+    console.error(`expected: ${expectedLines[firstDiff] ?? '<EOF>'}`);
+    console.error(`actual:   ${actualLines[firstDiff] ?? '<EOF>'}`);
+
     throw new Error('MMDemo MetaModule coverage file is stale; rebuild with build-coverage.mjs');
   }
   console.log('OK: MetaModule coverage file matches current catalog/graph/company sources');
