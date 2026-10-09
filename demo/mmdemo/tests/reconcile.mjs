@@ -149,3 +149,18 @@ if (q3Margin !== company.strategy.measurements.q3_gross_margin) {
 console.log(
   `OK: ${graph.entities.length} entities, ${graph.relations.length} relations, Q3 sales ${q3Sales}`
 );
+
+
+const businessUniversalTypes = [
+  'Identity','Project','Location','Asset','CatalogItem','Specification','Opportunity','LineItem',
+  'Quote','Order','Invoice','BalanceAccount','BalanceTransaction','Settlement','Account',
+  'JournalEntry','LedgerEntry','StockMovement','Lot','Shipment','HandlingUnit','Case','Assessment',
+  'Reservation','Entitlement','Contract','Plan','Filing','Measurement','RuleSet','Message','FileResource',
+];
+
+const exercisedTypes = new Set(graph.entities.map(entity => entity.type));
+for (const type of businessUniversalTypes) {
+  if (!exercisedTypes.has(type)) {
+    fail(`Business Universal type not exercised by graph: ${type}`);
+  }
+}
