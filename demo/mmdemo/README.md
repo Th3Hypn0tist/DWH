@@ -103,3 +103,23 @@ data/metamodule-event-audit.json
 ```
 
 CI validates that missing Events are not silently promoted to `EVENTS_PROVEN`.
+
+
+## Strategy coverage
+
+Strategy coverage is composition-derived from Business Universals.
+
+```text
+known Strategy labels   27 EXERCISED
+unresolved C-suite       1 UNRESOLVED_ID
+```
+
+No Strategy-specific duplicate data engine is introduced. Each known Strategy method/capability/C-suite view carries a Business Universal requirement list sourced from the Strategy contract, and the coverage builder marks it `EXERCISED` only when every required Business Universal is exercised in the current demo graph.
+
+Current composition evidence:
+
+```text
+data/strategy-business-universal-composition.json
+```
+
+Event review remains separate; structural/demo coverage does not imply `EVENTS_PROVEN`.
