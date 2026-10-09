@@ -1,6 +1,6 @@
 {
   "dataset": "mmdemo.event_audit.universals.2026-10-09",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authority": "audit_projection_only",
   "scope": "Universal MetaModules",
   "status_model": [
@@ -10,10 +10,13 @@
     "NOT_EVENT_OWNER"
   ],
   "summary": {
-    "total": 43,
-    "events_proven": 0,
-    "event_review_required": 43,
-    "event_conflict": 0
+    "universals_total": 43,
+    "universals_events_proven": 0,
+    "universals_event_review_required": 43,
+    "editor_event_review_required": 1,
+    "grouping_not_event_owner": 3,
+    "unresolved_actual_members_event_review_required": 5,
+    "event_conflicts": 0
   },
   "family_summary": {
     "business": {
@@ -553,5 +556,90 @@
     "missing Events are not invented",
     "grouping abstractions are audited separately as NOT_EVENT_OWNER",
     "audit output is evidence about canonical sources, not a canonical Event definition"
-  ]
+  ],
+  "provenance": {
+    "source_repository": "Th3Hypn0tist/AIGMos_docs",
+    "source_commit": "befef6476a3b8974baa961e73acd68e53ecc135c",
+    "universal_contracts": "canonical/json/universal/{business,platform,gui}",
+    "composition_registry": "canonical/json/composition/00_Registry.json"
+  },
+  "compositions": {
+    "editor": {
+      "semantic_identity": "aigmos.expose.editor",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "source_status": "unlocked",
+      "source_version": "1.1",
+      "source_path": "canonical/json/composition/editor/00_Editor_Composition_Module.json",
+      "behavior_present": false,
+      "declared_event_count": null,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "note": "Editor is an actual Composition MetaModule; source contract currently declares no behavior.events field."
+    },
+    "groups": [
+      {
+        "identity": "BusinessSuite",
+        "classification": "grouping abstraction",
+        "event_status": "NOT_EVENT_OWNER",
+        "note": "Current 1.5 grouping model; member Composition MetaModules own Events."
+      },
+      {
+        "identity": "Strategy",
+        "classification": "grouping abstraction",
+        "event_status": "NOT_EVENT_OWNER",
+        "legacy_source": {
+          "path": "canonical/json/composition/strategy/00_Strategy_Contract.json",
+          "version": "1.3",
+          "status": "unlocked",
+          "historical_classification": "Composition MetaModule",
+          "behavior_present": false
+        },
+        "note": "Newer 1.5 grouping model supersedes legacy 1.3 event ownership classification."
+      },
+      {
+        "identity": "Everyday",
+        "classification": "grouping abstraction",
+        "event_status": "NOT_EVENT_OWNER",
+        "legacy_source": {
+          "path": "canonical/json/composition/everyday/00_Everyday_Contract.json",
+          "version": "1.1",
+          "status": "unlocked",
+          "historical_classification": "Suite Composition MetaModule",
+          "behavior_present": false
+        },
+        "note": "Newer 1.5 grouping model supersedes legacy 1.1 event ownership classification."
+      }
+    ],
+    "unresolved_actual_members": [
+      {
+        "display_name": "ERP",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "event_status": "EVENT_REVIEW_REQUIRED",
+        "reason": "no current 1.5 canonical member identity/source contract recovered"
+      },
+      {
+        "display_name": "CRM",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "event_status": "EVENT_REVIEW_REQUIRED",
+        "reason": "no current 1.5 canonical member identity/source contract recovered"
+      },
+      {
+        "display_name": "HRM",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "event_status": "EVENT_REVIEW_REQUIRED",
+        "reason": "no current 1.5 canonical member identity/source contract recovered"
+      },
+      {
+        "display_name": "WMS",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "event_status": "EVENT_REVIEW_REQUIRED",
+        "reason": "no current 1.5 canonical member identity/source contract recovered"
+      },
+      {
+        "display_name": "Projects",
+        "identity_status": "UNRESOLVED_CURRENT_ID_AXIS",
+        "event_status": "EVENT_REVIEW_REQUIRED",
+        "reason": "no current 1.5 canonical member identity/source contract recovered"
+      }
+    ]
+  }
 }
