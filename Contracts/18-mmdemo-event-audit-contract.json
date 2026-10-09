@@ -1,0 +1,51 @@
+{
+  "name": "MMDemo MetaModule Event Audit Contract",
+  "version": "0.1.0",
+  "dataset": "mmdemo.event_audit.universals.2026-10-09",
+  "purpose": "record explicit Event-definition evidence and unresolved Event coverage without inventing missing Events",
+  "statusModel": {
+    "EVENTS_PROVEN": "explicit canonical Event declarations are present and reviewed",
+    "EVENT_REVIEW_REQUIRED": "Event ownership applies but explicit canonical Event coverage is missing or incomplete",
+    "EVENT_CONFLICT": "canonical sources conflict on Event semantics/ownership",
+    "NOT_EVENT_OWNER": "current classification does not own Events"
+  },
+  "currentFindings": {
+    "universals": {
+      "total": 43,
+      "events_proven": 0,
+      "event_review_required": 43
+    },
+    "editor": {
+      "event_status": "EVENT_REVIEW_REQUIRED"
+    },
+    "groupingAbstractions": {
+      "BusinessSuite": "NOT_EVENT_OWNER",
+      "Strategy": "NOT_EVENT_OWNER",
+      "Everyday": "NOT_EVENT_OWNER"
+    },
+    "unresolvedActualMembers": {
+      "labels": [
+        "ERP",
+        "CRM",
+        "HRM",
+        "WMS",
+        "Projects"
+      ],
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "rule": "do not invent current 1.5 identities or Events"
+    }
+  },
+  "provenanceRules": [
+    "locked semantic identity does not imply Events are proven",
+    "explicit empty behavior.events keeps status EVENT_REVIEW_REQUIRED",
+    "missing behavior.events keeps status EVENT_REVIEW_REQUIRED for actual Event-owning MetaModules",
+    "newer 1.5 grouping classification supersedes older unlocked Strategy/Everyday composition contracts for Event ownership",
+    "historical source disagreement is preserved as provenance rather than silently merged",
+    "missing Events are reviewed separately and never synthesized merely to satisfy final coverage"
+  ],
+  "sourceSnapshot": "demo/mmdemo/data/metamodule-event-audit.json",
+  "surface": {
+    "projector": "#PROJECTOR:MMDemo:browser",
+    "section": "Event audit"
+  }
+}
