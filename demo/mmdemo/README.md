@@ -50,9 +50,9 @@ data/company-q3-2026.json
 data/relation-graph-q3-2026.json
 ```
 
-The relation graph currently contains 755 synthetic entities and 1178 explicit directed relations. CI reconciles the graph back to the monthly Q3 summary, including sales, COGS, gross margin, purchases, cash, payroll, employee hours and inventory valuation.
+The relation graph currently contains 840 synthetic entities and 1300 explicit directed relations. CI reconciles the graph back to the monthly Q3 summary, including sales, COGS, gross margin, purchases, cash, payroll, employee hours and inventory valuation.
 
-The browser exposes an entity-type coverage view plus an incoming/outgoing relation explorer so records can be traversed directly.
+The browser exposes an entity-type coverage view plus an incoming/outgoing relation explorer so records can be traversed directly. All 32 Business Universal semantic types are now exercised by exact `entity.type` evidence in the Q3 graph.
 
 All synthetic record identities use `mmdemo.*`.
 
