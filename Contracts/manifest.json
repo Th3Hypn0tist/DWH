@@ -1,6 +1,6 @@
 {
   "package": "dwh-contracts",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "status": "active",
   "files": [
     "00-engine-contract.json",
@@ -21,6 +21,7 @@
     "15-web-nanocms-projection.json",
     "16-mmdemo-relation-graph-contract.json",
     "17-mmdemo-metamodule-coverage-contract.json",
+    "18-mmdemo-event-audit-contract.json",
     "manifest.json"
   ]
 }
