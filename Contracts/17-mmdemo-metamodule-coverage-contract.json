@@ -1,0 +1,42 @@
+{
+  "name": "MMDemo MetaModule Coverage Evidence Contract",
+  "version": "0.1.0",
+  "dataset": "mmdemo.coverage.mmdemo_industries.2026q3",
+  "purpose": "bind synthetic operational/demo evidence to canonical or unresolved MetaModule catalog entries without creating semantic identity or canonical authority",
+  "sources": {
+    "catalog": "#METAMODULE:CATALOG",
+    "relationGraph": "mmdemo.graph.mmdemo_industries.2026q3",
+    "company": "mmdemo.company.mmdemo_industries.2026q3"
+  },
+  "statusModel": {
+    "EXERCISED": "explicit evidence satisfies the current demo coverage rule",
+    "PARTIAL": "explicit evidence exists but the named semantics are not fully represented",
+    "NOT_YET_EXERCISED": "current demo contains no sufficient explicit evidence",
+    "UNRESOLVED_ID": "identity axis itself is unresolved and must not be guessed"
+  },
+  "evidenceRules": [
+    "Business Universal EXERCISED requires an exact graph entity.type match",
+    "Platform/GUI evidence requires explicit implementation/runtime evidence and is never inferred from name similarity",
+    "Composition labels with unresolved 1.5 identity remain display labels even when demo behavior exercises the named capability",
+    "Strategy and Everyday grouping abstractions are NOT_EVENT_OWNER and coverage applies only to member labels/identities",
+    "Everyday semantics are not inferred from superficially similar business records",
+    "coverage evidence never promotes mmdemo.* data into canonical evidence",
+    "PARTIAL and NOT_YET_EXERCISED are useful final-version gaps, not silent failures"
+  ],
+  "generation": {
+    "builder": "demo/mmdemo/tools/build-coverage.mjs",
+    "snapshot": "demo/mmdemo/data/metamodule-coverage-q3-2026.json",
+    "ciCheck": "node demo/mmdemo/tools/build-coverage.mjs --check",
+    "rule": "snapshot must be deterministically regenerated from catalog + graph + company data"
+  },
+  "surface": {
+    "projector": "#PROJECTOR:MMDemo:browser",
+    "section": "MetaModule coverage",
+    "capabilities": [
+      "summary by family/group",
+      "per-member coverage state",
+      "identity status",
+      "machine-readable evidence"
+    ]
+  }
+}
