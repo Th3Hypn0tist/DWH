@@ -327,7 +327,7 @@ function countStatuses(entries) {
 
 const coverage = {
   dataset: 'mmdemo.coverage.mmdemo_industries.2026q3',
-  version: '0.2.0',
+  version: '0.3.0',
   authority: 'synthetic_demo_evidence_only',
   sources: {
     catalog: '#METAMODULE:CATALOG',
