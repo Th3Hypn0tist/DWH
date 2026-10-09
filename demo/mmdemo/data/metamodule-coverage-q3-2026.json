@@ -659,7 +659,7 @@
             "mmdemo.rel.converted_to"
           ],
           "relation_counts": {
-            "mmdemo.rel.customer": 308,
+            "mmdemo.rel.customer": 311,
             "mmdemo.rel.has_quote": 42,
             "mmdemo.rel.converted_to": 87
           },
@@ -717,7 +717,7 @@
           "relation_counts": {
             "mmdemo.rel.received_by": 33,
             "mmdemo.rel.posts_stock_movement": 78,
-            "mmdemo.rel.location": 135
+            "mmdemo.rel.location": 144
           },
           "missing_types": [],
           "missing_relations": []
