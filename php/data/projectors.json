@@ -5,7 +5,8 @@
       "companyData": "/mmdemo/data/company-q3-2026.json",
       "catalogSymbol": "#METAMODULE:CATALOG",
       "surface": "mmdemo",
-      "relationGraph": "/mmdemo/data/relation-graph-q3-2026.json"
+      "relationGraph": "/mmdemo/data/relation-graph-q3-2026.json",
+      "coverageData": "/mmdemo/data/metamodule-coverage-q3-2026.json"
     }
   }
 }
