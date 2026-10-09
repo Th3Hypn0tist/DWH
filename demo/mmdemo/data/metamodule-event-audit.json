@@ -1,0 +1,557 @@
+{
+  "dataset": "mmdemo.event_audit.universals.2026-10-09",
+  "version": "0.1.0",
+  "authority": "audit_projection_only",
+  "scope": "Universal MetaModules",
+  "status_model": [
+    "EVENTS_PROVEN",
+    "EVENT_REVIEW_REQUIRED",
+    "EVENT_CONFLICT",
+    "NOT_EVENT_OWNER"
+  ],
+  "summary": {
+    "total": 43,
+    "events_proven": 0,
+    "event_review_required": 43,
+    "event_conflict": 0
+  },
+  "family_summary": {
+    "business": {
+      "total": 32,
+      "event_review_required": 32
+    },
+    "platform": {
+      "total": 8,
+      "event_review_required": 8
+    },
+    "gui": {
+      "total": 3,
+      "event_review_required": 3
+    }
+  },
+  "entries": [
+    {
+      "family": "business",
+      "semantic_identity": "Identity",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Project",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Location",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Asset",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "CatalogItem",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Specification",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Opportunity",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "LineItem",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Quote",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Order",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Invoice",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "BalanceAccount",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "BalanceTransaction",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Settlement",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Account",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "JournalEntry",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "LedgerEntry",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "StockMovement",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Lot",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Shipment",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "HandlingUnit",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Case",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Assessment",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Reservation",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Entitlement",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Contract",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Plan",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Filing",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Measurement",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "RuleSet",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "Message",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "business",
+      "semantic_identity": "FileResource",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/business/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "NetworkService",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "LibraryMount",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "SymbolNamespace",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "nanoCMSStructure",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "IAM",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "AccessCore",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "DWH",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "platform",
+      "semantic_identity": "EXTPeer",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/platform/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "gui",
+      "semantic_identity": "LiveBinding",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/gui/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "gui",
+      "semantic_identity": "DirectManipulation",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/gui/",
+        "behavior_events": []
+      }
+    },
+    {
+      "family": "gui",
+      "semantic_identity": "SpatialView",
+      "identity_status": "CANONICAL_CONFIRMED",
+      "canonical_status": "locked",
+      "declared_event_count": 0,
+      "event_status": "EVENT_REVIEW_REQUIRED",
+      "evidence": {
+        "source": "AIGMos_docs/canonical/json/universal/gui/",
+        "behavior_events": []
+      }
+    }
+  ],
+  "rules": [
+    "locked semantic identity does not imply Events are proven",
+    "explicit empty behavior.events means Event review remains required",
+    "missing Events are not invented",
+    "grouping abstractions are audited separately as NOT_EVENT_OWNER",
+    "audit output is evidence about canonical sources, not a canonical Event definition"
+  ]
+}
